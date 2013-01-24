@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Projeto de POO (Software de Apoio Educacional): Código-Fonte de miu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projeto de POO (Software de Apoio Educacional)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_108b30cb6e8606f86f6713bff4fb1218.html">MIU</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">miu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="miu_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//MÓDULO DE INTERFACE DE USUARIO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MIU_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MIU_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;..\MP\mp.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MIU</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="miu_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">   11</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="comment">/* Classes */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_login.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_login.html" title="Esta classe eh responsavel por lidar com os processos necessarios para fazer o login de um usuario...">Login</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> nome;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> matricula;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">string</span> senha;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">string</span> disciplina;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">char</span> turma;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> nivel;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">char</span> *nome_arquivo;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_login.html" title="Esta classe eh responsavel por lidar com os processos necessarios para fazer o login de um usuario...">Login</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_login.html" title="Esta classe eh responsavel por lidar com os processos necessarios para fazer o login de um usuario...">Login</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="class_login.html" title="Esta classe eh responsavel por lidar com os processos necessarios para fazer o login de um usuario...">Login</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        Master *logar_m ();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Professor *logar_p ();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        Aluno *logar_a ();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="class_login_data_exception.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_login_data_exception.html" title="Esta classe eh responsavel por receber as mensagens de excecao e armazena-las.">LoginDataException</a></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">string</span> mensagem;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="class_login_data_exception.html" title="Esta classe eh responsavel por receber as mensagens de excecao e armazena-las.">LoginDataException</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">string</span> getException ();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/* Funções */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<a class="code" href="miu_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">void</span> <a class="code" href="miu_8cpp.html#a79ad4bde3889c80a392adee4b80df7e3" title="Esta funcao padroniza o comprimento das entradas nome, senha e matricula.">padronizar</a> (<span class="keywordtype">string</span>&amp;, <span class="keywordtype">int</span>&amp;, <span class="keywordtype">string</span>&amp;);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<a class="code" href="miu_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">void</span> <a class="code" href="miu_8cpp.html#a79ad4bde3889c80a392adee4b80df7e3" title="Esta funcao padroniza o comprimento das entradas nome, senha e matricula.">padronizar</a> (<span class="keywordtype">string</span>&amp;, <span class="keywordtype">int</span>&amp;, <span class="keywordtype">string</span>&amp;, <span class="keywordtype">string</span>&amp;);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<a class="code" href="miu_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">void</span> <a class="code" href="miu_8cpp.html#a79ad4bde3889c80a392adee4b80df7e3" title="Esta funcao padroniza o comprimento das entradas nome, senha e matricula.">padronizar</a> (<span class="keywordtype">string</span>&amp;, <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<a class="code" href="miu_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">void</span> <a class="code" href="miu_8cpp.html#a591bd9521bca7fb1bed47b75d46433b0" title="Esta funcao eh responsavel por se comunicar pela tela do computador com o usuario.">interface_usuario</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MIU_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Terça, 22 de Janeiro de 2013 16:40:14 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

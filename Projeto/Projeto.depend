@@ -1,0 +1,167 @@
+# depslib dependency file v1.0
+1355509420 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\classes.cpp
+	<iostream>
+	<fstream>
+	"classes.h"
+
+1355506922 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\classes.h
+	<string>
+
+1355509186 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\funcoes.cpp
+	<iostream>
+	<cstdlib>
+	"funcoes.h"
+	"classes.h"
+	"arquivos.h"
+
+1355406232 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\funcoes.h
+
+1355409646 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\arquivos.h
+	<fstream>
+	<string>
+
+1355682566 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\main.cpp
+	"MIU\miu.h"
+
+1355509293 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\arquivos.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"arquivos.h"
+
+1355589887 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\miu\miu_func.cpp
+	<iostream>
+	<cstdlib>
+	"miu_func.h"
+	"../MP/mp_classes.h"
+
+1355589583 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\miu\miu_func.h
+
+1355589617 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mp\mp_classes.h
+	<string>
+
+1355589917 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mp\mp_classes.cpp
+	<iostream>
+	<fstream>
+	"mp_classes.h"
+
+1355589377 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mgd\mgd_classes.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"mgd_classes.h"
+
+1355589248 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mgd\mgd_classes.h
+	<fstream>
+	<string>
+
+1355711575 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\miu\miu.cpp
+	<iostream>
+	<cstdlib>
+	"miu.h"
+	"..\MP\mp.h"
+
+1356023980 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\miu\miu.h
+	<string>
+	"..\MP\mp.h"
+
+1355708707 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mp\mp.h
+	<string>
+
+1355710193 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mgd\mgd.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"mgd.h"
+
+1355708707 c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mgd\mgd.h
+	<fstream>
+	<string>
+
+1355708707 source:c:\users\mateus mendelson\documents\unb - engenharia de computação\programação orientada à objetos (rodrigo bonifácio de almeida)\projeto\projeto\mp\mp.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"mp.h"
+	"..\MGD\mgd.h"
+
+1355711575 source:c:\users\mateus mendelson\desktop\projeto\miu\miu.cpp
+	<iostream>
+	<cstdlib>
+	"miu.h"
+	"..\MP\mp.h"
+
+1355708707 c:\users\mateus mendelson\desktop\projeto\miu\miu.h
+	<string>
+	"..\MP\mp.h"
+
+1355708707 c:\users\mateus mendelson\desktop\projeto\mp\mp.h
+	<string>
+
+1355682566 source:c:\users\mateus mendelson\desktop\projeto\main.cpp
+	"MIU\miu.h"
+
+1355710193 source:c:\users\mateus mendelson\desktop\projeto\mgd\mgd.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"mgd.h"
+
+1355708707 c:\users\mateus mendelson\desktop\projeto\mgd\mgd.h
+	<fstream>
+	<string>
+
+1355708707 source:c:\users\mateus mendelson\desktop\projeto\mp\mp.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"mp.h"
+	"..\MGD\mgd.h"
+
+1356026092 source:c:\users\mateusmendelson\desktop\projeto\main.cpp
+	"MIU\miu.h"
+
+1358711441 c:\users\mateusmendelson\desktop\projeto\miu\miu.h
+	<string>
+	"..\MP\mp.h"
+
+1358715379 c:\users\mateusmendelson\desktop\projeto\mp\mp.h
+	<string>
+
+1358714062 source:c:\users\mateusmendelson\desktop\projeto\mgd\mgd.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"mgd.h"
+	"..\MVB\mvb.h"
+
+1358713951 c:\users\mateusmendelson\desktop\projeto\mgd\mgd.h
+	<fstream>
+	<string>
+
+1358865033 source:c:\users\mateusmendelson\desktop\projeto\miu\miu.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<cstring>
+	<cmath>
+	"miu.h"
+	"..\MP\mp.h"
+
+1358715379 source:c:\users\mateusmendelson\desktop\projeto\mp\mp.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"mp.h"
+	"..\MGD\mgd.h"
+
+1358650873 c:\users\mateusmendelson\desktop\projeto\mvb\mvb.h
+
+1358627578 source:c:\users\mateusmendelson\desktop\projeto\mvb\mvb.cpp
+	<iostream>
+	<fstream>
+	"mvb.h"
+

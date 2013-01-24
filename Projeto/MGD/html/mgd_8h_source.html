@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Projeto de POO (Software de Apoio Educacional): Código-Fonte de mgd.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projeto de POO (Software de Apoio Educacional)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d1f904e3633186ad89e32e8e9dc6473f.html">MGD</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mgd.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mgd_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//MÓDULO DE GERENCIAMENTO DE DADOS</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MGD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MGD_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* Classes */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_testa_sistema.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_testa_sistema.html">TestaSistema</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_testa_sistema.html">TestaSistema</a> ();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="class_inicializar_sistema.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_inicializar_sistema.html">InicializarSistema</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_inicializar_sistema.html">InicializarSistema</a> ();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_arquivo_existe.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_arquivo_existe.html">ArquivoExiste</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> existe;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_arquivo_existe.html">ArquivoExiste</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">bool</span> getExistencia ();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//Efetiva um cadastro</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="class_cadastrar.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cadastrar.html">Cadastrar</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//Cada construtor efetiva o cadastro de um tipo de usuário</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span>        <a class="code" href="class_cadastrar.html">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_cadastrar.html">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="class_cadastrar.html">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/* Funções */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MP</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">  105</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">bool</span> <a class="code" href="mgd_8cpp.html#ac285f6f76dd98571f87bf2f581ca9d9d" title="Esta função checa os dados de um usuario Master.">checar_user</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Master.txt&quot;</span>); <span class="comment">//Checa os dados de um Master</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">bool</span> <a class="code" href="mgd_8cpp.html#ac285f6f76dd98571f87bf2f581ca9d9d" title="Esta função checa os dados de um usuario Master.">checar_user</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Professor.txt&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">bool</span> <a class="code" href="mgd_8cpp.html#ac285f6f76dd98571f87bf2f581ca9d9d" title="Esta função checa os dados de um usuario Master.">checar_user</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Aluno.txt&quot;</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="mgd_8cpp.html#ac285f6f76dd98571f87bf2f581ca9d9d" title="Esta função checa os dados de um usuario Master.">checar_user</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<a class="code" href="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">bool</span> <a class="code" href="mgd_8cpp.html#a541dba15c526cb5be1397839af2a17b6" title="Esta funcao solicita a checagem da existencia de um usuario e, se ele existir, o deleta.">excluir_user</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MGD_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Terça, 22 de Janeiro de 2013 16:38:21 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,60 @@
+[OPTIONS]
+Compiled file=Documentacao MVB.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x416 Portuguese(Brazil)
+Title=Projeto de POO (Software de Apoio Educacional)
+
+[WINDOWS]
+main="Projeto de POO (Software de Apoio Educacional)","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+miu_8cpp_source.html
+miu_8h_source.html
+miu_8cpp.html
+miu_8h.html
+class_login.html
+class_login-members.html
+class_login_data_exception.html
+class_login_data_exception-members.html
+dir_108b30cb6e8606f86f6713bff4fb1218.html
+index.html
+annotated.html
+classes.html
+functions.html
+functions_func.html
+files.html
+globals.html
+globals_func.html
+globals_defs.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+ftv2blank.png
+ftv2doc.png
+ftv2folderclosed.png
+ftv2folderopen.png
+ftv2ns.png
+ftv2mo.png
+ftv2cl.png
+ftv2lastnode.png
+ftv2link.png
+ftv2mlastnode.png
+ftv2mnode.png
+ftv2node.png
+ftv2plastnode.png
+ftv2pnode.png
+ftv2vertline.png
+ftv2splitbar.png

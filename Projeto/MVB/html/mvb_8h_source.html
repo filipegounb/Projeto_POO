@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Projeto de POO (Software de Apoio Educacional): Código-Fonte de mvb.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projeto de POO (Software de Apoio Educacional)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_95e44d6a0f885eba4533be3f9541226d.html">MVB</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mvb.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mvb_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//MÓDULO DE VETOR DE BITS</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MVB_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MVB_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MVB</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">    8</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">int</span> <a class="code" href="mvb_8cpp.html#a66c54f5bc75857eb40c382066ee0dc55" title="Esta função inclui um registro no arquivo desejado de vetor de bits (a inclusão é feita no primeiro e...">incluir_registro</a> (<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">int</span> <a class="code" href="mvb_8cpp.html#ab78fcff4ed896b843ebace40ab47b233" title="Esta função busca e retorna a primeira posição livre no arquivo de vetor de bits desejado.">obter_posicao_livre</a> (<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">int</span> <a class="code" href="mvb_8cpp.html#aa36f1ec521a127486975bb0a655f2412" title="Esta função altera o status (livre ou ocupado) de um registro no arquivo desejado.">alterar_status_registro</a> (<span class="keywordtype">int</span>, <span class="keywordtype">long</span> <span class="keywordtype">int</span>, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb">EXTERNO</a> <span class="keywordtype">int</span> <a class="code" href="mvb_8cpp.html#aa23f5dff07893fb77594997d664a1256" title="Esta função checa o status (livre ou ocupado) de um registro no arquivo desejado.">obter_status</a> (<span class="keywordtype">int</span>, <span class="keywordtype">long</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MVB_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Terça, 22 de Janeiro de 2013 16:41:13 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>
