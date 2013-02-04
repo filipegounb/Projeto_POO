@@ -1,9 +1,4 @@
-/**
-* \mainpage Módulo de Persistência
-*
-* \brief Este módulo é responsável por garantir a integridade dos dados e do sistema.
-*/
-
+//MÓDULO DE PERSISTÊNCIA
 #include <iostream>
 #include <fstream>
 #include <string>

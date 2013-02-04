@@ -1,9 +1,4 @@
-/**
-* \mainpage Módulo de Gerenciamento de Dados
-*
-* \brief Este módulo é responsável por lidar com os dados gravados em disco, atendendo as solicitacoes de dados recebidas.
-*/
-
+//MÓDULO DE GERENCIAMENTO DE DADOS
 #include <iostream>
 #include <fstream>
 #include <string>

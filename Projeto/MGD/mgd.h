@@ -1,4 +1,8 @@
-//MÓDULO DE GERENCIAMENTO DE DADOS
+/**
+* \mainpage Módulo de Gerenciamento de Dados
+*
+* \brief Este módulo é responsável por lidar com os dados gravados em disco, atendendo as solicitacoes de dados recebidas.
+*/
 #ifndef MGD_H
 #define MGD_H
 
@@ -8,6 +12,10 @@
 /* Classes */
 using namespace std;
 
+/**
+* \brief Esta classe checa se os requisitos mínimos do sistema estão presentes.
+*
+*/
 class TestaSistema
 {
     public:
@@ -22,6 +30,10 @@ class TestaSistema
         TestaSistema ();
 };
 
+/**
+* \brief Esta classe cria os requisitos mínimos do sistema.
+*
+*/
 class InicializarSistema
 {
     public:
@@ -34,6 +46,10 @@ class InicializarSistema
         InicializarSistema ();
 };
 
+/**
+* \brief Esta classe checa a existência de um arquivo.
+*
+*/
 class ArquivoExiste
 {
     bool existe;
@@ -58,7 +74,10 @@ class ArquivoExiste
         bool getExistencia ();
 };
 
-//Efetiva um cadastro
+/**
+* \brief Esta classe cadastra um usuário.
+*
+*/
 class Cadastrar
 {
     public:

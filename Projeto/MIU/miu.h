@@ -1,4 +1,8 @@
-//MÓDULO DE INTERFACE DE USUARIO
+/**
+* \mainpage Módulo de Interface de Usuário
+*
+* \brief Este módulo é responsável por interagir com o usuário (receber e mostrar dados).
+*/
 #ifndef MIU_H
 #define	MIU_H
 
@@ -120,62 +124,63 @@ class LoginDataException
         string getException ();
 };
 
+/**
+* \brief Esta classe padroniza as entradas digitadas por um usuário.
+*
+*/
+class padronizar
+{
+public:
+    /**
+    * \brief Este construtor padroniza o comprimento das entradas nome, senha e matricula.
+    *
+    * Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
+    *
+    * Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo);
+    *
+    * Para o caso da senha, adiciona-se espacos a esquerda do que foi digitado.
+    *
+    * \param - Nome do usuario
+    * \param - Matricula do usuario
+    * \param - Senha do usuario
+    *
+    */
+    padronizar (string&, int&, string&);
+
+    /**
+    * \brief Este construtor padroniza o comprimento das entradas nome, senha, matricula e disciplina.
+    *
+    * Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
+    *
+    * Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo);
+    *
+    * Para o caso da senha, adiciona-se espacos à esquerda do que foi digitado;
+    *
+    * Para o caso da disciplina, adiciona-se espaços a direita do que foi digitado.
+    *
+    * \param - Nome do usuario
+    * \param - Matricula do usuario
+    * \param - Senha do usuario
+    * \param - Disciplina ministrada pelo usuario
+    *
+    */
+    padronizar (string&, int&, string&, string&);
+
+    /**
+    * \brief Este construtor padroniza o comprimento das entradas nome e matricula.
+    *
+    * Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
+    *
+    * Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo).
+    *
+    * \param - Nome do usuario
+    * \param - Matricula do usuario
+    *
+    */
+    padronizar (string&, int&);
+};
+
 /* Funções */
-
-/**
-* \brief Esta funcao padroniza o comprimento das entradas nome, senha e matricula.
-*
-* Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
-*
-* Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo);
-*
-* Para o caso da senha, adiciona-se espacos a esquerda do que foi digitado.
-*
-* \param - Nome do usuario
-* \param - Matricula do usuario
-* \param - Senha do usuario
-*
-* \return - Nao possui valor de retorno
-*
-*/
-EXTERNO void padronizar (string&, int&, string&);
-
-/**
-* \brief Esta funcao padroniza o comprimento das entradas nome, senha, matricula e disciplina.
-*
-* Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
-*
-* Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo);
-*
-* Para o caso da senha, adiciona-se espacos à esquerda do que foi digitado;
-*
-* Para o caso da disciplina, adiciona-se espaços a direita do que foi digitado.
-*
-* \param - Nome do usuario
-* \param - Matricula do usuario
-* \param - Senha do usuario
-* \param - Disciplina ministrada pelo usuario
-*
-* \return - Nao possui valor de retorno
-*
-*/
-EXTERNO void padronizar (string&, int&, string&, string&);
-
-/**
-* \brief Esta funcao padroniza o comprimento das entradas nome e matricula.
-*
-* Para o caso do nome, adiciona-se espacos a esquerda do que foi digitado;
-*
-* Para o caso da matricula, adiciona-se "noves" (9's) a esquerda do que foi digitado (um numero nao-nulo).
-*
-* \param - Nome do usuario
-* \param - Matricula do usuario
-*
-* \return - Nao possui valor de retorno
-*
-*/
-EXTERNO void padronizar (string&, int&);
-
 /**
 * \brief Esta funcao eh responsavel por se comunicar pela tela do computador com o usuario.
 *

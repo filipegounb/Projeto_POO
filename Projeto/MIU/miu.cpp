@@ -1,9 +1,4 @@
-/**
-* \mainpage Módulo de Interface de Usuário
-*
-* \brief Este módulo é responsável por interagir com o usuário (receber e mostrar dados).
-*/
-
+//MÓDULO DE INTERFACE DE USUARIO
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
@@ -184,8 +179,7 @@ string LoginDataException::getException ()
     return mensagem;
 }
 
-/* Funções */
-void padronizar (string& n, int& mat, string& s)
+padronizar::padronizar (string& n, int& mat, string& s)
 {
     char n_suporte[] = "                    "; //20 espaços
     char s_suporte[] = "          "; //10 espaços
@@ -247,7 +241,7 @@ void padronizar (string& n, int& mat, string& s)
     }
 }
 
-void padronizar (string& n, int& mat, string& s, string& disci)
+padronizar::padronizar (string& n, int& mat, string& s, string& disci)
 {
     char disci_suporte[] = "          "; //10 espaços
     unsigned int i = 0;
@@ -264,7 +258,7 @@ void padronizar (string& n, int& mat, string& s, string& disci)
     padronizar (n, mat, s);
 }
 
-void padronizar (string& n, int& mat)
+padronizar::padronizar (string& n, int& mat)
 {
     char n_suporte[] = "                    "; //20 espaços
     int mat_suporte[] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; //9 noves
@@ -316,6 +310,7 @@ void padronizar (string& n, int& mat)
     }
 }
 
+/* Funções */
 void interface_usuario (void)
 {
     bool tentar_de_novo;
@@ -413,7 +408,7 @@ void interface_usuario (void)
                         cout << "Senha: ";
                         getline (cin, senha);
 
-                        padronizar (nome, matricula, senha);
+                        padronizar p (nome, matricula, senha);
 
                         Login login (nome, matricula, senha, nivel);
 
@@ -466,7 +461,7 @@ void interface_usuario (void)
                             cout << "Senha: ";
                             getline (cin, n_senha);
 
-                            padronizar (n_nome, n_matricula, n_senha);
+                            padronizar p (n_nome, n_matricula, n_senha);
 
                             Master novo_master (n_nome, n_matricula, n_senha);
                             novo_master.cadastrar ();
@@ -491,7 +486,7 @@ void interface_usuario (void)
                                 cout << "Matricula: ";
                                 cin >> n_matricula;
 
-                                padronizar (n_nome, n_matricula);
+                                padronizar p (n_nome, n_matricula);
 
                                 resultado = solicitar_excluir_user (n_nome, n_matricula, 1);
 
@@ -527,7 +522,7 @@ void interface_usuario (void)
                             cout << "Disciplina: ";
                             getline (cin, n_disciplina, '\n');
 
-                            padronizar (n_nome, n_matricula, n_senha, n_disciplina);
+                            padronizar p (n_nome, n_matricula, n_senha, n_disciplina);
 
                             Professor novo_professor (n_nome, n_matricula, n_senha, n_disciplina);
                             novo_professor.cadastrar ();
@@ -552,7 +547,7 @@ void interface_usuario (void)
                                 cout << "Matricula: ";
                                 cin >> n_matricula;
 
-                                padronizar (n_nome, n_matricula);
+                                padronizar p (n_nome, n_matricula);
 
                                 resultado = solicitar_excluir_user (n_nome, n_matricula, 2);
 
@@ -587,10 +582,10 @@ void interface_usuario (void)
                             getline (cin, n_senha);
 
                             cout << "Turma: ";
-                            cin >> turma;
+                            cin >> n_turma;
                             getline (cin, lixo);
 
-                            padronizar (n_nome, n_matricula, n_senha);
+                            padronizar p (n_nome, n_matricula, n_senha);
 
                             Aluno novo_aluno (n_nome, n_matricula, n_senha, n_turma);
                             novo_aluno.cadastrar ();
@@ -615,7 +610,7 @@ void interface_usuario (void)
                                 cout << "Matricula: ";
                                 cin >> n_matricula;
 
-                                padronizar (n_nome, n_matricula);
+                                padronizar p (n_nome, n_matricula);
 
                                 resultado = solicitar_excluir_user (n_nome, n_matricula, 3);
 
@@ -674,7 +669,7 @@ void interface_usuario (void)
                         cout << "Disciplina: ";
                         getline (cin, disciplina, '\n');
 
-                        padronizar (nome, matricula, senha, disciplina);
+                        padronizar p (nome, matricula, senha, disciplina);
 
                         Login login (nome, matricula, senha, disciplina, nivel);
 
@@ -728,7 +723,7 @@ void interface_usuario (void)
                             cin >> turma;
                             getline (cin, lixo);
 
-                            padronizar (n_nome, n_matricula, n_senha);
+                            padronizar p (n_nome, n_matricula, n_senha);
 
                             Aluno novo_aluno (n_nome, n_matricula, n_senha, n_turma);
                             novo_aluno.cadastrar ();
@@ -753,7 +748,7 @@ void interface_usuario (void)
                                 cout << "Matricula: ";
                                 cin >> n_matricula;
 
-                                padronizar (n_nome, n_matricula);
+                                padronizar p (n_nome, n_matricula);
 
                                 resultado = solicitar_excluir_user (n_nome, n_matricula, 3);
 
@@ -811,7 +806,7 @@ void interface_usuario (void)
                         cin >> turma;
                         getline (cin, lixo);
 
-                        padronizar (nome, matricula, senha);
+                        padronizar p (nome, matricula, senha);
 
                         Login login (nome, matricula, senha, turma, nivel);
 

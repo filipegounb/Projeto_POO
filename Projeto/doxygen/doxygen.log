@@ -1,0 +1,16 @@
+C:/Users/MateusMendelson/Desktop/Projeto/MVB/mvb.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MGD/mgd.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MP/mp.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:135: warning: The following parameters of padronizar::padronizar(string &n, int &mat, string &s) are not documented:
+  parameter 'n'
+  parameter 'mat'
+  parameter 's'
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:151: warning: The following parameters of padronizar::padronizar(string &n, int &mat, string &s, string &disci) are not documented:
+  parameter 'n'
+  parameter 'mat'
+  parameter 's'
+  parameter 'disci'
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:170: warning: The following parameters of padronizar::padronizar(string &n, int &mat) are not documented:
+  parameter 'n'
+  parameter 'mat'

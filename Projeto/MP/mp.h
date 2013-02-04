@@ -1,4 +1,8 @@
-//MÓDULO DE PERSISTÊNCIA
+/**
+* \mainpage Módulo de Persistência
+*
+* \brief Este módulo é responsável por garantir a integridade dos dados e do sistema.
+*/
 #ifndef MP_H
 #define	MP_H
 
@@ -7,7 +11,10 @@
 /* Classes */
 using namespace std;
 
-//Base para todos os usuários
+/**
+* \brief Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exige a criação do método "cadastrar".
+*
+*/
 class Usuario
 {
 protected:
@@ -18,6 +25,10 @@ public:
     virtual void cadastrar ()=0;
 };
 
+/**
+* \brief Esta classe representa um usuario Master.
+*
+*/
 class Master : public Usuario
 {
 public:
@@ -45,6 +56,10 @@ public:
     void esc ();
 };
 
+/**
+* \brief Esta classe representa um Professor.
+*
+*/
 class Professor : public Usuario
 {
 public:
@@ -75,6 +90,10 @@ protected:
     string disciplina;
 };
 
+/**
+* \brief Esta classe representa um Aluno.
+*
+*/
 class Aluno : public Usuario
 {
 public:

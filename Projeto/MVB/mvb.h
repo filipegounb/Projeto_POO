@@ -1,4 +1,11 @@
-//MÓDULO DE VETOR DE BITS
+/**
+* \mainpage Módulo de Vetor de Bits
+*
+* \brief Este módulo é responsável pelo gerenciamento de espacos livres, possibilitando o reuso de memoria.
+*
+* Nao sao usados bits, sao usados inteiros nos valores '0' ou '1'.
+*
+*/
 #ifndef MVB_H
 #define	MVB_H
 
