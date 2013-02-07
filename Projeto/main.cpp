@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    interface_usuario ();
+    interface_usuario tela;
 
     return 0;
 }

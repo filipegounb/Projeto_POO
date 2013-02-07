@@ -39,7 +39,9 @@ InicializarSistema::InicializarSistema ()
 
         arquivo.close ();
 
-        incluir_registro (1);
+        Registro registro (1);
+
+        registro.incluir_registro ();
 
     }
 }
@@ -63,17 +65,18 @@ bool ArquivoExiste::getExistencia ()
 }
 
 //Cadastro de usuário Master
-Cadastrar::Cadastrar (const string nome, const int matricula, const string senha)
+Cadastrar::Cadastrar (const string nome, const string matricula, const string senha)
 {
     //Aqui, nao ha verificacao da existencia do arquivo de usuarios Master, pois,
     //para que este codigo seja alcancado, eh necessario que a criacao deste
     //arquivo jah tenha sido feita na primeira execucao do sistema.
     int tam_registro = 42; //Tamanho de um registro
+    Registro registro (1);
 
-    int posicao = incluir_registro (1);
+    int sucesso = registro.incluir_registro ();
 
     //Inserir no final do arquivo
-    if (posicao == -1)
+    if (sucesso == -1)
     {
         ofstream arquivo ("dados/Master.txt", ios_base::app);
 
@@ -81,35 +84,43 @@ Cadastrar::Cadastrar (const string nome, const int matricula, const string senha
 
         arquivo.close ();
     }
-    else
+    else if (sucesso == 0)
     {
         ofstream arquivo ("dados/Master.txt", ios_base::in);
 
-        arquivo.seekp (posicao*tam_registro, ios_base::beg);
+        arquivo.seekp (tam_registro*registro.getPos (), ios_base::beg);
 
         arquivo << nome << "|" << matricula << "|" << senha;
 
         arquivo.close ();
     }
+    /* Implementar um try-catch para lançar uma exceção aqui!!!!
+    else //sucesso = -2
+    {
+        throw "deu pau aqui! valor inválido para o nível de usuário!
+    }
+    */
 }
 
 //Cadastro de Professor
-Cadastrar::Cadastrar (const string nome, const int matricula, const string senha, const string disciplina)
+Cadastrar::Cadastrar (const string nome, const string matricula, const string senha, const string disciplina)
 {
     bool existe;
     int tam_registro = 53; //Tamanho de um registro
-    int posicao = incluir_registro (2);
+    Registro registro (2);
+
+    int sucesso = registro.incluir_registro ();
 
     ArquivoExiste arq ("dados/Professor.txt");
 
     existe = arq.getExistencia ();
 
     //O arquivo jah existe e o registro sera inserido no meio do arquivo
-    if (existe && posicao >= 0)
+    if (existe && sucesso >= 0)
     {
         ofstream arquivo ("dados/Professor.txt", ios_base::in);
 
-        arquivo.seekp (tam_registro*posicao, ios_base::beg);
+        arquivo.seekp (tam_registro*registro.getPos (), ios_base::beg);
 
         arquivo << nome << "|" << matricula << "|" << senha << "|" << disciplina;
 
@@ -136,22 +147,24 @@ Cadastrar::Cadastrar (const string nome, const int matricula, const string senha
 }
 
 //Cadastro de Aluno
-Cadastrar::Cadastrar (const string nome, const int matricula, const string senha, const char turma)
+Cadastrar::Cadastrar (const string nome, const string matricula, const string senha, const char turma)
 {
     bool existe;
     int tam_registro = 44; //Tamanho de um registro
-    int posicao = incluir_registro (3);
+    Registro registro (3);
+
+    int sucesso = registro.incluir_registro ();
 
     ArquivoExiste arq ("dados/Aluno.txt");
 
     existe = arq.getExistencia ();
 
     //O arquivo jah existe e o registro sera inserido no meio do arquivo
-    if (existe && posicao >= 0)
+    if (existe && sucesso >= 0)
     {
         ofstream arquivo ("dados/Aluno.txt", ios_base::in);
 
-        arquivo.seekp (tam_registro*posicao, ios_base::beg);
+        arquivo.seekp (tam_registro*registro.getPos (), ios_base::beg);
 
         arquivo << nome << "|" << matricula << "|" << senha << "|" << turma;
 
@@ -179,11 +192,11 @@ Cadastrar::Cadastrar (const string nome, const int matricula, const string senha
 
 /* Funções */
 //Checa os dados de um Master
-bool checar_user (const string nome, const int matricula, const string senha, const char *nome_arquivo)
+bool checar_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
 {
-    int mat;
     char c;
     char *n_suporte = 0;
+    char *mat_suporte = 0;
     char *s_suporte = 0;
     int status; //Indica se o registro ainda esta disponivel ou se ja foi deletado (checa o arquivo de vetor de bits)
     long int posicao = 0;
@@ -198,9 +211,11 @@ bool checar_user (const string nome, const int matricula, const string senha, co
     else
     {
         n_suporte = (char *) malloc (21*sizeof (char));
+        mat_suporte = (char *) malloc (10*sizeof (char));
         s_suporte = (char *) malloc (11*sizeof (char));
 
         n_suporte[20] = '\0';
+        mat_suporte[9] = '\0';
         s_suporte[10] = '\0';
 
         do
@@ -212,8 +227,10 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             string n (n_suporte);
 
             //Lendo a matrícula
-            fscanf (arquivo, "%d", &mat);
+            fscanf (arquivo, "%9c", mat_suporte);
             fscanf (arquivo, "%c", &c);
+
+            string mat (mat_suporte);
 
             //Lendo a senha
             fscanf (arquivo, "%10c", s_suporte);
@@ -221,7 +238,9 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             string s (s_suporte);
 
             //Verificando o status do registro
-            status = obter_status (1, posicao);
+            Registro registro (1);
+            registro.setPos (posicao);
+            status = registro.getStatus ();
 
             if (n == nome && s == senha && mat == matricula && status == 1)
             {
@@ -242,11 +261,11 @@ bool checar_user (const string nome, const int matricula, const string senha, co
 }
 
 //Checa os dados de um Professor
-bool checar_user (const string nome, const int matricula, const string senha, const string disciplina, const char *nome_arquivo)
+bool checar_user (const string nome, const string matricula, const string senha, const string disciplina, const char *nome_arquivo)
 {
-    int mat;
     char c;
     char *n_suporte = 0;
+    char *mat_suporte = 0;
     char *s_suporte = 0;
     char *disci_suporte = 0;
     int status; //Indica se o registro ainda esta disponivel ou se ja foi deletado (checa o arquivo de vetor de bits)
@@ -262,10 +281,12 @@ bool checar_user (const string nome, const int matricula, const string senha, co
     else
     {
         n_suporte = (char *) malloc (21*sizeof (char));
+        mat_suporte = (char *) malloc (10*sizeof (char));
         s_suporte = (char *) malloc (11*sizeof (char));
         disci_suporte = (char *) malloc (11*sizeof (char));
 
         n_suporte[20] = '\0';
+        mat_suporte[9] = '\0';
         s_suporte[10] = '\0';
         disci_suporte[10] = '\0';
 
@@ -278,8 +299,10 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             string n (n_suporte);
 
             //Lendo a matrícula
-            fscanf (arquivo, "%d", &mat);
+            fscanf (arquivo, "%9c", mat_suporte);
             fscanf (arquivo, "%c", &c);
+
+            string mat (mat_suporte);
 
             //Lendo a senha
             fscanf (arquivo, "%10c", s_suporte);
@@ -293,7 +316,9 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             string disci (disci_suporte);
 
             //Verificando o status do registro
-            status = obter_status (2, posicao);
+            Registro registro (2);
+            registro.setPos (posicao);
+            status = registro.getStatus ();
 
             if (n == nome && s == senha && mat == matricula && disci == disciplina && status == 1)
             {
@@ -314,11 +339,11 @@ bool checar_user (const string nome, const int matricula, const string senha, co
 }
 
 //Checa os dados de um Aluno
-bool checar_user (const string nome, const int matricula, const string senha, const char turma, const char *nome_arquivo)
+bool checar_user (const string nome, const string matricula, const string senha, const char turma, const char *nome_arquivo)
 {
-    int mat;
     char c;
     char *n_suporte = 0;
+    char *mat_suporte = 0;
     char *s_suporte = 0;
     char t;
     int status; //Indica se o registro ainda esta disponivel ou se ja foi deletado (checa o arquivo de vetor de bits)
@@ -334,9 +359,11 @@ bool checar_user (const string nome, const int matricula, const string senha, co
     else
     {
         n_suporte = (char *) malloc (21*sizeof (char));
+        mat_suporte = (char *) malloc (10*sizeof (char));
         s_suporte = (char *) malloc (11*sizeof (char));
 
         n_suporte[20] = '\0';
+        mat_suporte[9] = '\0';
         s_suporte[10] = '\0';
 
         do
@@ -348,8 +375,10 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             string n (n_suporte);
 
             //Lendo a matrícula
-            fscanf (arquivo, "%d", &mat);
+            fscanf (arquivo, "%9c", mat_suporte);
             fscanf (arquivo, "%c", &c);
+
+            string mat (mat_suporte);
 
             //Lendo a senha
             fscanf (arquivo, "%10c", s_suporte);
@@ -361,7 +390,9 @@ bool checar_user (const string nome, const int matricula, const string senha, co
             fscanf (arquivo, "%c", &t);
 
             //Verificando o status do registro
-            status = obter_status (3, posicao);
+            Registro registro (3);
+            registro.setPos (posicao);
+            status = registro.getStatus ();
 
             if (n == nome && s == senha && mat == matricula && t == turma && status == 1)
             {
@@ -382,11 +413,12 @@ bool checar_user (const string nome, const int matricula, const string senha, co
 }
 
 //Busca a posicao do registro de um usuario
-long int checar_user (const string nome, const int matricula, const int nivel)
+long int checar_user (const string nome, const string matricula, const int nivel)
 {
-    int mat;
+
     char lixo[22];
     char *n_suporte = 0;
+    char *mat_suporte = 0;
     int status; //Indica se o registro ainda esta disponivel ou se ja foi deletado (checa o arquivo de vetor de bits)
     long int posicao = 0;
 
@@ -407,8 +439,10 @@ long int checar_user (const string nome, const int matricula, const int nivel)
         else
         {
             n_suporte = (char *) malloc (21*sizeof (char));
+            mat_suporte = (char *) malloc (10*sizeof (char));
 
             n_suporte[20] = '\0';
+            mat_suporte[9] = '\0';
 
             do
             {
@@ -419,13 +453,17 @@ long int checar_user (const string nome, const int matricula, const int nivel)
                 string n (n_suporte);
 
                 //Lendo a matrícula
-                fscanf (arquivo, "%d", &mat);
+                fscanf (arquivo, "%9c", mat_suporte);
+
+                string mat (mat_suporte);
 
                 //Avancando os dados desnecessarios
                 fscanf (arquivo, "%11c", lixo);
 
                 //Verificando o status do registro
-                status = obter_status (1, posicao);
+                Registro registro (1);
+                registro.setPos (posicao);
+                status = registro.getStatus ();
 
                 if (n == nome && mat == matricula && status == 1)
                 {
@@ -457,8 +495,10 @@ long int checar_user (const string nome, const int matricula, const int nivel)
         else
         {
             n_suporte = (char *) malloc (21*sizeof (char));
+            mat_suporte = (char *) malloc (10*sizeof (char));
 
             n_suporte[20] = '\0';
+            mat_suporte[9] = '\0';
 
             do
             {
@@ -469,13 +509,17 @@ long int checar_user (const string nome, const int matricula, const int nivel)
                 string n (n_suporte);
 
                 //Lendo a matrícula
-                fscanf (arquivo, "%d", &mat);
+                fscanf (arquivo, "%9c", mat_suporte);
+
+                string mat (mat_suporte);
 
                 //Avancando os dados desnecessarios
                 fscanf (arquivo, "%22c", lixo);
 
                 //Verificando o status do registro
-                status = obter_status (2, posicao);
+                Registro registro (2);
+                registro.setPos (posicao);
+                status = registro.getStatus ();
 
                 if (n == nome && mat == matricula && status == 1)
                 {
@@ -508,8 +552,10 @@ long int checar_user (const string nome, const int matricula, const int nivel)
         else
         {
             n_suporte = (char *) malloc (21*sizeof (char));
+            mat_suporte = (char *) malloc (10*sizeof (char));
 
             n_suporte[20] = '\0';
+            mat_suporte[9] = '\0';
 
             do
             {
@@ -520,13 +566,17 @@ long int checar_user (const string nome, const int matricula, const int nivel)
                 string n (n_suporte);
 
                 //Lendo a matrícula
-                fscanf (arquivo, "%d", &mat);
+                fscanf (arquivo, "%9c", mat_suporte);
+
+                string mat (mat_suporte);
 
                 //Avancando os dados desnecessarios
                 fscanf (arquivo, "%13c", lixo);
 
                 //Verificando o status do registro
-                status = obter_status (3, posicao);
+                Registro registro (3);
+                registro.setPos (posicao);
+                status = registro.getStatus ();
 
                 if (n == nome && mat == matricula && status == 1)
                 {
@@ -550,7 +600,7 @@ long int checar_user (const string nome, const int matricula, const int nivel)
 }
 
 //Checa os dados de um usuario, com o objetivo de exclui-lo (ver funcaos 'soliciar_excluir_......')
-bool excluir_user (const string nome, const int matricula, const int nivel)
+bool excluir_user (const string nome, const string matricula, const int nivel)
 {
     int posicao;
 
@@ -562,7 +612,10 @@ bool excluir_user (const string nome, const int matricula, const int nivel)
     }
     else
     {
-        alterar_status_registro (nivel, (long int) posicao, 0);
+        Registro registro (nivel);
+        registro.setPos ((long int) posicao);
+        registro.alterar_status_registro (0);
+        //alterar_status_registro (nivel, (long int) posicao, 0);
 
         return true;
     }

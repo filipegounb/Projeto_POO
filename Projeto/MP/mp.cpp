@@ -11,7 +11,7 @@
 using namespace std;
 //Métodos para Master
 //Construtor
-Master::Master (const string n, const int mat, const string s)
+Master::Master (const string n, const string mat, const string s)
 {
     nome = n;
     matricula = mat;
@@ -26,7 +26,7 @@ void Master::cadastrar ()
 
 //Métodos para Professor
 //Construtor
-Professor::Professor (const string n, const int mat, const string s, const string disci)
+Professor::Professor (const string n, const string mat, const string s, const string disci)
 {
     nome = n;
     matricula = mat;
@@ -42,7 +42,7 @@ void Professor::cadastrar ()
 
 //Métodos para Aluno
 //Construtor
-Aluno::Aluno (const string n, const int mat, const string s, const char t)
+Aluno::Aluno (const string n, const string mat, const string s, const char t)
 {
     nome = n;
     matricula = mat;
@@ -74,25 +74,25 @@ void checa_estado_sistema ()
 }
 
 //Checa os dados de um usuario Master
-bool existe_user (const string nome, const int matricula, const string senha, const char *nome_arquivo)
+bool existe_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
 {
     return checar_user (nome, matricula, senha, nome_arquivo);
 }
 
 //Checa os dados digitados por um Professor
-bool existe_user (const string nome, const int matricula, const string senha, const string disci, const char *nome_arquivo)
+bool existe_user (const string nome, const string matricula, const string senha, const string disci, const char *nome_arquivo)
 {
     return checar_user (nome, matricula, senha, disci, nome_arquivo);
 }
 
 //Checa os dados digitados por um Aluno
-bool existe_user (const string nome, const int matricula, const string senha, const char t, const char *nome_arquivo)
+bool existe_user (const string nome, const string matricula, const string senha, const char t, const char *nome_arquivo)
 {
     return checar_user (nome, matricula, senha, t, nome_arquivo);
 }
 
 //Checa se um usuario existe e o deleta
-bool solicitar_excluir_user (const string nome, const int matricula, const int nivel)
+bool solicitar_excluir_user (const string nome, const string matricula, const int nivel)
 {
     bool sucesso;
 

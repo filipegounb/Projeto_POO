@@ -8,81 +8,110 @@
 /* Classes */
 using namespace std;
 
-/* Funções */
+//Construtor (seta o nível de usuário)
+Registro::Registro (int n)
+{
+    this->nivel = n;
+    this->posicao = -10;
+    this->status = -1;
+}
+
+//Seta a posicao do registro
+void Registro::setPos (long int p)
+{
+    this->posicao = p;
+
+    this->status = this->obter_status ();
+}
+
+//Retorna a posicao
+long int Registro::getPos ()
+{
+    return this->posicao;
+}
+
+//Retorna o status do registro
+int Registro::getStatus ()
+{
+    return this->status;
+}
+
  //Inlcui um registro no arquivo desejado
-int incluir_registro (int opcao)
+int Registro::incluir_registro ()
 {
     FILE *arquivo = 0;
     int sucesso;
-    int posicao;
 
-    switch (opcao)
+    switch (this->nivel)
     {
         case 1:
-            posicao = obter_posicao_livre (opcao);
+            this->posicao = this->obter_posicao_livre ();
 
             //Arquivo inexistente ou não há posições livres
-            if (posicao == -1 || posicao == -2)
+            if (this->posicao == -1 || this->posicao == -2)
             {
                 arquivo = fopen ("dados/vetor_bits_master.txt", "a+");
                 fprintf(arquivo, "1");
 
                 fclose(arquivo);
 
-                return -1;
+                this->posicao = -1;
+                return this->posicao;
             }
             //Inclusão do novo registro
             else
             {
-                sucesso = alterar_status_registro (opcao, posicao, 1);
+                sucesso = this->alterar_status_registro (1);
 
-                return posicao;
+                return 0;
             }
             break;
 
         case 2:
-            posicao = obter_posicao_livre (opcao);
+            this->posicao = this->obter_posicao_livre ();
 
             //Arquivo inexistente ou não há posições livres
-            if (posicao == -1 || posicao == -2)
+            if (this->posicao == -1 || this->posicao == -2)
             {
                 arquivo = fopen ("dados/vetor_bits_professor.txt", "a+");
                 fprintf(arquivo, "1");
 
                 fclose(arquivo);
 
-                return -1;
+                this->posicao = -1;
+                return this->posicao;
             }
             //Inclusão do novo registro
             else
             {
-                sucesso = alterar_status_registro (opcao, posicao, 1);
+                sucesso = this->alterar_status_registro (1);
 
-                return posicao;
+                return 0;
             }
             break;
 
         case 3:
-            posicao = obter_posicao_livre (opcao);
+            this->posicao = this->obter_posicao_livre ();
 
             //Arquivo inexistente ou não há posições livres
-            if (posicao == -1 || posicao == -2)
+            if (this->posicao == -1 || this->posicao == -2)
             {
                 arquivo = fopen ("dados/vetor_bits_aluno.txt", "a+");
                 fprintf(arquivo, "1");
 
                 fclose(arquivo);
 
-                return -1;
+                this->posicao = -1;
+                return this->posicao;
             }
             //Inclusão do novo registro
             else
             {
-                posicao = obter_posicao_livre (opcao);
+                this->posicao = this->obter_posicao_livre ();
 
-                sucesso = alterar_status_registro (opcao, posicao, 1);
+                sucesso = this->alterar_status_registro (1);
 
-                return posicao;
+                return 0;
             }
             break;
         default:
@@ -92,13 +121,13 @@ int incluir_registro (int opcao)
 }
 
 // Busca e retorna a primeira posicao livre no arquivo desejado
-int obter_posicao_livre (int opcao)
+int Registro::obter_posicao_livre ()
 {
     FILE *arquivo = 0;
-    long int posicao = -1;
+    long int p = -1;
     int status;
 
-    switch (opcao)
+    switch (this->nivel)
     {
         case 1:
             arquivo = fopen ("dados/vetor_bits_master.txt", "r");
@@ -108,14 +137,14 @@ int obter_posicao_livre (int opcao)
                 return -2;
             }
 
-            while (!feof (arquivo) && posicao == -1)
+            while (!feof (arquivo) && p == -1)
             {
                fscanf (arquivo, "%1d", &status);
 
                if (status == 0)
                {
-                   posicao = ftell (arquivo);
-                   posicao--;
+                   p = ftell (arquivo);
+                   p--;
                }
             }
 
@@ -129,14 +158,14 @@ int obter_posicao_livre (int opcao)
                 return -2;
             }
 
-            while (!feof (arquivo) && posicao == -1)
+            while (!feof (arquivo) && p == -1)
             {
                fscanf (arquivo, "%1d", &status);
 
                if (status == 0)
                {
-                   posicao = ftell (arquivo);
-                   posicao--;
+                   p = ftell (arquivo);
+                   p--;
                }
             }
 
@@ -150,14 +179,14 @@ int obter_posicao_livre (int opcao)
                 return -2;
             }
 
-            while (!feof (arquivo) && posicao == -1)
+            while (!feof (arquivo) && p == -1)
             {
                fscanf (arquivo, "%1d", &status);
 
                if (status == 0)
                {
-                   posicao = ftell (arquivo);
-                   posicao--;
+                   p = ftell (arquivo);
+                   p--;
                }
             }
 
@@ -169,11 +198,13 @@ int obter_posicao_livre (int opcao)
     }
 
     // Retorno da primeira posição livre no arquivo. Se não houver nenhuma posição livre, retorna-se -1, que indica que deve-se abrir o arquivo desejado com o modo "a", que grava no final do arquivo
-    return (int) posicao;
+    this->posicao = p;
+    this->status = 0;
+    return (int) p;
 }
 
  // Altera o status (livre ou ocupado) de um registro
-int alterar_status_registro (int opcao, long int posicao, int novo_status)
+int Registro::alterar_status_registro (int novo_status)
 {
     FILE *arquivo = NULL;
     long int suporte;
@@ -185,7 +216,7 @@ int alterar_status_registro (int opcao, long int posicao, int novo_status)
         return -1;
     }
 
-    switch (opcao)
+    switch (this->nivel)
     {
         case 1:
             arquivo = fopen ("dados/vetor_bits_master.txt", "r+");
@@ -278,14 +309,14 @@ int alterar_status_registro (int opcao, long int posicao, int novo_status)
 }
 
 // Checa o status de um registro (livre ou ocupado)
-int obter_status (int opcao, long int posicao)
+int Registro::obter_status ()
 {
     FILE *arquivo = NULL;
     int status;
     long int suporte;
     long int tam_arquivo = -1;
 
-    switch (opcao)
+    switch (this->nivel)
     {
         case 1:
             arquivo = fopen ("dados/vetor_bits_master.txt", "r");

@@ -4,11 +4,13 @@ var annotated =
     [ "ArquivoExiste", "class_arquivo_existe.html", "class_arquivo_existe" ],
     [ "Cadastrar", "class_cadastrar.html", "class_cadastrar" ],
     [ "InicializarSistema", "class_inicializar_sistema.html", "class_inicializar_sistema" ],
+    [ "interface_usuario", "classinterface__usuario.html", "classinterface__usuario" ],
     [ "Login", "class_login.html", "class_login" ],
     [ "LoginDataException", "class_login_data_exception.html", "class_login_data_exception" ],
     [ "Master", "class_master.html", "class_master" ],
     [ "padronizar", "classpadronizar.html", "classpadronizar" ],
     [ "Professor", "class_professor.html", "class_professor" ],
+    [ "Registro", "class_registro.html", "class_registro" ],
     [ "TestaSistema", "class_testa_sistema.html", "class_testa_sistema" ],
     [ "Usuario", "class_usuario.html", "class_usuario" ]
 ];

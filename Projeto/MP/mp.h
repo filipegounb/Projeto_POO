@@ -19,7 +19,7 @@ class Usuario
 {
 protected:
     string nome;
-    int matricula;
+    string matricula;
     string senha;
 public:
     virtual void cadastrar ()=0;
@@ -40,7 +40,7 @@ public:
     * \param <s> - Senha do usuario
     *
     */
-    Master (const string, const int, const string);
+    Master (const string, const string, const string);
     //~Master ();
 
     /**
@@ -72,7 +72,7 @@ public:
     * \param <disci> - Disciplina ministrada pelo usuario
     *
     */
-    Professor (const string, const int, const string, const string);
+    Professor (const string, const string, const string, const string);
     //~Professor ();
 
     /**
@@ -106,7 +106,7 @@ public:
     * \param <t> - Turma do usuario
     *
     */
-    Aluno (const string, const int, const string, const char);
+    Aluno (const string, const string, const string, const char);
     //~Aluno();
 
     /**
@@ -144,43 +144,43 @@ EXTERNO void checa_estado_sistema ();
 /**
 * \brief Esta funcao solicita a checagem da existencia de um usuário Master com os dados recebidos.
 *
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos usuarios Master cadastrados (por padrao, tem o valor "dados/Master.txt")
 * \param <nome> - Nome do usuario
 * \param <matricula> - Matricula do usuario
 * \param <senha> - Senha do usuario
+* \param <*nome_arquivo> - Arquivo que armazena os dados dos usuarios Master cadastrados (por padrao, tem o valor "dados/Master.txt")
 *
 * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
 *
 */
-EXTERNO bool existe_user (const string, const int, const string, const char *nome_arquivo = "dados/Master.txt");
+EXTERNO bool existe_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
 
 /**
 * \brief Esta funcao solicita a checagem da existencia de um Professor com os dados recebidos.
 *
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos professores cadastrados (por padrao, tem o valor "dados/Professor.txt")
 * \param <nome> - Nome do usuario
 * \param <matricula> - Matricula do usuario
 * \param <senha> - Senha do usuario
 * \param <disci> - Disciplina ministrada pelo usuario
+* \param <*nome_arquivo> - Arquivo que armazena os dados dos professores cadastrados (por padrao, tem o valor "dados/Professor.txt")
 *
 * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
 *
 */
-EXTERNO bool existe_user (const string, const int, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
+EXTERNO bool existe_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
 
 /**
 * \brief Esta funcao solicita a checagem da existencia de um Aluno com os dados recebidos.
 *
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
 * \param <nome> - Nome do usuario
 * \param <matricula> - Matricula do usuario
 * \param <senha> - Senha do usuario
 * \param <t> - Turma do usuario
+* \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
 *
 * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
 *
 */
-EXTERNO bool existe_user (const string, const int, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
+EXTERNO bool existe_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
 
 /**
 * \brief Esta funcao solicita a exclusao de um usuario.
@@ -193,6 +193,6 @@ EXTERNO bool existe_user (const string, const int, const string, const char, con
 * \retval <false> - O usuario solicitado nao foi encontrado
 *
 */
-EXTERNO bool solicitar_excluir_user (const string, const int, const int);
+EXTERNO bool solicitar_excluir_user (const string, const string, const int);
 
 #endif	/* MP_H */

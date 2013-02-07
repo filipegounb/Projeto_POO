@@ -13,7 +13,7 @@
 using namespace std;
 
 //Master
-Login::Login (const string n, const int mat, const string s, const int nivel)
+Login::Login (const string n, const string mat, const string s, const int nivel)
 {
     if (nivel != 1)
     {
@@ -27,7 +27,7 @@ Login::Login (const string n, const int mat, const string s, const int nivel)
 }
 
 //Professor
-Login::Login (const string n, const int mat, const string s, const string disci, const int nivel)
+Login::Login (const string n, const string mat, const string s, const string disci, const int nivel)
 {
     if (nivel != 2)
     {
@@ -42,7 +42,7 @@ Login::Login (const string n, const int mat, const string s, const string disci,
 }
 
 //Aluno
-Login::Login (const string n, const int mat, const string s, const char t, const int nivel)
+Login::Login (const string n, const string mat, const string s, const char t, const int nivel)
 {
     if (nivel != 3)
     {
@@ -179,11 +179,11 @@ string LoginDataException::getException ()
     return mensagem;
 }
 
-padronizar::padronizar (string& n, int& mat, string& s)
+padronizar::padronizar (string& n, string& mat, string& s)
 {
     char n_suporte[] = "                    "; //20 espaços
     char s_suporte[] = "          "; //10 espaços
-    int mat_suporte[] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; //9 noves
+    char mat_suporte[] = "         "; //9 espaços
     unsigned int i = 0;
 
     //Padronizando o nome
@@ -204,44 +204,16 @@ padronizar::padronizar (string& n, int& mat, string& s)
     s = s_suporte;
 
     //Padronizando a matricula
-    double valor;
-    double mat_double;
-    int controle = 1;
-    int ii;
-
-    mat_double = (double) mat;
-    for (ii = 8; ii >= 0; ii--)
+    i = 0;
+    while (i < mat.size () && i < 9)
     {
-        valor = (double) (mat_double/(pow (10, ii)));
-        valor = floor (valor);
-
-        //Ignora todos os valores que sao nulos antes do primeiro valor nao-nulo (para nao sobrescrever os 9's do vetor)
-        if (controle == 1)
-        {
-            if (valor != 0)
-            {
-                //Desativa o controle
-                controle = 0;
-
-                mat_suporte[ii] = (int) valor;
-                mat_double = mat_double - (double) mat_suporte[ii]*pow (10, ii);
-            }
-        }
-        else
-        {
-            mat_suporte[ii] = (int) valor;
-            mat_double = mat_double - (double) mat_suporte[ii]*pow (10, ii);
-        }
+        mat_suporte[8 - i] = mat[(mat.size () - 1) - i];
+        i++;
     }
-
-    mat = 0;
-    for (ii = 0; ii < 9; ii++)
-    {
-        mat += mat_suporte[ii]*pow (10.0, ii);
-    }
+    mat = mat_suporte;
 }
 
-padronizar::padronizar (string& n, int& mat, string& s, string& disci)
+padronizar::padronizar (string& n, string& mat, string& s, string& disci)
 {
     char disci_suporte[] = "          "; //10 espaços
     unsigned int i = 0;
@@ -258,10 +230,10 @@ padronizar::padronizar (string& n, int& mat, string& s, string& disci)
     padronizar (n, mat, s);
 }
 
-padronizar::padronizar (string& n, int& mat)
+padronizar::padronizar (string& n, string& mat)
 {
     char n_suporte[] = "                    "; //20 espaços
-    int mat_suporte[] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; //9 noves
+    char mat_suporte[] = "         "; //9 espaços
     unsigned int i = 0;
 
     //Padronizando o nome
@@ -273,52 +245,22 @@ padronizar::padronizar (string& n, int& mat)
     n = n_suporte;
 
     //Padronizando a matricula
-    double valor;
-    double mat_double;
-    int controle = 1;
-    int ii;
-
-    mat_double = (double) mat;
-    for (ii = 8; ii >= 0; ii--)
+    i = 0;
+    while (i < mat.size () && i < 9)
     {
-        valor = (double) (mat_double/(pow (10, ii)));
-        valor = floor (valor);
-
-        //Ignora todos os valores que sao nulos antes do primeiro valor nao-nulo (para nao sobrescrever os 9's do vetor)
-        if (controle == 1)
-        {
-            if (valor != 0)
-            {
-                //Desativa o controle
-                controle = 0;
-
-                mat_suporte[ii] = (int) valor;
-                mat_double = mat_double - (double) mat_suporte[ii]*pow (10, ii);
-            }
-        }
-        else
-        {
-            mat_suporte[ii] = (int) valor;
-            mat_double = mat_double - (double) mat_suporte[ii]*pow (10, ii);
-        }
+        mat_suporte[8 - i] = mat[(mat.size () - 1) - i];
+        i++;
     }
-
-    mat = 0;
-    for (ii = 0; ii < 9; ii++)
-    {
-        mat += mat_suporte[ii]*pow (10.0, ii);
-    }
+    mat = mat_suporte;
 }
 
-/* Funções */
-void interface_usuario (void)
+interface_usuario::interface_usuario ()
 {
     bool tentar_de_novo;
     bool menu;
 
     int nivel;
     int controle;
-    int matricula;
     int opcao;
 
     char turma;
@@ -326,12 +268,13 @@ void interface_usuario (void)
     string senha;
     string nome;
     string disciplina;
+    string matricula;
 
-    int n_matricula;
     char n_turma;
 
     string n_senha;
     string n_nome;
+    string n_matricula;
     string n_disciplina;
 
     string lixo;
@@ -402,8 +345,7 @@ void interface_usuario (void)
                         getline (cin, nome);
 
                         cout << "Matricula: ";
-                        cin >> matricula;
-                        getchar ();
+                        getline (cin, matricula);
 
                         cout << "Senha: ";
                         getline (cin, senha);
@@ -449,14 +391,15 @@ void interface_usuario (void)
                         //Menu (tive problemas ao usar switch-case... error: jump to case label[-fpermissive]) o que eh isso?????????
                         if (opcao == 1)
                         {
+                            getchar ();
+
                             system ("cls");
                             cout << "\n\n\n\n";
                             cout << "Nome: ";
                             getline (cin, n_nome);
 
                             cout << "Matricula: ";
-                            cin >> n_matricula;
-                            getchar ();
+                            getline (cin, n_matricula);
 
                             cout << "Senha: ";
                             getline (cin, n_senha);
@@ -484,7 +427,7 @@ void interface_usuario (void)
                                 getline (cin, n_nome);
 
                                 cout << "Matricula: ";
-                                cin >> n_matricula;
+                                getline (cin, n_matricula);
 
                                 padronizar p (n_nome, n_matricula);
 
@@ -513,8 +456,7 @@ void interface_usuario (void)
                             getline (cin, n_nome);
 
                             cout << "Matricula: ";
-                            cin >> n_matricula;
-                            getchar ();
+                            getline (cin, n_matricula);
 
                             cout << "Senha: ";
                             getline (cin, n_senha, '\n');
@@ -545,7 +487,7 @@ void interface_usuario (void)
                                 getline (cin, n_nome);
 
                                 cout << "Matricula: ";
-                                cin >> n_matricula;
+                                getline (cin, n_matricula);
 
                                 padronizar p (n_nome, n_matricula);
 
@@ -575,8 +517,7 @@ void interface_usuario (void)
                             getline (cin, n_nome);
 
                             cout << "Matricula: ";
-                            cin >> n_matricula;
-                            getchar ();
+                            getline (cin, n_matricula);
 
                             cout << "Senha: ";
                             getline (cin, n_senha);
@@ -608,7 +549,7 @@ void interface_usuario (void)
                                 getline (cin, n_nome);
 
                                 cout << "Matricula: ";
-                                cin >> n_matricula;
+                                getline (cin, n_matricula);
 
                                 padronizar p (n_nome, n_matricula);
 
@@ -660,8 +601,7 @@ void interface_usuario (void)
                         getline (cin, nome);
 
                         cout << "Matricula: ";
-                        cin >> matricula;
-                        getchar ();
+                        getline (cin, matricula);
 
                         cout << "Senha: ";
                         getline (cin, senha, '\n');
@@ -713,8 +653,7 @@ void interface_usuario (void)
                             getline (cin, n_nome);
 
                             cout << "Matricula: ";
-                            cin >> n_matricula;
-                            getchar ();
+                            getline (cin, n_matricula);
 
                             cout << "Senha: ";
                             getline (cin, n_senha);
@@ -746,7 +685,7 @@ void interface_usuario (void)
                                 getline (cin, n_nome);
 
                                 cout << "Matricula: ";
-                                cin >> n_matricula;
+                                getline (cin, n_matricula);
 
                                 padronizar p (n_nome, n_matricula);
 
@@ -796,8 +735,7 @@ void interface_usuario (void)
                         getline (cin, nome);
 
                         cout << "Matricula: ";
-                        cin >> matricula;
-                        getchar ();
+                        getline (cin, matricula);
 
                         cout << "Senha: ";
                         getline (cin, senha);

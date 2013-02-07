@@ -90,7 +90,7 @@ class Cadastrar
         * \param <senha> - Senha do usuário
         *
         */
-        Cadastrar (const string, const int, const string);
+        Cadastrar (const string, const string, const string);
 
         /**
         * \brief Este construtor chama a acao de cadastrar um Professor.
@@ -101,7 +101,7 @@ class Cadastrar
         * \param <disciplina> - Disciplina ministrada pelo usuario
         *
         */
-        Cadastrar (const string, const int, const string, const string);
+        Cadastrar (const string, const string, const string, const string);
 
         /**
         * \brief Este construtor chama a acao de cadastrar um Aluno.
@@ -112,7 +112,7 @@ class Cadastrar
         * \param <turma> - Disciplina ministrada pelo usuario
         *
         */
-        Cadastrar (const string, const int, const string, const char);
+        Cadastrar (const string, const string, const string, const char);
 };
 
 
@@ -135,7 +135,7 @@ class Cadastrar
 * \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
 *
 */
-EXTERNO bool checar_user (const string, const int, const string, const char *nome_arquivo = "dados/Master.txt"); //Checa os dados de um Master
+EXTERNO bool checar_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
 
 /**
 * \brief Esta função checa os dados de um Professor.
@@ -149,7 +149,7 @@ EXTERNO bool checar_user (const string, const int, const string, const char *nom
 * \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
 *
 */
-EXTERNO bool checar_user (const string, const int, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
+EXTERNO bool checar_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
 
 /**
 * \brief Esta função checa os dados de um Aluno.
@@ -163,7 +163,7 @@ EXTERNO bool checar_user (const string, const int, const string, const string, c
 * \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
 *
 */
-EXTERNO bool checar_user (const string, const int, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
+EXTERNO bool checar_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
 
 /**
 * \brief Esta função checa a existencia de um usuario, com o objetivo de exclui-lo.
@@ -176,7 +176,7 @@ EXTERNO bool checar_user (const string, const int, const string, const char, con
 * \retval <-1> - O usuario solicitado nao foi encontrado
 *
 */
-EXTERNO long int checar_user (const string, const int, const int);
+EXTERNO long int checar_user (const string, const string, const int);
 
 /**
 * \brief Esta funcao solicita a checagem da existencia de um usuario e, se ele existir, o deleta.
@@ -188,6 +188,6 @@ EXTERNO long int checar_user (const string, const int, const int);
 * \return - Retorna 'true' se o usuario foi deletado; 'false', caso contrario
 *
 */
-EXTERNO bool excluir_user (const string, const int, const int);
+EXTERNO bool excluir_user (const string, const string, const int);
 
 #endif	/* MGD_H */
