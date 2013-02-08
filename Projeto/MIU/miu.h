@@ -9,13 +9,49 @@
 #include <string>
 #include "..\MP\mp.h"
 
-#ifdef SERVIDOR_MIU
-#define EXTERNO
-#else
-#define EXTERNO extern
-#endif
-/* Classes */
 using namespace std;
+
+/**
+* \brief Esta classe eh responsavel por obter e exibir a data e a hora no instante em que cada menu eh acessado.
+*
+*/
+class Data_Hora
+{
+    int hrs;
+    int minutos;
+    int dia;
+    int mes;
+    int ano;
+    string data;
+    string hora;
+
+    /**
+    * \brief Este metodo converte um numero de 1 a 12 para o mes correspondente, textualmente.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna o mes desejado, em texto
+    */
+    string ConverteMes ();
+
+    /**
+    * \brief Este metodo constroi os textos da data e da hora.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void ConstroiDataHora ();
+public:
+    /**
+    * \brief Este metodo imprime a data e a hora no momento do acesso ao menu, na tela.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void ImprimeDataHora ();
+};
 
 /**
 * \brief Esta classe eh responsavel por lidar com os processos necessarios para fazer o login de um usuario.
@@ -73,7 +109,7 @@ class Login
         *
         * \param - Nao possui parametros de entrada
         *
-        * \return - Se os dados conferem, retorna um objeto do tipo Master; se nao, retorna NULL.
+        * \return - Se os dados conferem, retorna um objeto do tipo Master; se nao, retorna NULL
         */
         Master *logar_m ();
 
@@ -82,7 +118,7 @@ class Login
         *
         * \param - Nao possui parametros de entrada
         *
-        * \return - Se os dados conferem, retorna um objeto do tipo Professor; se nao, retorna NULL.
+        * \return - Se os dados conferem, retorna um objeto do tipo Professor; se nao, retorna NULL
         */
         Professor *logar_p ();
 
@@ -91,7 +127,7 @@ class Login
         *
         * \param - Nao possui parametros de entrada
         *
-        * \return - Se os dados conferem, retorna um objetivo do tipo Aluno; se nao, retorna NULL.
+        * \return - Se os dados conferem, retorna um objetivo do tipo Aluno; se nao, retorna NULL
         */
         Aluno *logar_a ();
 };
@@ -181,11 +217,57 @@ public:
 };
 
 /**
+* \brief Esta classe eh responsavel por apresentar os menus ao usuario.
+*
+**/
+class Menu
+{
+    Data_Hora dh;
+public:
+    /**
+    * \brief Este metodo imprime o menu inicial.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void menu_inicial ();
+
+    /**
+    * \brief Este metodo imprime o menu para usuarios Master.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void menu_master ();
+
+    /**
+    * \brief Este metodo imprime o menu para Professor.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void menu_professor ();
+
+    /**
+    * \brief Este metodo imprime o menu para Aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    */
+    void menu_aluno ();
+};
+
+/**
 * \brief Esta classe eh responsavel por se comunicar pela tela do computador com o usuario.
 *
 **/
 class interface_usuario
 {
+    Menu m; //Representa os menus
 public:
     /**
     * \brief Este construtor eh responsavel por se comunicar pela tela do computador com o usuario.
@@ -204,12 +286,8 @@ public:
     *
     * \param - Nao possui parametros de entrada
     *
-    * \return - Nao possui valor de retorno
-    *
     */
     interface_usuario ();
 };
-
-
 
 #endif	/* MIU_H */

@@ -3,9 +3,6 @@
 #include <fstream>
 #include "mvb.h"
 
-#define SERVIDOR_MVB
-
-/* Classes */
 using namespace std;
 
 //Construtor (seta o nível de usuário)

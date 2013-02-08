@@ -6,11 +6,14 @@ Obs. 1: Na primeira execução do programa, é automaticamente cadastrado um usuári
 - Matricula: 123456789
 - Senha: 12345
 
-Obs.2 : O projeto foi feito na IDE CodeBlocks versão 8.02 no Windows 8.
+Obs.2 : O projeto foi feito na IDE CodeBlocks versão 12.11 no Windows 8.
 
 Obs. 3: O projeto é enviado com alguns usuários já cadastrados. Para testar o sistema em seu estado inicial, apague
 todos os arquivos da pasta 'dados'.
 
-Obs. 4: A documentação de cada módulo encontra-se em sua respectiva pasta.
+Obs. 4: A documentação de cada módulo encontra-se em sua respectiva pasta. Uma documentação completa está no diretório "doxygen".
 
-Até agora, temos as seguintes funcionalidades: Cadastro, login, excluisão de usuários, reuso de espaço livre.
+Obs. 5: O código foi feito com o uso de system ("cls"), que limpa a tela. Se houver problemas na compilação, tente excluir todos os comandos
+system ("cls") e compile novamente.
+
+Até agora, temos as seguintes funcionalidades: Cadastro, login, exclusão de usuários, reuso de espaço livre, mostrador de data e hora

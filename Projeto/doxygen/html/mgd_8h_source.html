@@ -107,69 +107,67 @@ $(document).ready(function(){initNavTree('mgd_8h.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Classes */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_testa_sistema.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_testa_sistema.html" title="Esta classe checa se os requisitos mínimos do sistema estão presentes.">TestaSistema</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_testa_sistema.html" title="Esta classe checa se os requisitos mínimos do sistema estão presentes.">TestaSistema</a> ();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_inicializar_sistema.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_inicializar_sistema.html" title="Esta classe cria os requisitos mínimos do sistema.">InicializarSistema</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_inicializar_sistema.html" title="Esta classe cria os requisitos mínimos do sistema.">InicializarSistema</a> ();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="class_arquivo_existe.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_arquivo_existe.html" title="Esta classe checa a existência de um arquivo.">ArquivoExiste</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> existe;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_arquivo_existe.html" title="Esta classe checa a existência de um arquivo.">ArquivoExiste</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">bool</span> getExistencia ();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="class_cadastrar.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//Cada construtor efetiva o cadastro de um tipo de usuário</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/* Funções */</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MP</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;EXTERNO <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Master.txt&quot;</span>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;EXTERNO <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Professor.txt&quot;</span>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;EXTERNO <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Aluno.txt&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_testa_sistema.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_testa_sistema.html" title="Esta classe checa se os requisitos mínimos do sistema estão presentes.">TestaSistema</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_testa_sistema.html" title="Esta classe checa se os requisitos mínimos do sistema estão presentes.">TestaSistema</a> ();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="class_inicializar_sistema.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_inicializar_sistema.html" title="Esta classe cria os requisitos mínimos do sistema.">InicializarSistema</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_inicializar_sistema.html" title="Esta classe cria os requisitos mínimos do sistema.">InicializarSistema</a> ();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="class_arquivo_existe.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_arquivo_existe.html" title="Esta classe checa a existência de um arquivo.">ArquivoExiste</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> existe;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_arquivo_existe.html" title="Esta classe checa a existência de um arquivo.">ArquivoExiste</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">bool</span> getExistencia ();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="class_cadastrar.html">   80</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//Cada construtor efetiva o cadastro de um tipo de usuário</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="class_cadastrar.html" title="Esta classe cadastra um usuário.">Cadastrar</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="class_checar__user.html">  121</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_checar__user.html" title="Esta classe faz checagem da existencia (ou nao) de um usuario.">Checar_user</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Master.txt&quot;</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Professor.txt&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">bool</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Aluno.txt&quot;</span>);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;EXTERNO <span class="keywordtype">long</span> <span class="keywordtype">int</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;EXTERNO <span class="keywordtype">bool</span> excluir_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MGD_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> checar_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="code" href="class_excluir__user.html">  186</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_excluir__user.html" title="Esta classe checa se um usuario existe e, se ele existir, o deleta.">Excluir_user</a></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">bool</span> excluir_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MGD_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d1f904e3633186ad89e32e8e9dc6473f.html">MGD</a></li><li class="navelem"><b>mgd.h</b></li>
-    <li class="footer">Generated on Thu Feb 7 2013 14:08:29 for Projeto by
+    <li class="footer">Generated on Fri Feb 8 2013 00:22:20 for Projeto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

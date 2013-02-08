@@ -104,43 +104,37 @@ $(document).ready(function(){initNavTree('mvb_8h.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef MVB_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MVB_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MVB</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_registro.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_registro.html" title="Esta classe eh responsavel pelo gerenciamento dos espacos livres.">Registro</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> posicao; <span class="comment">//Para indicar o primeiro registro, usa-se o indice 0</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> nivel;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> status;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> obter_status ();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_registro.html#a9430ed779c1e44d268b9f9d83431bf7a" title="Este construtor seta o nivel do usuario.">Registro</a> (<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_registro.html#abb3c378083ce56224334bafc07eccba2" title="Este método seta a posicao do registro e, automaticamente, verifica o status do registro.">setPos</a> (<span class="keywordtype">long</span> <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a3838977bc5826a5d8faaa047768c1802" title="Este método retorna a posicao do registro.">getPos</a> ();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a2470413f508f6f99f64498aa166e27fe" title="Este método retorna o status do registro.">getStatus</a> ();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#ac0f763dfd447ae9d787136c5426ec29d" title="Este método inclui um registro no arquivo desejado de vetor de bits (a inclusão é feita no primeiro espaço li...">incluir_registro</a> ();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a7e4f9c8f9139f63c11c243f357eedd0a" title="Este método busca e retorna a primeira posição livre no arquivo de vetor de bits desejado.">obter_posicao_livre</a> ();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#ab5a44a5609c239f4c4060df70276a77a" title="Este método altera o status (livre ou ocupado) de um registro no arquivo desejado.">alterar_status_registro</a> (<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MVB_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="class_registro.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_registro.html" title="Esta classe eh responsavel pelo gerenciamento dos espacos livres.">Registro</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> posicao; <span class="comment">//Para indicar o primeiro registro, usa-se o indice 0</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> nivel;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> status;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> obter_status ();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_registro.html#a9430ed779c1e44d268b9f9d83431bf7a" title="Este construtor seta o nivel do usuario.">Registro</a> (<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_registro.html#abb3c378083ce56224334bafc07eccba2" title="Este método seta a posicao do registro e, automaticamente, verifica o status do registro.">setPos</a> (<span class="keywordtype">long</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a3838977bc5826a5d8faaa047768c1802" title="Este método retorna a posicao do registro.">getPos</a> ();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a2470413f508f6f99f64498aa166e27fe" title="Este método retorna o status do registro.">getStatus</a> ();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#ac0f763dfd447ae9d787136c5426ec29d" title="Este método inclui um registro no arquivo desejado de vetor de bits (a inclusão é feita no primeiro espaço li...">incluir_registro</a> ();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#a7e4f9c8f9139f63c11c243f357eedd0a" title="Este método busca e retorna a primeira posição livre no arquivo de vetor de bits desejado.">obter_posicao_livre</a> ();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_registro.html#ab5a44a5609c239f4c4060df70276a77a" title="Este método altera o status (livre ou ocupado) de um registro no arquivo desejado.">alterar_status_registro</a> (<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MVB_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_95e44d6a0f885eba4533be3f9541226d.html">MVB</a></li><li class="navelem"><b>mvb.h</b></li>
-    <li class="footer">Generated on Thu Feb 7 2013 14:08:29 for Projeto by
+    <li class="footer">Generated on Fri Feb 8 2013 00:22:20 for Projeto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

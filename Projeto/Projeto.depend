@@ -123,14 +123,14 @@
 1360255141 source:c:\users\mateusmendelson\desktop\projeto\main.cpp
 	"MIU\miu.h"
 
-1360255233 c:\users\mateusmendelson\desktop\projeto\miu\miu.h
+1360293275 c:\users\mateusmendelson\desktop\projeto\miu\miu.h
 	<string>
 	"..\MP\mp.h"
 
-1360255141 c:\users\mateusmendelson\desktop\projeto\mp\mp.h
+1360293721 c:\users\mateusmendelson\desktop\projeto\mp\mp.h
 	<string>
 
-1360256739 source:c:\users\mateusmendelson\desktop\projeto\mgd\mgd.cpp
+1360291605 source:c:\users\mateusmendelson\desktop\projeto\mgd\mgd.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -138,11 +138,11 @@
 	"mgd.h"
 	"..\MVB\mvb.h"
 
-1360255141 c:\users\mateusmendelson\desktop\projeto\mgd\mgd.h
+1360291782 c:\users\mateusmendelson\desktop\projeto\mgd\mgd.h
 	<fstream>
 	<string>
 
-1360256403 source:c:\users\mateusmendelson\desktop\projeto\miu\miu.cpp
+1360292809 source:c:\users\mateusmendelson\desktop\projeto\miu\miu.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -150,17 +150,19 @@
 	<cmath>
 	"miu.h"
 	"..\MP\mp.h"
+	<ctime>
+	<sstream>
 
-1360255141 source:c:\users\mateusmendelson\desktop\projeto\mp\mp.cpp
+1360291605 source:c:\users\mateusmendelson\desktop\projeto\mp\mp.cpp
 	<iostream>
 	<fstream>
 	<string>
 	"mp.h"
 	"..\MGD\mgd.h"
 
-1360173319 c:\users\mateusmendelson\desktop\projeto\mvb\mvb.h
+1360264942 c:\users\mateusmendelson\desktop\projeto\mvb\mvb.h
 
-1360173319 source:c:\users\mateusmendelson\desktop\projeto\mvb\mvb.cpp
+1360265367 source:c:\users\mateusmendelson\desktop\projeto\mvb\mvb.cpp
 	<iostream>
 	<fstream>
 	"mvb.h"

@@ -6,11 +6,106 @@
 #include <cmath>
 #include "miu.h"
 #include "..\MP\mp.h"
+#include <ctime>
+#include <sstream>
 
-#define SERVIDOR_MIU
-
-/* Classes */
 using namespace std;
+
+//Imprime a data e a hora
+void Data_Hora::ImprimeDataHora ()
+{
+    /*
+    * Informações úteis: http://www.cplusplus.com/reference/ctime/tm/
+    */
+
+    this->ConstroiDataHora ();
+
+    cout << " ------------------------------------" << endl;
+    cout << "|Data atual: " << this->data << "  |" <<endl;
+    cout << "|Horario atual: " << this->hora << "|" << endl;
+    cout << " ------------------------------------" << endl;
+}
+
+//Constroi a data e a hora
+void Data_Hora::ConstroiDataHora ()
+{
+    stringstream d;
+    stringstream a;
+    stringstream h;
+    stringstream m;
+    time_t t;
+    struct tm *tempo;
+
+    time (&t);
+    tempo = localtime (&t);
+
+    this->hrs = tempo->tm_hour;
+    this->minutos = tempo->tm_min;
+
+    this->dia = tempo->tm_mday;
+    this->mes = tempo->tm_mon + 1;
+    this->ano = tempo->tm_year + 1900;
+
+    h << this->hrs;
+    m << this->minutos;
+
+    d << this->dia;
+    a << this->ano;
+
+    this->data.assign (d.str () + " de " + this->ConverteMes () + " de " + a.str ());
+    this->hora.assign (h.str () + " horas e " + m.str () + " minutos");
+}
+
+//Coloca o mes textualmente
+string Data_Hora::ConverteMes ()
+{
+    string mes_em_texto;
+
+    switch (this->mes)
+    {
+    case 1:
+        mes_em_texto.assign ("Janeiro");
+        break;
+    case 2:
+        mes_em_texto.assign ("Fevereiro");
+        break;
+    case 3:
+        mes_em_texto.assign ("Marco");
+        break;
+    case 4:
+        mes_em_texto.assign ("Abril");
+        break;
+    case 5:
+        mes_em_texto.assign ("Maio");
+        break;
+    case 6:
+        mes_em_texto.assign ("Junho");
+        break;
+    case 7:
+        mes_em_texto.assign ("Julho");
+        break;
+    case 8:
+        mes_em_texto.assign ("Agosto");
+        break;
+    case 9:
+        mes_em_texto.assign ("Setembro");
+        break;
+    case 10:
+        mes_em_texto.assign ("Outubro");
+        break;
+    case 11:
+        mes_em_texto.assign ("Novembro");
+        break;
+    case 12:
+        mes_em_texto.assign ("Dezembro");
+        break;
+    default:
+        mes_em_texto.assign ("");
+        break;
+    }
+
+    return mes_em_texto;
+}
 
 //Master
 Login::Login (const string n, const string mat, const string s, const int nivel)
@@ -64,8 +159,9 @@ Master *Login::logar_m ()
             try
             {
                 bool existe;
+                User user;
 
-                existe = existe_user (this->nome, this->matricula, this->senha);
+                existe = user.existe_user (this->nome, this->matricula, this->senha);
 
                 if (existe)
                 {
@@ -101,8 +197,9 @@ Professor *Login::logar_p ()
             try
             {
                 bool existe;
+                User user;
 
-                existe = existe_user (this->nome, this->matricula, this->senha, this->disciplina);
+                existe = user.existe_user (this->nome, this->matricula, this->senha, this->disciplina);
 
                 if (existe)
                 {
@@ -138,8 +235,9 @@ Aluno *Login::logar_a ()
             try
             {
                 bool existe;
+                User user;
 
-                existe = existe_user (this->nome, this->matricula, this->senha, this->turma);
+                existe = user.existe_user (this->nome, this->matricula, this->senha, this->turma);
 
                 if (existe)
                 {
@@ -179,11 +277,12 @@ string LoginDataException::getException ()
     return mensagem;
 }
 
+//Padroniza os dados para um usuario Master e um Aluno (Aluno nao precisa padronizar a variavel Turma)
 padronizar::padronizar (string& n, string& mat, string& s)
 {
     char n_suporte[] = "                    "; //20 espaços
-    char s_suporte[] = "          "; //10 espaços
     char mat_suporte[] = "         "; //9 espaços
+    char s_suporte[] = "          "; //10 espaços
     unsigned int i = 0;
 
     //Padronizando o nome
@@ -213,6 +312,7 @@ padronizar::padronizar (string& n, string& mat, string& s)
     mat = mat_suporte;
 }
 
+//Padroniza os dados para um Professor
 padronizar::padronizar (string& n, string& mat, string& s, string& disci)
 {
     char disci_suporte[] = "          "; //10 espaços
@@ -230,6 +330,7 @@ padronizar::padronizar (string& n, string& mat, string& s, string& disci)
     padronizar (n, mat, s);
 }
 
+//Padroniza os dados nome e matricula
 padronizar::padronizar (string& n, string& mat)
 {
     char n_suporte[] = "                    "; //20 espaços
@@ -254,6 +355,70 @@ padronizar::padronizar (string& n, string& mat)
     mat = mat_suporte;
 }
 
+//Menu inicial
+void Menu::menu_inicial ()
+{
+    system ("cls");
+
+    cout << "**************************************" << endl;
+    cout << "BEM-VINDO AO SISTEMA DE APOIO ESCOLAR!" << endl;
+    cout << "**************************************" << endl;
+
+    dh.ImprimeDataHora ();
+
+
+    cout << "Para comecar, voce deve fazer seu login. Escolha seu nivel de usuario: " << endl;
+
+    cout << "1) Master\n2) Professor\n3) Aluno\n4) Sair" << endl;
+
+    cout << "Opcao: ";
+
+}
+
+//Menu para Master
+void Menu::menu_master ()
+{
+    system ("cls");
+    dh.ImprimeDataHora ();
+    //Menu
+    cout << "\n\nMenu:" << endl;
+    cout << "1) Cadastrar Master" << endl;
+    cout << "2) Excluir Master" << endl;
+    cout << "3) Cadastrar Professor" << endl;
+    cout << "4) Excluir Professor" << endl;
+    cout << "5) Cadastrar Aluno" << endl;
+    cout << "6) Excluir Aluno" << endl;
+    cout << "7) Log out" << endl;
+    cout << "Opcao: ";
+}
+
+//Menu para Professor
+void Menu::menu_professor ()
+{
+    system ("cls");
+    dh.ImprimeDataHora ();
+    //Menu
+    cout << "\n\nMenu:" << endl;
+    cout << "1) Cadastrar Aluno" << endl;
+    cout << "2) Postar Nota de Aluno (em construcao)" << endl;
+    cout << "3) Excluir Aluno" << endl;
+    cout << "4) Log out" << endl;
+    cout << "Opcao: ";
+}
+
+//Menu para Aluno
+void Menu::menu_aluno ()
+{
+    system ("cls");
+    dh.ImprimeDataHora ();
+    //Menu
+    cout << "\n\nMenu:" << endl;
+    cout << "1) Ver Notas (em construcao)" << endl;
+    cout << "4) Log out" << endl;
+    cout << "Opcao: ";
+}
+
+//Interface com o usuario
 interface_usuario::interface_usuario ()
 {
     bool tentar_de_novo;
@@ -280,54 +445,16 @@ interface_usuario::interface_usuario ()
     string lixo;
 
     //Checa se é o primeiro acesso ao programa
-    checa_estado_sistema ();
-
-    /******** TESTES *********/
-/*
-    string s1 ("Ola meu amigo!");
-    cout << "s1: " << s1 << endl;
-
-    string s2 (&s1[0], &s1[5]);
-    cout << "s2: " << s2 << endl;
-
-    s1[3] = '9';
-
-    cout << "s1: " << s1 << endl;
-    cout << "s2: " << s2 << endl;
-
-
-
-
-
-    Aluno aluno ("Mateus Silva", 1242354, "minhasenha", 'A');
-    aluno.cadastrar ();
-
-    Professor prof ("Simone Brusci", 96784, "calc", "calculo");
-    prof.cadastrar ();
-
-    Master master ("Mateus Mendelson", 12345, "12345");
-    master.cadastrar ();*/
-
-    /******** /TESTES ********/
+    Checa_estado_sistema sistema;
 
     do
     {
-        system ("cls");
-
-        cout << "**************************************" << endl;
-        cout << "BEM-VINDO AO SISTEMA DE APOIO ESCOLAR!" << endl;
-        cout << "**************************************\n" << endl;
-
-        cout << "Para comecar, voce deve fazer seu login. Escolha seu nivel de usuario: " << endl;
-
-        controle = 1;
-
-        cout << "1) Master\n2) Professor\n3) Aluno\n4) Sair" << endl;
-
-        cout << "Opcao: ";
+        m.menu_inicial ();
 
         cin >> nivel;
         getchar ();
+
+        controle = 1;
 
         switch (nivel)
         {
@@ -339,7 +466,6 @@ interface_usuario::interface_usuario ()
                     do
                     {
                         system ("cls");
-
                         //Entrada dos dados de login
                         cout << "\n\nNome: ";
                         getline (cin, nome);
@@ -375,16 +501,7 @@ interface_usuario::interface_usuario ()
 
                     do
                     {
-                        //Menu
-                        cout << "\n\n\n\nMenu:" << endl;
-                        cout << "1) Cadastrar Master" << endl;
-                        cout << "2) Excluir Master" << endl;
-                        cout << "3) Cadastrar Professor" << endl;
-                        cout << "4) Excluir Professor" << endl;
-                        cout << "5) Cadastrar Aluno" << endl;
-                        cout << "6) Excluir Aluno" << endl;
-                        cout << "7) Log out" << endl;
-                        cout << "Opcao: ";
+                        m.menu_master ();
 
                         cin >> opcao;
 
@@ -431,7 +548,9 @@ interface_usuario::interface_usuario ()
 
                                 padronizar p (n_nome, n_matricula);
 
-                                resultado = solicitar_excluir_user (n_nome, n_matricula, 1);
+                                User user;
+
+                                resultado = user.solicitar_excluir_user (n_nome, n_matricula, 1);
 
                                 if (resultado)
                                 {
@@ -491,7 +610,9 @@ interface_usuario::interface_usuario ()
 
                                 padronizar p (n_nome, n_matricula);
 
-                                resultado = solicitar_excluir_user (n_nome, n_matricula, 2);
+                                User user;
+
+                                resultado = user.solicitar_excluir_user (n_nome, n_matricula, 2);
 
                                 if (resultado)
                                 {
@@ -553,7 +674,9 @@ interface_usuario::interface_usuario ()
 
                                 padronizar p (n_nome, n_matricula);
 
-                                resultado = solicitar_excluir_user (n_nome, n_matricula, 3);
+                                User user;
+
+                                resultado = user.solicitar_excluir_user (n_nome, n_matricula, 3);
 
                                 if (resultado)
                                 {
@@ -634,13 +757,7 @@ interface_usuario::interface_usuario ()
 
                     do
                     {
-                        //Menu
-                        cout << "\n\n\n\nMenu:" << endl;
-                        cout << "1) Cadastrar Aluno" << endl;
-                        cout << "2) Postar Nota de Aluno (em construcao)" << endl;
-                        cout << "3) Excluir Aluno" << endl;
-                        cout << "4) Log out" << endl;
-                        cout << "Opcao: ";
+                        m.menu_professor ();
 
                         cin >> opcao;
 
@@ -689,7 +806,9 @@ interface_usuario::interface_usuario ()
 
                                 padronizar p (n_nome, n_matricula);
 
-                                resultado = solicitar_excluir_user (n_nome, n_matricula, 3);
+                                User user;
+
+                                resultado = user.solicitar_excluir_user (n_nome, n_matricula, 3);
 
                                 if (resultado)
                                 {
@@ -769,11 +888,7 @@ interface_usuario::interface_usuario ()
 
                     do
                     {
-                        //Menu
-                        cout << "\n\n\n\nMenu:" << endl;
-                        cout << "1) Ver Notas (em construcao)" << endl;
-                        cout << "4) Log out" << endl;
-                        cout << "Opcao: ";
+                        m.menu_aluno ();
 
                         cin >> opcao;
 

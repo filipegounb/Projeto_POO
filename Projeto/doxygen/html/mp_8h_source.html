@@ -106,81 +106,78 @@ $(document).ready(function(){initNavTree('mp_8h.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include&lt;string&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* Classes */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_usuario.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> nome;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> matricula;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">string</span> senha;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> cadastrar ()=0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_master.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_master.html" title="Esta classe representa um usuario Master.">Master</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_master.html" title="Esta classe representa um usuario Master.">Master</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//~Master ();</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//Me apague:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="class_professor.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//~Professor ();</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//Me apague:</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">string</span> disciplina;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="class_aluno.html">   97</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//~Aluno();</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//Me apague:</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">char</span> turma; <span class="comment">//O sistema é implementado para apenas uma série, ou seja, especificaremos apenas a letra da turma</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">/* Funções */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#ifdef SERVIDOR_MP</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXTERNO extern</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;EXTERNO <span class="keywordtype">void</span> checa_estado_sistema ();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;EXTERNO <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Master.txt&quot;</span>);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;EXTERNO <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Professor.txt&quot;</span>);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;EXTERNO <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Aluno.txt&quot;</span>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;EXTERNO <span class="keywordtype">bool</span> solicitar_excluir_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MP_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_usuario.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> nome;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> matricula;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> senha;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> cadastrar ()=0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_master.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_master.html" title="Esta classe representa um usuario Master.">Master</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_master.html" title="Esta classe representa um usuario Master.">Master</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//Me apague:</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_professor.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//Me apague:</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">string</span> disciplina;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="class_aluno.html">   94</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> : <span class="keyword">public</span> <a class="code" href="class_usuario.html" title="Esta classe eh a classe base para as classes que representam usuários. É uma classe abstrata que exig...">Usuario</a></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> cadastrar ();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//Me apague:</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> esc ();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">char</span> turma; <span class="comment">//O sistema é implementado para apenas uma série, ou seja, especificaremos apenas a letra da turma</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="class_checa__estado__sistema.html">  127</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_checa__estado__sistema.html" title="Esta classe checa o estado do sistema (inicializado ou não inicializado).">Checa_estado_sistema</a></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="class_checa__estado__sistema.html" title="Esta classe checa o estado do sistema (inicializado ou não inicializado).">Checa_estado_sistema</a> ();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="class_user.html">  143</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_user.html" title="Esta classe checa a existencia de usuarios e solicita a exlusao de usuarios.">User</a></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Master.txt&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Professor.txt&quot;</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">bool</span> existe_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Aluno.txt&quot;</span>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">bool</span> solicitar_excluir_user (<span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;};</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MP_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9608f138d2f1042cdcca92dcefa47e96.html">MP</a></li><li class="navelem"><b>mp.h</b></li>
-    <li class="footer">Generated on Thu Feb 7 2013 14:08:29 for Projeto by
+    <li class="footer">Generated on Fri Feb 8 2013 00:22:20 for Projeto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

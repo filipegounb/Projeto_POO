@@ -4,44 +4,22 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa36f1ec521a127486975bb0a655f2412"><param name="Name" value="alterar_status_registro"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#ab5a44a5609c239f4c4060df70276a77a"><param name="Name" value="alterar_status_registro"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a3838977bc5826a5d8faaa047768c1802"><param name="Name" value="getPos"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a2470413f508f6f99f64498aa166e27fe"><param name="Name" value="getStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#ac0f763dfd447ae9d787136c5426ec29d"><param name="Name" value="incluir_registro"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a7e4f9c8f9139f63c11c243f357eedd0a"><param name="Name" value="obter_posicao_livre"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html"><param name="Name" value="Registro"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa36f1ec521a127486975bb0a655f2412"><param name="Name" value="mvb.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a31739939dc4ae522db691f6f362f9798"><param name="Name" value="mvb.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#ab5a44a5609c239f4c4060df70276a77a"><param name="Name" value="alterar_status_registro"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a3838977bc5826a5d8faaa047768c1802"><param name="Name" value="getPos"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a2470413f508f6f99f64498aa166e27fe"><param name="Name" value="getStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#ac0f763dfd447ae9d787136c5426ec29d"><param name="Name" value="incluir_registro"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a7e4f9c8f9139f63c11c243f357eedd0a"><param name="Name" value="obter_posicao_livre"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#a9430ed779c1e44d268b9f9d83431bf7a"><param name="Name" value="Registro"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#abb3c378083ce56224334bafc07eccba2"><param name="Name" value="setPos"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb"><param name="Name" value="EXTERNO"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#a66c54f5bc75857eb40c382066ee0dc55"><param name="Name" value="incluir_registro"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#a66c54f5bc75857eb40c382066ee0dc55"><param name="Name" value="mvb.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a0d320eaff331ca66e46ce682c24821c6"><param name="Name" value="mvb.h"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html"><param name="Name" value="mvb.cpp"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa36f1ec521a127486975bb0a655f2412"><param name="Name" value="alterar_status_registro"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#a66c54f5bc75857eb40c382066ee0dc55"><param name="Name" value="incluir_registro"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#ab78fcff4ed896b843ebace40ab47b233"><param name="Name" value="obter_posicao_livre"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa23f5dff07893fb77594997d664a1256"><param name="Name" value="obter_status"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#a296ac1a1ff5238d609a09b7c70d4735b"><param name="Name" value="SERVIDOR_MVB"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html"><param name="Name" value="mvb.h"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a31739939dc4ae522db691f6f362f9798"><param name="Name" value="alterar_status_registro"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a70559d9eb31c31d12ce2d195edf30dcb"><param name="Name" value="EXTERNO"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a0d320eaff331ca66e46ce682c24821c6"><param name="Name" value="incluir_registro"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a092975bff500fcd3c20279e78f3c0f91"><param name="Name" value="obter_posicao_livre"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#abf58406a62bee8bb700108cfe137ab13"><param name="Name" value="obter_status"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#ab78fcff4ed896b843ebace40ab47b233"><param name="Name" value="obter_posicao_livre"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#ab78fcff4ed896b843ebace40ab47b233"><param name="Name" value="mvb.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#a092975bff500fcd3c20279e78f3c0f91"><param name="Name" value="mvb.h"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa23f5dff07893fb77594997d664a1256"><param name="Name" value="obter_status"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#aa23f5dff07893fb77594997d664a1256"><param name="Name" value="mvb.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8h.html#abf58406a62bee8bb700108cfe137ab13"><param name="Name" value="mvb.h"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mvb_8cpp.html#a296ac1a1ff5238d609a09b7c70d4735b"><param name="Name" value="SERVIDOR_MVB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_registro.html#abb3c378083ce56224334bafc07eccba2"><param name="Name" value="setPos"></OBJECT>
 </UL>
 </BODY>
 </HTML>

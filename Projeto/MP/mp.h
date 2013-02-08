@@ -8,7 +8,6 @@
 
 #include<string>
 
-/* Classes */
 using namespace std;
 
 /**
@@ -41,7 +40,6 @@ public:
     *
     */
     Master (const string, const string, const string);
-    //~Master ();
 
     /**
     * \brief Este metodo chama o cadastro de usuario Master.
@@ -73,7 +71,6 @@ public:
     *
     */
     Professor (const string, const string, const string, const string);
-    //~Professor ();
 
     /**
     * \brief Este metodo chama o cadastro de Professor.
@@ -107,7 +104,6 @@ public:
     *
     */
     Aluno (const string, const string, const string, const char);
-    //~Aluno();
 
     /**
     * \brief Este metodo chama o cadastro de Aluno.
@@ -124,75 +120,82 @@ protected:
     char turma; //O sistema é implementado para apenas uma série, ou seja, especificaremos apenas a letra da turma
 };
 
-/* Funções */
-#ifdef SERVIDOR_MP
-#define EXTERNO
-#else
-#define EXTERNO extern
-#endif
-
 /**
-* \brief Esta funcao checa se já existe algum usuário Master cadastrado (estado minimo para o sistema)
-*
-* \param - Nao possui parametros de entrada
-*
-* \return - Nao possui valor de retorno
+* \brief Esta classe checa o estado do sistema (inicializado ou não inicializado).
 *
 */
-EXTERNO void checa_estado_sistema ();
+class Checa_estado_sistema
+{
+public:
+    /**
+    * \brief Este construtor checa se já existe algum usuário Master cadastrado (estado minimo para o sistema)
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    */
+    Checa_estado_sistema ();
+};
 
 /**
-* \brief Esta funcao solicita a checagem da existencia de um usuário Master com os dados recebidos.
-*
-* \param <nome> - Nome do usuario
-* \param <matricula> - Matricula do usuario
-* \param <senha> - Senha do usuario
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos usuarios Master cadastrados (por padrao, tem o valor "dados/Master.txt")
-*
-* \return - Retorna 'true' se o usuario existe; 'false', caso contrario
+* \brief Esta classe checa a existencia de usuarios e solicita a exlusao de usuarios.
 *
 */
-EXTERNO bool existe_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
+class User
+{
+public:
+    /**
+    * \brief Este metodo solicita a checagem da existencia de um usuário Master com os dados recebidos.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <senha> - Senha do usuario
+    * \param <*nome_arquivo> - Arquivo que armazena os dados dos usuarios Master cadastrados (por padrao, tem o valor "dados/Master.txt")
+    *
+    * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
+    *
+    */
+    bool existe_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
 
-/**
-* \brief Esta funcao solicita a checagem da existencia de um Professor com os dados recebidos.
-*
-* \param <nome> - Nome do usuario
-* \param <matricula> - Matricula do usuario
-* \param <senha> - Senha do usuario
-* \param <disci> - Disciplina ministrada pelo usuario
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos professores cadastrados (por padrao, tem o valor "dados/Professor.txt")
-*
-* \return - Retorna 'true' se o usuario existe; 'false', caso contrario
-*
-*/
-EXTERNO bool existe_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
+    /**
+    * \brief Este metodo solicita a checagem da existencia de um Professor com os dados recebidos.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <senha> - Senha do usuario
+    * \param <disci> - Disciplina ministrada pelo usuario
+    * \param <*nome_arquivo> - Arquivo que armazena os dados dos professores cadastrados (por padrao, tem o valor "dados/Professor.txt")
+    *
+    * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
+    *
+    */
+    bool existe_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
 
-/**
-* \brief Esta funcao solicita a checagem da existencia de um Aluno com os dados recebidos.
-*
-* \param <nome> - Nome do usuario
-* \param <matricula> - Matricula do usuario
-* \param <senha> - Senha do usuario
-* \param <t> - Turma do usuario
-* \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
-*
-* \return - Retorna 'true' se o usuario existe; 'false', caso contrario
-*
-*/
-EXTERNO bool existe_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
+    /**
+    * \brief Este metodo solicita a checagem da existencia de um Aluno com os dados recebidos.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <senha> - Senha do usuario
+    * \param <t> - Turma do usuario
+    * \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
+    *
+    * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
+    *
+    */
+    bool existe_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
 
-/**
-* \brief Esta funcao solicita a exclusao de um usuario.
-*
-* \param <nome> - Nome do usuario
-* \param <matricula> - Matricula do usuario
-* \param <nivel> - Nivel de acesso do usuario
-*
-* \retval <true> - Usuario excluido com sucesso
-* \retval <false> - O usuario solicitado nao foi encontrado
-*
-*/
-EXTERNO bool solicitar_excluir_user (const string, const string, const int);
+    /**
+    * \brief Este metodo solicita a exclusao de um usuario.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <nivel> - Nivel de acesso do usuario
+    *
+    * \retval <true> - Usuario excluido com sucesso
+    * \retval <false> - O usuario solicitado nao foi encontrado
+    *
+    */
+    bool solicitar_excluir_user (const string, const string, const int);
+};
 
 #endif	/* MP_H */

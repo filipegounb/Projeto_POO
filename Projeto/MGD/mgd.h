@@ -9,7 +9,6 @@
 #include <fstream>
 #include <string>
 
-/* Classes */
 using namespace std;
 
 /**
@@ -115,79 +114,90 @@ class Cadastrar
         Cadastrar (const string, const string, const string, const char);
 };
 
-
-
-/* Funções */
-#ifdef SERVIDOR_MP
-#define EXTERNO
-#else
-#define EXTERNO extern
-#endif
-
 /**
-* \brief Esta função checa os dados de um usuario Master.
-*
-* \param <nome> - Nome do usuário
-* \param <matricula> - Matricula do usuário
-* \param <senha> - Senha do usuário
-* \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Master.txt")
-*
-* \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
+* \brief Esta classe faz checagem da existencia (ou nao) de um usuario.
 *
 */
-EXTERNO bool checar_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
+class Checar_user
+{
+public:
+    /**
+    * \brief Este metodo checa os dados de um usuario Master.
+    *
+    * \param <nome> - Nome do usuário
+    * \param <matricula> - Matricula do usuário
+    * \param <senha> - Senha do usuário
+    * \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Master.txt")
+    *
+    * \retval <true> - O conjunto de dados confere
+    * \retval <false> - O conjunto de dados nao confere
+    *
+    */
+    bool checar_user (const string, const string, const string, const char *nome_arquivo = "dados/Master.txt");
+
+    /**
+    * \brief Este metodo checa os dados de um Professor.
+    *
+    * \param <nome> - Nome do usuário
+    * \param <matricula> - Matricula do usuário
+    * \param <senha> - Senha do usuário
+    * \param <disciplina> - Disciplina ministrada pelo usuario
+    * \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Professor.txt")
+    *
+    * \retval <true> - O conjunto de dados confere
+    * \retval <false> - O conjunto de dados nao confere
+    *
+    */
+    bool checar_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
+
+    /**
+    * \brief Este metodo checa os dados de um Aluno.
+    *
+    * \param <nome> - Nome do usuário
+    * \param <matricula> - Matricula do usuário
+    * \param <senha> - Senha do usuário
+    * \param <turma> - Turma do usuário
+    * \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Aluno.txt")
+    *
+    * \retval <true> - O conjunto de dados confere
+    * \retval <false> - O conjunto de dados nao confere
+    *
+    */
+    bool checar_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
+
+    /**
+    * \brief Este metodo checa a existencia de um usuario, com o objetivo de exclui-lo.
+    *
+    * \param <nome> - Nome do usuário
+    * \param <matricula> - Matricula do usuário
+    * \param <nivel> - Nivel do usuario que se deseja checar
+    *
+    * \retval <Valor_nao_nulo> - A posicao do registro do usuario no arquivo
+    * \retval <-1> - O usuario solicitado nao foi encontrado
+    *
+    */
+    long int checar_user (const string, const string, const int);
+};
 
 /**
-* \brief Esta função checa os dados de um Professor.
+* \brief Esta classe checa se um usuario existe e, se ele existir, o deleta.
 *
-* \param <nome> - Nome do usuário
-* \param <matricula> - Matricula do usuário
-* \param <senha> - Senha do usuário
-* \param <disciplina> - Disciplina ministrada pelo usuario
-* \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Professor.txt")
-*
-* \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
-*
-*/
-EXTERNO bool checar_user (const string, const string, const string, const string, const char *nome_arquivo = "dados/Professor.txt");
-
-/**
-* \brief Esta função checa os dados de um Aluno.
-*
-* \param <nome> - Nome do usuário
-* \param <matricula> - Matricula do usuário
-* \param <senha> - Senha do usuário
-* \param <turma> - Turma do usuário
-* \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Aluno.txt")
-*
-* \return - Retorna 'true' se o conjunto de dados confere; 'false', caso contrario
-*
-*/
-EXTERNO bool checar_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
-
-/**
-* \brief Esta função checa a existencia de um usuario, com o objetivo de exclui-lo.
-*
-* \param <nome> - Nome do usuário
-* \param <matricula> - Matricula do usuário
-* \param <nivel> - Nivel do usuario que se deseja checar
-*
-* \retval <Valor_nao_nulo> - A posicao do registro do usuario no arquivo
-* \retval <-1> - O usuario solicitado nao foi encontrado
-*
-*/
-EXTERNO long int checar_user (const string, const string, const int);
-
-/**
-* \brief Esta funcao solicita a checagem da existencia de um usuario e, se ele existir, o deleta.
-*
-* \param <nome> - Nome do usuario
-* \param <matricula> - Matricula do usuario
-* \param <nivel> - Nivel do usuario que se deseja checar
-*
-* \return - Retorna 'true' se o usuario foi deletado; 'false', caso contrario
-*
-*/
-EXTERNO bool excluir_user (const string, const string, const int);
+**/
+class Excluir_user
+{
+public:
+    /**
+    * \brief Este metodo solicita a checagem da existencia de um usuario e, se ele existir, o deleta.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <nivel> - Nivel do usuario que se deseja checar
+    *
+    * \retval <true> - O usuario foi deletado
+    * \retval <false> - O usuario nao foi encontrado / nao foi deletado
+    *
+    */
+    bool excluir_user (const string, const string, const int);
+};
 
 #endif	/* MGD_H */

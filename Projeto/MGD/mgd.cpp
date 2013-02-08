@@ -6,11 +6,9 @@
 #include "mgd.h"
 #include "..\MVB\mvb.h"
 
-#define SERVIDOR_MGD
-
-/* Classes */
 using namespace std;
 
+//Testa o sistema
 TestaSistema::TestaSistema ()
 {
     ifstream arquivo ("dados/Master.txt"); // ou: ifstream arquivo; arquivo.open ("dados/Master.txt");
@@ -190,9 +188,8 @@ Cadastrar::Cadastrar (const string nome, const string matricula, const string se
     }
 }
 
-/* Funções */
 //Checa os dados de um Master
-bool checar_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
+bool Checar_user::checar_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
 {
     char c;
     char *n_suporte = 0;
@@ -261,7 +258,7 @@ bool checar_user (const string nome, const string matricula, const string senha,
 }
 
 //Checa os dados de um Professor
-bool checar_user (const string nome, const string matricula, const string senha, const string disciplina, const char *nome_arquivo)
+bool Checar_user::checar_user (const string nome, const string matricula, const string senha, const string disciplina, const char *nome_arquivo)
 {
     char c;
     char *n_suporte = 0;
@@ -339,7 +336,7 @@ bool checar_user (const string nome, const string matricula, const string senha,
 }
 
 //Checa os dados de um Aluno
-bool checar_user (const string nome, const string matricula, const string senha, const char turma, const char *nome_arquivo)
+bool Checar_user::checar_user (const string nome, const string matricula, const string senha, const char turma, const char *nome_arquivo)
 {
     char c;
     char *n_suporte = 0;
@@ -413,7 +410,7 @@ bool checar_user (const string nome, const string matricula, const string senha,
 }
 
 //Busca a posicao do registro de um usuario
-long int checar_user (const string nome, const string matricula, const int nivel)
+long int Checar_user::checar_user (const string nome, const string matricula, const int nivel)
 {
 
     char lixo[22];
@@ -600,11 +597,12 @@ long int checar_user (const string nome, const string matricula, const int nivel
 }
 
 //Checa os dados de um usuario, com o objetivo de exclui-lo (ver funcaos 'soliciar_excluir_......')
-bool excluir_user (const string nome, const string matricula, const int nivel)
+bool Excluir_user::excluir_user (const string nome, const string matricula, const int nivel)
 {
     int posicao;
+    Checar_user user;
 
-    posicao = checar_user (nome, matricula, nivel);
+    posicao = user.checar_user (nome, matricula, nivel);
 
     if (posicao == -1)
     {

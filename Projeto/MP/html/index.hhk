@@ -6,7 +6,7 @@
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html"><param name="Name" value="Aluno"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a07235dd3f5c907e7079223dce59fddd1"><param name="Name" value="Aluno"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a4cf30cd5f85f8979251c7f60dc105d05"><param name="Name" value="Aluno"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a1993852f4884cf74463e732f48efb2eb"><param name="Name" value="cadastrar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#aa684b5ee05e317791ee1cbd214d9b538"><param name="Name" value="esc"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#ad5909c7a7393baa30440c7d3267df8de"><param name="Name" value="turma"></OBJECT>
@@ -18,10 +18,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#adcad4b61b63a742a3ad3a43ff337dc94"><param name="Name" value="Professor"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#aa8a42c4443a276724836ef85c270118e"><param name="Name" value="Usuario"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4a03a0d99ca661a976331a225a7e0e06"><param name="Name" value="checa_estado_sistema"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_checa__estado__sistema.html"><param name="Name" value="Checa_estado_sistema"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4a03a0d99ca661a976331a225a7e0e06"><param name="Name" value="mp.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad95996bfd10a6f70e7d9f1af6419c2f0"><param name="Name" value="mp.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_checa__estado__sistema.html#a661ffe145962a8c1a61ca44d1a1437cf"><param name="Name" value="Checa_estado_sistema"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#aec8691c6f46ee56b3ffdd243876f8df0"><param name="Name" value="disciplina"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#aa684b5ee05e317791ee1cbd214d9b538"><param name="Name" value="esc"></OBJECT>
@@ -30,53 +29,34 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#a5287db30567b84a8247ad58aca20661e"><param name="Name" value="Master"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a92980b4ba863d9bf191c808fbeb49177"><param name="Name" value="Professor"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4362706ea4aa7e1a17962163f58834ee"><param name="Name" value="existe_user"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4362706ea4aa7e1a17962163f58834ee"><param name="Name" value="mp.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad194812d3a4f68ae9e6231dfc3d667d7"><param name="Name" value="mp.h"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#a70559d9eb31c31d12ce2d195edf30dcb"><param name="Name" value="EXTERNO"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a8efbb5e95843dae92d511fb8a1ace89b"><param name="Name" value="existe_user"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html"><param name="Name" value="Master"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#aae44ecf67799bd64e1e632e49e9770ac"><param name="Name" value="cadastrar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#a5287db30567b84a8247ad58aca20661e"><param name="Name" value="esc"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#aec74051aee9e0599ccd9d8cb553d3fc6"><param name="Name" value="Master"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#ac6665709a986b6af6c6cf497725e597d"><param name="Name" value="Master"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#af863d549793c8f18e256ff178ceeb2ae"><param name="Name" value="matricula"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html"><param name="Name" value="mp.cpp"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4a03a0d99ca661a976331a225a7e0e06"><param name="Name" value="checa_estado_sistema"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a4362706ea4aa7e1a17962163f58834ee"><param name="Name" value="existe_user"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#ad459c32880550b7e94afcc1848aa3051"><param name="Name" value="SERVIDOR_MP"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a3ff5dab0ca41ea4fa685b28d83f35776"><param name="Name" value="solicitar_excluir_user"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html"><param name="Name" value="mp.h"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad95996bfd10a6f70e7d9f1af6419c2f0"><param name="Name" value="checa_estado_sistema"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad194812d3a4f68ae9e6231dfc3d667d7"><param name="Name" value="existe_user"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#a70559d9eb31c31d12ce2d195edf30dcb"><param name="Name" value="EXTERNO"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad66eb847618f36c05d3b5c77f50bf781"><param name="Name" value="solicitar_excluir_user"></OBJECT>
-  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a0bac535328b6bb59e5c3d83a05571675"><param name="Name" value="matricula"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50"><param name="Name" value="nome"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html"><param name="Name" value="Professor"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#adcad4b61b63a742a3ad3a43ff337dc94"><param name="Name" value="cadastrar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#aec8691c6f46ee56b3ffdd243876f8df0"><param name="Name" value="disciplina"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a92980b4ba863d9bf191c808fbeb49177"><param name="Name" value="esc"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a148d9287c96875c4833a522c826fd1e8"><param name="Name" value="Professor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#afa8691258db853304e67130571792365"><param name="Name" value="Professor"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44"><param name="Name" value="senha"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#ad459c32880550b7e94afcc1848aa3051"><param name="Name" value="SERVIDOR_MP"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a3ff5dab0ca41ea4fa685b28d83f35776"><param name="Name" value="solicitar_excluir_user"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8cpp.html#a3ff5dab0ca41ea4fa685b28d83f35776"><param name="Name" value="mp.cpp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mp_8h.html#ad66eb847618f36c05d3b5c77f50bf781"><param name="Name" value="mp.h"></OBJECT>
-  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a9a73fbe474586921e71a4cfe766ac4ba"><param name="Name" value="solicitar_excluir_user"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#ad5909c7a7393baa30440c7d3267df8de"><param name="Name" value="turma"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html"><param name="Name" value="User"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a8efbb5e95843dae92d511fb8a1ace89b"><param name="Name" value="existe_user"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a9a73fbe474586921e71a4cfe766ac4ba"><param name="Name" value="solicitar_excluir_user"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html"><param name="Name" value="Usuario"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#aa8a42c4443a276724836ef85c270118e"><param name="Name" value="cadastrar"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#af863d549793c8f18e256ff178ceeb2ae"><param name="Name" value="matricula"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a0bac535328b6bb59e5c3d83a05571675"><param name="Name" value="matricula"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50"><param name="Name" value="nome"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44"><param name="Name" value="senha"></OBJECT>
   </UL>

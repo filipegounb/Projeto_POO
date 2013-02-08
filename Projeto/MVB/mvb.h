@@ -9,12 +9,6 @@
 #ifndef MVB_H
 #define	MVB_H
 
-#ifdef SERVIDOR_MVB
-#define EXTERNO
-#else
-#define EXTERNO extern
-#endif
-
 /**
 * \brief Esta classe eh responsavel pelo gerenciamento dos espacos livres.
 *

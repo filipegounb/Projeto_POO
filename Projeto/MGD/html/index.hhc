@@ -16,9 +16,20 @@
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#aa452a4b66d54cd596fec7af48d8f4dd1"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a56e53c2dd2a6bcf6d5a09e580da668c4"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a6bd310cafda1528f0fa228e86c1ee62d"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#af51666993eade5176d05393766b381db"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a48c1b4b157583280a96a8a41100ef8f0"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a379df02b5a172a390b7a89ca371bdd32"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Checar_user"><param name="Local" value="class_checar__user.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#ac8b21d797a6c9c45a78bc95143638bb9"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a681dcdf631a6316752afe655055508a8"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a8de248b63e137dd9adc167b34eb8bc28"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a42d87afb6312de517befebf955aee5ab"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Excluir_user"><param name="Local" value="class_excluir__user.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="excluir_user"><param name="Local" value="class_excluir__user.html#a942621b9c7f197c95102b9d7e55ecdc1"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="InicializarSistema"><param name="Local" value="class_inicializar_sistema.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
@@ -40,16 +51,8 @@
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Lista de Arquivos"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="mgd.cpp"><param name="Local" value="mgd_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
-      <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="SERVIDOR_MGD"><param name="Local" value="mgd_8cpp.html#a57a6b447e532a9d9cea42f090d1ab43a"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8cpp.html#ac285f6f76dd98571f87bf2f581ca9d9d"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8cpp.html#a6a23fbdbd6a247691ab8aef72819c5b1"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8cpp.html#acab0aecdb7e470c58cbe05dc44aa537c"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8cpp.html#a4ccbfd97c39cd5d595576e254e36f697"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="excluir_user"><param name="Local" value="mgd_8cpp.html#a541dba15c526cb5be1397839af2a17b6"><param name="ImageNumber" value="11"></OBJECT>
-      </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="mgd.h"><param name="Local" value="mgd_8h.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="mgd.cpp"><param name="Local" value="mgd_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="mgd.h"><param name="Local" value="mgd_8h.html"><param name="ImageNumber" value="11"></OBJECT>
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="TestaSistema"><param name="Local" value="class_testa_sistema.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
@@ -66,23 +69,22 @@
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#aa452a4b66d54cd596fec7af48d8f4dd1"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a56e53c2dd2a6bcf6d5a09e580da668c4"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a6bd310cafda1528f0fa228e86c1ee62d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#af51666993eade5176d05393766b381db"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a48c1b4b157583280a96a8a41100ef8f0"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cadastrar"><param name="Local" value="class_cadastrar.html#a379df02b5a172a390b7a89ca371bdd32"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="EXTERNO"><param name="Local" value="mgd_8h.html#a70559d9eb31c31d12ce2d195edf30dcb"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8h.html#a6904171772929c9a030c63e1d2dbff70"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8h.html#a0d82a43d21fd70f7b2d0256796277692"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8h.html#a0b43abc795a65b9703cacdff9306b496"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="mgd_8h.html#a422dd18ced94faa40a1d5c8c1c79a11c"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="excluir_user"><param name="Local" value="mgd_8h.html#af5f77694ffde60ec3f93861d9d2ed54c"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Checar_user"><param name="Local" value="class_checar__user.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#ac8b21d797a6c9c45a78bc95143638bb9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a681dcdf631a6316752afe655055508a8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a8de248b63e137dd9adc167b34eb8bc28"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="checar_user"><param name="Local" value="class_checar__user.html#a42d87afb6312de517befebf955aee5ab"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Excluir_user"><param name="Local" value="class_excluir__user.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="excluir_user"><param name="Local" value="class_excluir__user.html#a942621b9c7f197c95102b9d7e55ecdc1"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
       </UL>
-    </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Arquivos Membros"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
-    <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="Todos"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="Funções"><param name="Local" value="globals_func.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="Definições e Macros"><param name="Local" value="globals_defs.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   </UL>
 </UL>

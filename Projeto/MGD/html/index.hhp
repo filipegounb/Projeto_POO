@@ -21,6 +21,10 @@ class_arquivo_existe.html
 class_arquivo_existe-members.html
 class_cadastrar.html
 class_cadastrar-members.html
+class_checar__user.html
+class_checar__user-members.html
+class_excluir__user.html
+class_excluir__user-members.html
 class_inicializar_sistema.html
 class_inicializar_sistema-members.html
 class_testa_sistema.html
@@ -32,9 +36,6 @@ classes.html
 functions.html
 functions_func.html
 files.html
-globals.html
-globals_func.html
-globals_defs.html
 tab_a.png
 tab_b.png
 tab_h.png

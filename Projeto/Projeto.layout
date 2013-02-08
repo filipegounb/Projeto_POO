@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="MP\mp.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2549" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="19" />
+			<Collapse line="26" />
+			<Collapse line="35" />
+			<Collapse line="42" />
+			<Collapse line="51" />
+			<Collapse line="57" />
+			<Collapse line="74" />
+			<Collapse line="82" />
+			<Collapse line="90" />
+			<Collapse line="98" />
+			<Collapse line="107" />
+			<Collapse line="114" />
+			<Collapse line="122" />
+		</Folding>
+	</File>
+	<File name="MIU\miu.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7328" topLine="36" />
+		</Cursor>
+		<Folding>
+			<Collapse line="18" />
+			<Collapse line="60" />
+			<Collapse line="139" />
+			<Collapse line="167" />
+			<Collapse line="223" />
+			<Collapse line="268" />
+		</Folding>
+	</File>
+	<File name="MGD\mgd.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="203" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="12" />
+			<Collapse line="23" />
+			<Collapse line="48" />
+			<Collapse line="60" />
+			<Collapse line="66" />
+			<Collapse line="104" />
+			<Collapse line="148" />
+			<Collapse line="192" />
+			<Collapse line="261" />
+			<Collapse line="339" />
+			<Collapse line="413" />
+			<Collapse line="600" />
+		</Folding>
+	</File>
+	<File name="MVB\mvb.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="16" />
+		</Folding>
+	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="207" topLine="0" />
@@ -8,107 +69,69 @@
 	</File>
 	<File name="MP\mp.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5379" topLine="93" />
+			<Cursor1 position="1653" topLine="35" />
 		</Cursor>
 		<Folding>
-			<Collapse line="18" />
-			<Collapse line="32" />
-			<Collapse line="63" />
-			<Collapse line="97" />
+			<Collapse line="17" />
+			<Collapse line="31" />
+			<Collapse line="61" />
+			<Collapse line="94" />
+			<Collapse line="127" />
+			<Collapse line="143" />
 		</Folding>
 	</File>
 	<File name="MVB\mvb.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4906" topLine="20" />
+			<Cursor1 position="87" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="12" />
-			<Collapse line="20" />
-			<Collapse line="28" />
-			<Collapse line="34" />
-			<Collapse line="40" />
-		</Folding>
-	</File>
-	<File name="MGD\mgd.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5836" topLine="98" />
-		</Cursor>
-		<Folding>
-			<Collapse line="19" />
-			<Collapse line="37" />
-			<Collapse line="53" />
-			<Collapse line="81" />
-		</Folding>
-	</File>
-	<File name="MVB\mvb.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1146" topLine="25" />
-		</Cursor>
-	</File>
-	<File name="MIU\miu.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1951" topLine="27" />
-		</Cursor>
-		<Folding>
-			<Collapse line="24" />
-			<Collapse line="103" />
-			<Collapse line="131" />
-			<Collapse line="187" />
-		</Folding>
-	</File>
-	<File name="MP\mp.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="420" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="14" />
-			<Collapse line="22" />
-			<Collapse line="29" />
-			<Collapse line="38" />
-			<Collapse line="45" />
-			<Collapse line="54" />
-			<Collapse line="60" />
-			<Collapse line="77" />
-			<Collapse line="83" />
-			<Collapse line="89" />
-			<Collapse line="95" />
-		</Folding>
-	</File>
-	<File name="MGD\mgd.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1824" topLine="24" />
-		</Cursor>
-		<Folding>
-			<Collapse line="14" />
+			<Collapse line="9" />
+			<Collapse line="17" />
 			<Collapse line="25" />
-			<Collapse line="50" />
-			<Collapse line="62" />
-			<Collapse line="68" />
-			<Collapse line="106" />
-			<Collapse line="150" />
-			<Collapse line="195" />
-			<Collapse line="264" />
-			<Collapse line="342" />
-			<Collapse line="416" />
-			<Collapse line="603" />
+			<Collapse line="31" />
+			<Collapse line="37" />
+			<Collapse line="121" />
+			<Collapse line="204" />
+			<Collapse line="309" />
 		</Folding>
 	</File>
-	<File name="MIU\miu.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+	<File name="MGD\mgd.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="11367" topLine="228" />
+			<Cursor1 position="5799" topLine="35" />
 		</Cursor>
 		<Folding>
-			<Collapse line="16" />
+			<Collapse line="18" />
+			<Collapse line="36" />
+			<Collapse line="52" />
+			<Collapse line="80" />
+			<Collapse line="121" />
+			<Collapse line="186" />
+		</Folding>
+	</File>
+	<File name="MIU\miu.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6761" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="15" />
 			<Collapse line="30" />
-			<Collapse line="45" />
 			<Collapse line="60" />
-			<Collapse line="97" />
-			<Collapse line="134" />
-			<Collapse line="171" />
-			<Collapse line="177" />
-			<Collapse line="182" />
-			<Collapse line="216" />
-			<Collapse line="233" />
+			<Collapse line="111" />
+			<Collapse line="125" />
+			<Collapse line="140" />
+			<Collapse line="155" />
+			<Collapse line="193" />
+			<Collapse line="231" />
+			<Collapse line="269" />
+			<Collapse line="275" />
+			<Collapse line="281" />
+			<Collapse line="316" />
+			<Collapse line="334" />
+			<Collapse line="359" />
+			<Collapse line="379" />
+			<Collapse line="396" />
+			<Collapse line="410" />
+			<Collapse line="422" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>

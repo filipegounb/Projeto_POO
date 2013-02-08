@@ -5,9 +5,6 @@
 #include "mp.h"
 #include "..\MGD\mgd.h"
 
-#define SERVIDOR_MP
-
-/* Classes */
 using namespace std;
 //Métodos para Master
 //Construtor
@@ -56,8 +53,8 @@ void Aluno::cadastrar ()
     Cadastrar usuario (nome, matricula, senha, turma);
 }
 
-/* Funções */
-void checa_estado_sistema ()
+//Checa o estado do sistema (inicializado ou não inicializado)
+Checa_estado_sistema::Checa_estado_sistema ()
 {
     ArquivoExiste arquivo ( (char *) &"dados/Master.txt");
 
@@ -74,29 +71,36 @@ void checa_estado_sistema ()
 }
 
 //Checa os dados de um usuario Master
-bool existe_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
+bool User::existe_user (const string nome, const string matricula, const string senha, const char *nome_arquivo)
 {
-    return checar_user (nome, matricula, senha, nome_arquivo);
+    Checar_user user;
+
+    return user.checar_user (nome, matricula, senha, nome_arquivo);
 }
 
 //Checa os dados digitados por um Professor
-bool existe_user (const string nome, const string matricula, const string senha, const string disci, const char *nome_arquivo)
+bool User::existe_user (const string nome, const string matricula, const string senha, const string disci, const char *nome_arquivo)
 {
-    return checar_user (nome, matricula, senha, disci, nome_arquivo);
+    Checar_user user;
+
+    return user.checar_user (nome, matricula, senha, disci, nome_arquivo);
 }
 
 //Checa os dados digitados por um Aluno
-bool existe_user (const string nome, const string matricula, const string senha, const char t, const char *nome_arquivo)
+bool User::existe_user (const string nome, const string matricula, const string senha, const char t, const char *nome_arquivo)
 {
-    return checar_user (nome, matricula, senha, t, nome_arquivo);
+    Checar_user user;
+
+    return user.checar_user (nome, matricula, senha, t, nome_arquivo);
 }
 
 //Checa se um usuario existe e o deleta
-bool solicitar_excluir_user (const string nome, const string matricula, const int nivel)
+bool User::solicitar_excluir_user (const string nome, const string matricula, const int nivel)
 {
     bool sucesso;
+    Excluir_user user;
 
-    return sucesso = excluir_user (nome, matricula, nivel);
+    return sucesso = user.excluir_user (nome, matricula, nivel);
 }
 
 //Imprimem os valores no objeto, somente para testes.

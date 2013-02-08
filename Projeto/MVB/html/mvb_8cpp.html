@@ -29,13 +29,13 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -44,9 +44,6 @@
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#define-members">Definições e Macros</a> &#124;
-<a href="#func-members">Funções</a>  </div>
   <div class="headertitle">
 <div class="title">Referência do Arquivo mvb.cpp</div>  </div>
 </div><!--header-->
@@ -56,212 +53,10 @@
 <code>#include &quot;<a class="el" href="mvb_8h_source.html">mvb.h</a>&quot;</code><br/>
 </div>
 <p><a href="mvb_8cpp_source.html">Vá para o código-fonte deste arquivo.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
-Definições e Macros</h2></td></tr>
-<tr class="memitem:a296ac1a1ff5238d609a09b7c70d4735b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mvb_8cpp.html#a296ac1a1ff5238d609a09b7c70d4735b">SERVIDOR_MVB</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
-Funções</h2></td></tr>
-<tr class="memitem:a66c54f5bc75857eb40c382066ee0dc55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mvb_8cpp.html#a66c54f5bc75857eb40c382066ee0dc55">incluir_registro</a> (int opcao)</td></tr>
-<tr class="memdesc:a66c54f5bc75857eb40c382066ee0dc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função inclui um registro no arquivo desejado de vetor de bits (a inclusão é feita no primeiro espaço livre encontrado).  <a href="#a66c54f5bc75857eb40c382066ee0dc55"></a><br/></td></tr>
-<tr class="memitem:ab78fcff4ed896b843ebace40ab47b233"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mvb_8cpp.html#ab78fcff4ed896b843ebace40ab47b233">obter_posicao_livre</a> (int opcao)</td></tr>
-<tr class="memdesc:ab78fcff4ed896b843ebace40ab47b233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função busca e retorna a primeira posição livre no arquivo de vetor de bits desejado.  <a href="#ab78fcff4ed896b843ebace40ab47b233"></a><br/></td></tr>
-<tr class="memitem:aa36f1ec521a127486975bb0a655f2412"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mvb_8cpp.html#aa36f1ec521a127486975bb0a655f2412">alterar_status_registro</a> (int opcao, long int posicao, int novo_status)</td></tr>
-<tr class="memdesc:aa36f1ec521a127486975bb0a655f2412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função altera o status (livre ou ocupado) de um registro no arquivo desejado.  <a href="#aa36f1ec521a127486975bb0a655f2412"></a><br/></td></tr>
-<tr class="memitem:aa23f5dff07893fb77594997d664a1256"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mvb_8cpp.html#aa23f5dff07893fb77594997d664a1256">obter_status</a> (int opcao, long int posicao)</td></tr>
-<tr class="memdesc:aa23f5dff07893fb77594997d664a1256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função checa o status (livre ou ocupado) de um registro no arquivo desejado.  <a href="#aa23f5dff07893fb77594997d664a1256"></a><br/></td></tr>
-</table>
-<hr/><h2>Definições e macros</h2>
-<a class="anchor" id="a296ac1a1ff5238d609a09b7c70d4735b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SERVIDOR_MVB</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definição na linha <a class="el" href="mvb_8cpp_source.html#l00014">14</a> do arquivo <a class="el" href="mvb_8cpp_source.html">mvb.cpp</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Funções</h2>
-<a class="anchor" id="aa36f1ec521a127486975bb0a655f2412"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int alterar_status_registro </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Esta função altera o status (livre ou ocupado) de um registro no arquivo desejado. </p>
-<dl class="params"><dt>Parâmetros:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">&lt;opcao&gt;</td><td>- Recebe o nivel do usuario ('1' para adicionar Master; '2', para Professor; '3', para Aluno) </td></tr>
-    <tr><td class="paramname">&lt;posicao&gt;</td><td>- Recebe o valor que indica a posição relativa do registro à ser alterado </td></tr>
-    <tr><td class="paramname">&lt;novo_status&gt;</td><td>- Recebe o valor do novo status do registro ('0', para livre; '1', para ocupado)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Valores Retornados:</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">&lt;0&gt;</td><td>- alteracao feita com sucesso </td></tr>
-    <tr><td class="paramname">&lt;-1&gt;</td><td>- indica que o novo valor que se quer atribuir ao registro é inválido (diferente de '0' e de '1') </td></tr>
-    <tr><td class="paramname">&lt;-2&gt;</td><td>- indica que o arquivo que se deseja alterar não existe </td></tr>
-    <tr><td class="paramname">&lt;-3&gt;</td><td>- indica que o registro que deve ser alterado não existe, ou seja, o tamanho do arquivo é menor do que a posição do registro que se quer alterar </td></tr>
-    <tr><td class="paramname">&lt;-4&gt;</td><td>- indica que o valor passado para o primeiro argumento é inválido </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definição na linha <a class="el" href="mvb_8cpp_source.html#l00184">184</a> do arquivo <a class="el" href="mvb_8cpp_source.html">mvb.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a66c54f5bc75857eb40c382066ee0dc55"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int incluir_registro </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Esta função inclui um registro no arquivo desejado de vetor de bits (a inclusão é feita no primeiro espaço livre encontrado). </p>
-<dl class="params"><dt>Parâmetros:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">&lt;opcao&gt;</td><td>- Recebe o nivel do usuario ('1' para adicionar Master; '2', para Professor; '3', para Aluno)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Valores Retornados:</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">&lt;Valor_nao_negativo&gt;</td><td>- a posicao em que o registro foi incluido </td></tr>
-    <tr><td class="paramname">&lt;-1&gt;</td><td>- indica que o registro foi inserido no final do arquivo ou que o arquivo não existia e agora foi criado e preenchido com o novo dado </td></tr>
-    <tr><td class="paramname">&lt;-2&gt;</td><td>- indica que o valor passado como parâmetro para a função é inválido </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definição na linha <a class="el" href="mvb_8cpp_source.html#l00021">21</a> do arquivo <a class="el" href="mvb_8cpp_source.html">mvb.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab78fcff4ed896b843ebace40ab47b233"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int obter_posicao_livre </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Esta função busca e retorna a primeira posição livre no arquivo de vetor de bits desejado. </p>
-<dl class="params"><dt>Parâmetros:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">&lt;opcao&gt;</td><td>- Recebe o nivel do usuario ('1' para adicionar Master; '2', para Professor; '3', para Aluno)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Valores Retornados:</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">&lt;Valor_nao_negativo&gt;</td><td>- a primeira posição livre do arquivo em questão </td></tr>
-    <tr><td class="paramname">&lt;-1&gt;</td><td>- indica que nao ha possicoes livres, ou seja, o novo registro deve ser inserido no final do arquivo </td></tr>
-    <tr><td class="paramname">&lt;-2&gt;</td><td>- tem-se o indicativo de que o arquivo de vetor de bits desejado ainda não existe </td></tr>
-    <tr><td class="paramname">&lt;-3&gt;</td><td>- houve erro no valor do argumento da função (o valor passado não é aceitável) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definição na linha <a class="el" href="mvb_8cpp_source.html#l00103">103</a> do arquivo <a class="el" href="mvb_8cpp_source.html">mvb.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa23f5dff07893fb77594997d664a1256"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int obter_status </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Esta função checa o status (livre ou ocupado) de um registro no arquivo desejado. </p>
-<dl class="params"><dt>Parâmetros:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">&lt;opcao&gt;</td><td>- Recebe o nivel do usuario ('1' para adicionar Master; '2', para Professor; '3', para Aluno) </td></tr>
-    <tr><td class="paramname">&lt;posicao&gt;</td><td>- Recebe a posição relativa do registro desejado (para ler o primeiro registro, use o indice 0)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Valores Retornados:</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">&lt;1&gt;</td><td>- registro ocupado </td></tr>
-    <tr><td class="paramname">&lt;0&gt;</td><td>- registro livre </td></tr>
-    <tr><td class="paramname">&lt;-1&gt;</td><td>- indica que o arquivo desejado ainda é inexistente </td></tr>
-    <tr><td class="paramname">&lt;-2&gt;</td><td>- indica que o registro que deve ser alterado nao existe, ou seja, o tamanho do arquivo eh menor do que a posicao do registro que se quer alterar </td></tr>
-    <tr><td class="paramname">&lt;-3&gt;</td><td>- indica que o valor passado para o primeiro argumento eh invalido </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definição na linha <a class="el" href="mvb_8cpp_source.html#l00289">289</a> do arquivo <a class="el" href="mvb_8cpp_source.html">mvb.cpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Terça, 22 de Janeiro de 2013 16:41:13 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 8 de Fevereiro de 2013 00:28:20 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
