@@ -9,7 +9,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a4cf30cd5f85f8979251c7f60dc105d05"><param name="Name" value="Aluno"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a1993852f4884cf74463e732f48efb2eb"><param name="Name" value="cadastrar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#aa684b5ee05e317791ee1cbd214d9b538"><param name="Name" value="esc"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#ad5909c7a7393baa30440c7d3267df8de"><param name="Name" value="turma"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a4e6b3cb66a06ac974c5e197c10a4f33c"><param name="Name" value="getMatricula"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a75ca576e335d4678e6777de92a218b99"><param name="Name" value="getNome"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a1993852f4884cf74463e732f48efb2eb"><param name="Name" value="cadastrar"></OBJECT>
   <UL>
@@ -22,7 +23,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_checa__estado__sistema.html#a661ffe145962a8c1a61ca44d1a1437cf"><param name="Name" value="Checa_estado_sistema"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#aec8691c6f46ee56b3ffdd243876f8df0"><param name="Name" value="disciplina"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#aa684b5ee05e317791ee1cbd214d9b538"><param name="Name" value="esc"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#aa684b5ee05e317791ee1cbd214d9b538"><param name="Name" value="Aluno"></OBJECT>
@@ -30,6 +30,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a92980b4ba863d9bf191c808fbeb49177"><param name="Name" value="Professor"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a8efbb5e95843dae92d511fb8a1ace89b"><param name="Name" value="existe_user"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a1aaff5fe33176bbeec52243d1ecca860"><param name="Name" value="getDisciplina"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a4e6b3cb66a06ac974c5e197c10a4f33c"><param name="Name" value="getMatricula"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#a75ca576e335d4678e6777de92a218b99"><param name="Name" value="getNome"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html#a6bb001908d9a0a1b12e24c85bc8779e6"><param name="Name" value="imprimir_notas"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html"><param name="Name" value="Master"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_master.html#aae44ecf67799bd64e1e632e49e9770ac"><param name="Name" value="cadastrar"></OBJECT>
@@ -38,16 +42,21 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a0bac535328b6bb59e5c3d83a05571675"><param name="Name" value="matricula"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50"><param name="Name" value="nome"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html"><param name="Name" value="Notas"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html#a6bb001908d9a0a1b12e24c85bc8779e6"><param name="Name" value="imprimir_notas"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html#a7f479dbc59c5da024f25d460cba949e7"><param name="Name" value="Notas"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html#ac3ae2756c8382451a2b3d55eee598a80"><param name="Name" value="~Notas"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html"><param name="Name" value="Professor"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#adcad4b61b63a742a3ad3a43ff337dc94"><param name="Name" value="cadastrar"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#aec8691c6f46ee56b3ffdd243876f8df0"><param name="Name" value="disciplina"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a92980b4ba863d9bf191c808fbeb49177"><param name="Name" value="esc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#a1aaff5fe33176bbeec52243d1ecca860"><param name="Name" value="getDisciplina"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_professor.html#afa8691258db853304e67130571792365"><param name="Name" value="Professor"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44"><param name="Name" value="senha"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a9a73fbe474586921e71a4cfe766ac4ba"><param name="Name" value="solicitar_excluir_user"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_aluno.html#ad5909c7a7393baa30440c7d3267df8de"><param name="Name" value="turma"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html"><param name="Name" value="User"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_user.html#a8efbb5e95843dae92d511fb8a1ace89b"><param name="Name" value="existe_user"></OBJECT>
@@ -60,6 +69,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50"><param name="Name" value="nome"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44"><param name="Name" value="senha"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_notas.html#ac3ae2756c8382451a2b3d55eee598a80"><param name="Name" value="~Notas"></OBJECT>
 </UL>
 </BODY>
 </HTML>

@@ -64,13 +64,15 @@ Métodos Públicos</h2></td></tr>
 <tr class="memdesc:a681dcdf631a6316752afe655055508a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um Professor.  <a href="#a681dcdf631a6316752afe655055508a8"></a><br/></td></tr>
 <tr class="memitem:a8de248b63e137dd9adc167b34eb8bc28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a8de248b63e137dd9adc167b34eb8bc28">checar_user</a> (const string, const string, const string, const char, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
 <tr class="memdesc:a8de248b63e137dd9adc167b34eb8bc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um Aluno.  <a href="#a8de248b63e137dd9adc167b34eb8bc28"></a><br/></td></tr>
+<tr class="memitem:a033b8f9710f57f411c868311cfc67cf3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a033b8f9710f57f411c868311cfc67cf3">checar_user</a> (const string, const string, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
+<tr class="memdesc:a033b8f9710f57f411c868311cfc67cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um Aluno (nao precisa da senha do aluno nem da turma) - eh direcionado a postagem de notas.  <a href="#a033b8f9710f57f411c868311cfc67cf3"></a><br/></td></tr>
 <tr class="memitem:a42d87afb6312de517befebf955aee5ab"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a42d87afb6312de517befebf955aee5ab">checar_user</a> (const string, const string, const int)</td></tr>
 <tr class="memdesc:a42d87afb6312de517befebf955aee5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa a existencia de um usuario, com o objetivo de exclui-lo.  <a href="#a42d87afb6312de517befebf955aee5ab"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Descrição Detalhada</h2>
 <div class="textblock"><p>Esta classe faz checagem da existencia (ou nao) de um usuario. </p>
 
-<p>Definição na linha <a class="el" href="mgd_8h_source.html#l00121">121</a> do arquivo <a class="el" href="mgd_8h_source.html">mgd.h</a>.</p>
+<p>Definição na linha <a class="el" href="mgd_8h_source.html#l00122">122</a> do arquivo <a class="el" href="mgd_8h_source.html">mgd.h</a>.</p>
 </div><hr/><h2>Métodos</h2>
 <a class="anchor" id="ac8b21d797a6c9c45a78bc95143638bb9"></a>
 <div class="memitem">
@@ -260,6 +262,57 @@ Métodos Públicos</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a033b8f9710f57f411c868311cfc67cf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Checar_user::checar_user </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>matricula</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nome_arquivo</em> = <code>&quot;dados/Aluno.txt&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este metodo checa os dados de um Aluno (nao precisa da senha do aluno nem da turma) - eh direcionado a postagem de notas. </p>
+<dl class="params"><dt>Parâmetros:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;nome&gt;</td><td>- Nome do usuário </td></tr>
+    <tr><td class="paramname">&lt;matricula&gt;</td><td>- Matricula do usuário </td></tr>
+    <tr><td class="paramname">&lt;*nome_arquivo&gt;</td><td>- Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Aluno.txt")</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados:</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&lt;true&gt;</td><td>- O conjunto de dados confere </td></tr>
+    <tr><td class="paramname">&lt;false&gt;</td><td>- O conjunto de dados nao confere </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00413">413</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a42d87afb6312de517befebf955aee5ab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +360,7 @@ Métodos Públicos</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00413">413</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00482">482</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +371,7 @@ Métodos Públicos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 8 de Fevereiro de 2013 00:25:37 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 11 de Fevereiro de 2013 19:28:56 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

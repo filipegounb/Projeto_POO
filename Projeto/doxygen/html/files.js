@@ -6,7 +6,9 @@ var files =
       [ "ArquivoExiste", "class_arquivo_existe.html", "class_arquivo_existe" ],
       [ "Cadastrar", "class_cadastrar.html", "class_cadastrar" ],
       [ "Checar_user", "class_checar__user.html", "class_checar__user" ],
-      [ "Excluir_user", "class_excluir__user.html", "class_excluir__user" ]
+      [ "Excluir_user", "class_excluir__user.html", "class_excluir__user" ],
+      [ "Nota", "class_nota.html", "class_nota" ],
+      [ "Recupera_Notas", "class_recupera___notas.html", "class_recupera___notas" ]
     ] ],
     [ "miu.h", "miu_8h.html", [
       [ "Data_Hora", "class_data___hora.html", "class_data___hora" ],
@@ -22,7 +24,8 @@ var files =
       [ "Professor", "class_professor.html", "class_professor" ],
       [ "Aluno", "class_aluno.html", "class_aluno" ],
       [ "Checa_estado_sistema", "class_checa__estado__sistema.html", "class_checa__estado__sistema" ],
-      [ "User", "class_user.html", "class_user" ]
+      [ "User", "class_user.html", "class_user" ],
+      [ "Notas", "class_notas.html", "class_notas" ]
     ] ],
     [ "mvb.h", "mvb_8h.html", [
       [ "Registro", "class_registro.html", "class_registro" ]

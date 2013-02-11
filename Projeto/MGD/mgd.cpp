@@ -409,6 +409,75 @@ bool Checar_user::checar_user (const string nome, const string matricula, const 
     }
 }
 
+//Checa os dados de um Aluno (nao precisa da senha do aluno nem da turma)
+bool Checar_user::checar_user (const string nome, const string matricula, const char *nome_arquivo)
+{
+    char *n_suporte = 0;
+    char *mat_suporte = 0;
+    char lixo[11];
+    int status; //Indica se o registro ainda esta disponivel ou se ja foi deletado (checa o arquivo de vetor de bits)
+    long int posicao = 0;
+    FILE *arquivo = fopen (nome_arquivo, "r");
+
+    //O arquivo falhou
+    if ( arquivo == 0)
+    {
+        return false;
+    }
+    //O arquivo abriu
+    else
+    {
+        n_suporte = (char *) malloc (21*sizeof (char));
+        mat_suporte = (char *) malloc (10*sizeof (char));
+
+        n_suporte[20] = '\0';
+        mat_suporte[9] = '\0';
+
+        do
+        {
+            //Lendo o nome
+            fscanf (arquivo, "%20c", n_suporte);
+            fscanf (arquivo, "%c", &lixo[0]);
+
+            string n (n_suporte);
+
+            //Lendo a matrícula
+            fscanf (arquivo, "%9c", mat_suporte);
+            fscanf (arquivo, "%c", &lixo[0]);
+
+            string mat (mat_suporte);
+
+            //Pulando a senha
+            fscanf (arquivo, "%11c", lixo);
+
+            //Pulando a turma
+            fscanf (arquivo, "%c", &lixo[0]);
+
+            //Verificando o status do registro
+            Registro registro (3);
+            registro.setPos (posicao);
+            status = registro.getStatus ();
+
+            if (n == nome && mat == matricula && status == 1)
+            {
+                return true;
+
+                cout << "Nome: " << nome << " Matricula: " << matricula;
+            }
+
+            if (!feof (arquivo))
+            {
+                fscanf (arquivo, "%c", &lixo[0]); // '+'
+            }
+
+            posicao++;
+        }
+        while ( !feof (arquivo) );
+
+        return false;
+    }
+}
+
 //Busca a posicao do registro de um usuario
 long int Checar_user::checar_user (const string nome, const string matricula, const int nivel)
 {
@@ -617,4 +686,201 @@ bool Excluir_user::excluir_user (const string nome, const string matricula, cons
 
         return true;
     }
+}
+
+//Seta as notas para uma disciplina
+void Nota::setNota (const string disci, const float n1, const float n2, const float n3, const float n4)
+{
+    this->disciplina = disci;
+    this->N1 = n1;
+    this->N2 = n2;
+    this->N3 = n3;
+    this->N4 = n4;
+}
+
+//Retorna a disciplina
+string Nota::getDisciplina ()
+{
+    return this->disciplina;
+}
+
+//Retorna a primeira nota
+float Nota::getN1 ()
+{
+    return this->N1;
+}
+
+//Retorna a segunda nota
+float Nota::getN2 ()
+{
+    return this->N2;
+}
+
+//Retorna a terceira nota
+float Nota::getN3 ()
+{
+    return this->N3;
+}
+
+//Retorna a quarta nota
+float Nota::getN4 ()
+{
+    return this->N4;
+}
+
+//Destrutor de 'Recupera_Notas'
+Recupera_Notas::~Recupera_Notas ()
+{
+    int i;
+    int tam = conjunto_notas->size ();
+
+    for (i = 0; i < tam; i++)
+    {
+        conjunto_notas->pop_back ();
+    }
+
+    free (conjunto_notas);
+}
+
+//Le e retorna o conjunto de notas de um certo aluno
+int Recupera_Notas::obter_conjunto_notas (const string& matricula, const string& disciplina_professor)
+{
+    string disciplina;
+    float N1;
+    float N2;
+    float N3;
+    float N4;
+
+    this->conjunto_notas = new vector<Nota> ();
+
+    FILE *arquivo = fopen ("dados/Notas.txt", "r");
+
+    if (arquivo == 0)
+    {
+        return 0;
+    }
+
+    Nota *nota = new Nota ();
+
+    char lixo;
+    char mat[10];
+    char disci[11];
+
+    mat[9] = '\0';
+    disci[10] = '\0';
+
+    //Nao eh necessario se preocupar com a disciplina
+    if (disciplina_professor == " ")
+    {
+        do
+        {
+            fscanf (arquivo, "%9c", mat);
+
+            //Le as notas
+            if (mat == matricula)
+            {
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%10c", disci);
+                disciplina.assign (disci);
+
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N1);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N2);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N3);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N4);
+
+                //Seta o objeto 'nota'
+                nota->setNota (disciplina, N1, N2, N3, N4);
+
+                //Insere a nota no conjunto de notas
+                this->conjunto_notas->push_back (*nota);
+            }
+            //Avançamos até o próximo registro
+            else
+            {
+                do
+                {
+                    fscanf (arquivo, "%c", &lixo);
+                }
+                while (lixo != '+' && !feof (arquivo));
+            }
+
+            if ( !feof (arquivo)) fscanf (arquivo, "%c", &lixo);
+        }
+        while ( !feof (arquivo) );
+    }
+    //Deve-se escolher a disciplina correta
+    else
+    {
+        do
+        {
+            fscanf (arquivo, "%9c", mat);
+
+            //Le as notas
+            if (mat == matricula)
+            {
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%10c", disci);
+                disciplina.assign (disci);
+
+
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N1);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N2);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N3);
+                fscanf (arquivo, "%c", &lixo); //Avançando '|'
+
+                fscanf (arquivo, "%f", &N4);
+
+                if (disciplina == disciplina_professor)
+                {
+                    //Seta o objeto 'nota'
+                    nota->setNota (disciplina, N1, N2, N3, N4);
+
+                    //Insere a nota no conjunto de notas
+                    this->conjunto_notas->push_back (*nota);
+                }
+            }
+            //Avançamos até o próximo registro
+            else
+            {
+                do
+                {
+                    fscanf (arquivo, "%c", &lixo);
+                }
+                while (lixo != '+' && !feof (arquivo));
+            }
+
+            if ( !feof (arquivo)) fscanf (arquivo, "%c", &lixo);
+        }
+        while ( !feof (arquivo) );
+    }
+
+    return this->conjunto_notas->size ();
+}
+
+//Retorna um objeto Nota
+Nota Recupera_Notas::obter_uma_nota ()
+{
+    Nota *nota = new Nota ();
+
+    nota->setNota (this->conjunto_notas->back ().getDisciplina (), this->conjunto_notas->back ().getN1 (), this->conjunto_notas->back ().getN2 (), this->conjunto_notas->back ().getN3 (), this->conjunto_notas->back ().getN4 ());
+
+    this->conjunto_notas->pop_back ();
+
+    return *nota;
 }

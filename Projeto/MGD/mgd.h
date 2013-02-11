@@ -8,6 +8,7 @@
 
 #include <fstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -166,6 +167,19 @@ public:
     bool checar_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
 
     /**
+    * \brief Este metodo checa os dados de um Aluno (nao precisa da senha do aluno nem da turma) - eh direcionado a postagem de notas.
+    *
+    * \param <nome> - Nome do usuário
+    * \param <matricula> - Matricula do usuário
+    * \param <*nome_arquivo> - Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Aluno.txt")
+    *
+    * \retval <true> - O conjunto de dados confere
+    * \retval <false> - O conjunto de dados nao confere
+    *
+    */
+    bool checar_user (const string, const string, const char *nome_arquivo = "dados/Aluno.txt");
+
+    /**
     * \brief Este metodo checa a existencia de um usuario, com o objetivo de exclui-lo.
     *
     * \param <nome> - Nome do usuário
@@ -198,6 +212,122 @@ public:
     *
     */
     bool excluir_user (const string, const string, const int);
+};
+
+/**
+* \brief Esta classe armazena os dados de uma nota.
+*
+*/
+class Nota
+{
+    string disciplina;
+    float N1;
+    float N2;
+    float N3;
+    float N4;
+public:
+    /**
+    * \brief Este metodo seta as notas.
+    *
+    * \param <disci> - Disciplina da nota
+    * \param <n1> - Primeira nota
+    * \param <n2> - Segunda nota
+    * \param <n3> - Terceira nota
+    * \param <n4> - Quarta nota
+    *
+    * \return - Nao possui valor de retorno
+    *
+    */
+    void setNota (const string, const float, const float, const float, const float);
+
+    /**
+    * \brief Este metodo retorna a disciplina da nota.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a disciplina
+    *
+    */
+    string getDisciplina ();
+
+    /**
+    * \brief Este metodo retorna a primeira nota.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a primeira nota
+    *
+    */
+    float getN1 ();
+
+    /**
+    * \brief Este metodo retorna a segunda nota.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a segunda nota
+    *
+    */
+    float getN2 ();
+
+    /**
+    * \brief Este metodo retorna a terceira nota.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a terceira nota
+    *
+    */
+    float getN3 ();
+
+    /**
+    * \brief Este metodo retorna a quarta nota.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a quarta nota
+    *
+    */
+    float getN4 ();
+};
+
+/**
+* \brief Esta classe armazena o conjunto de notas de um dado aluno.
+*
+*/
+class Recupera_Notas
+{
+    vector<Nota> *conjunto_notas;
+
+public:
+    /**
+    * \brief Este destrutor libera o ponteiro de vetor de notas.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    */
+    ~Recupera_Notas ();
+
+    /**
+    * \brief Este metodo le as notas de um aluno e as armazena em um vetor.
+    *
+    * \param <matricula> - Matricula do Aluno
+    * \param <disciplina_professor> - Disciplina ministrada pelo Professor
+    *
+    * \return - Retorna a quantidade de disciplinas que tem notas publicadas para esta matricula
+    *
+    */
+    int obter_conjunto_notas (const string&, const string&);
+
+    /**
+    * \brief Este metodo retorna uma nota, sendo que sempre retorna a nota mais recente ainda presente no vetor 'conjunto_notas'.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna uma nota (disciplina e as quatro notas desta disciplina, em um objeto do tipo Nota) na ordem inversa do vetor 'conjunto_notas'
+    *
+    */
+    Nota obter_uma_nota ();
 };
 
 #endif	/* MGD_H */

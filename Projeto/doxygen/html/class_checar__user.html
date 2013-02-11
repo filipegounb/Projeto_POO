@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a681dcdf631a6316752afe655055508a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um <a class="el" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a>.  <a href="#a681dcdf631a6316752afe655055508a8"></a><br/></td></tr>
 <tr class="memitem:a8de248b63e137dd9adc167b34eb8bc28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a8de248b63e137dd9adc167b34eb8bc28">checar_user</a> (const string, const string, const string, const char, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
 <tr class="memdesc:a8de248b63e137dd9adc167b34eb8bc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a>.  <a href="#a8de248b63e137dd9adc167b34eb8bc28"></a><br/></td></tr>
+<tr class="memitem:a033b8f9710f57f411c868311cfc67cf3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a033b8f9710f57f411c868311cfc67cf3">checar_user</a> (const string, const string, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
+<tr class="memdesc:a033b8f9710f57f411c868311cfc67cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa os dados de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> (nao precisa da senha do aluno nem da turma) - eh direcionado a postagem de notas.  <a href="#a033b8f9710f57f411c868311cfc67cf3"></a><br/></td></tr>
 <tr class="memitem:a42d87afb6312de517befebf955aee5ab"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_checar__user.html#a42d87afb6312de517befebf955aee5ab">checar_user</a> (const string, const string, const int)</td></tr>
 <tr class="memdesc:a42d87afb6312de517befebf955aee5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo checa a existencia de um usuario, com o objetivo de exclui-lo.  <a href="#a42d87afb6312de517befebf955aee5ab"></a><br/></td></tr>
 </table>
@@ -309,6 +311,55 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a033b8f9710f57f411c868311cfc67cf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Checar_user::checar_user </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>matricula</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nome_arquivo</em> = <code>&quot;dados/Aluno.txt&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este metodo checa os dados de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> (nao precisa da senha do aluno nem da turma) - eh direcionado a postagem de notas. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;nome&gt;</td><td>- Nome do usuário </td></tr>
+    <tr><td class="paramname">&lt;matricula&gt;</td><td>- Matricula do usuário </td></tr>
+    <tr><td class="paramname">&lt;*nome_arquivo&gt;</td><td>- Nome do arquivo que possui os dados (por padrao, tem o valor "dados/Aluno.txt")</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values:</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&lt;true&gt;</td><td>- O conjunto de dados confere </td></tr>
+    <tr><td class="paramname">&lt;false&gt;</td><td>- O conjunto de dados nao confere </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a42d87afb6312de517befebf955aee5ab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -368,7 +419,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_checar__user.html">Checar_user</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 00:22:20 for Projeto by
+    <li class="footer">Generated on Mon Feb 11 2013 19:27:48 for Projeto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

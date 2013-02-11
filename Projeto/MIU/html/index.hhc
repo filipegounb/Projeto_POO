@@ -36,6 +36,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_aluno"><param name="Local" value="class_menu.html#a64eab52cd4a95d2a345b146e252a3d7f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_inicial"><param name="Local" value="class_menu.html#a65d5451d12f54da70660f941f599b8cc"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_master"><param name="Local" value="class_menu.html#a860c6071fa41b46cc54eef379ef89dc4"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_postar_nota"><param name="Local" value="class_menu.html#aa3c5ef258043e1f0a18ec448f73c09b3"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_professor"><param name="Local" value="class_menu.html#a6e7c5107d99058c130a9d53651138ed6"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="padronizar"><param name="Local" value="classpadronizar.html"><param name="ImageNumber" value="1"></OBJECT>
@@ -88,6 +89,7 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_aluno"><param name="Local" value="class_menu.html#a64eab52cd4a95d2a345b146e252a3d7f"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_inicial"><param name="Local" value="class_menu.html#a65d5451d12f54da70660f941f599b8cc"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_master"><param name="Local" value="class_menu.html#a860c6071fa41b46cc54eef379ef89dc4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_postar_nota"><param name="Local" value="class_menu.html#aa3c5ef258043e1f0a18ec448f73c09b3"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="menu_professor"><param name="Local" value="class_menu.html#a6e7c5107d99058c130a9d53651138ed6"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="interface_usuario"><param name="Local" value="classinterface__usuario.html"><param name="ImageNumber" value="1"></OBJECT>

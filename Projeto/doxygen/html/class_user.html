@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a814798930de2429d8349797de01ece76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo solicita a checagem da existencia de um <a class="el" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a> com os dados recebidos.  <a href="#a814798930de2429d8349797de01ece76"></a><br/></td></tr>
 <tr class="memitem:ad064d47b5fd1265e976d54a7303851f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user.html#ad064d47b5fd1265e976d54a7303851f5">existe_user</a> (const string, const string, const string, const char, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
 <tr class="memdesc:ad064d47b5fd1265e976d54a7303851f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo solicita a checagem da existencia de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> com os dados recebidos.  <a href="#ad064d47b5fd1265e976d54a7303851f5"></a><br/></td></tr>
+<tr class="memitem:ad9ec805b843e8bf84b4fbe12e41eeeba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user.html#ad9ec805b843e8bf84b4fbe12e41eeeba">existe_user</a> (const string, const string, const char *nome_arquivo=&quot;dados/Aluno.txt&quot;)</td></tr>
+<tr class="memdesc:ad9ec805b843e8bf84b4fbe12e41eeeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo solicita a checagem da existencia de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> com os dados recebidos.  <a href="#ad9ec805b843e8bf84b4fbe12e41eeeba"></a><br/></td></tr>
 <tr class="memitem:a9a73fbe474586921e71a4cfe766ac4ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user.html#a9a73fbe474586921e71a4cfe766ac4ba">solicitar_excluir_user</a> (const string, const string, const int)</td></tr>
 <tr class="memdesc:a9a73fbe474586921e71a4cfe766ac4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo solicita a exclusao de um usuario.  <a href="#a9a73fbe474586921e71a4cfe766ac4ba"></a><br/></td></tr>
 </table>
@@ -260,7 +262,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
+          <td class="paramname"><em>turma</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -282,7 +284,50 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">&lt;nome&gt;</td><td>- Nome do usuario </td></tr>
     <tr><td class="paramname">&lt;matricula&gt;</td><td>- Matricula do usuario </td></tr>
     <tr><td class="paramname">&lt;senha&gt;</td><td>- Senha do usuario </td></tr>
-    <tr><td class="paramname">&lt;t&gt;</td><td>- Turma do usuario </td></tr>
+    <tr><td class="paramname">&lt;turma&gt;</td><td>- Turma do usuario </td></tr>
+    <tr><td class="paramname">&lt;*nome_arquivo&gt;</td><td>- Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>- Retorna 'true' se o usuario existe; 'false', caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad9ec805b843e8bf84b4fbe12e41eeeba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool User::existe_user </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>matricula</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nome_arquivo</em> = <code>&quot;dados/Aluno.txt&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este metodo solicita a checagem da existencia de um <a class="el" href="class_aluno.html" title="Esta classe representa um Aluno.">Aluno</a> com os dados recebidos. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;nome&gt;</td><td>- Nome do usuario </td></tr>
+    <tr><td class="paramname">&lt;matricula&gt;</td><td>- Matricula do usuario </td></tr>
     <tr><td class="paramname">&lt;*nome_arquivo&gt;</td><td>- Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")</td></tr>
   </table>
   </dd>
@@ -350,7 +395,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_user.html">User</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 00:22:20 for Projeto by
+    <li class="footer">Generated on Mon Feb 11 2013 19:27:48 for Projeto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

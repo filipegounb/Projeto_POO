@@ -46,7 +46,7 @@ public:
     *
     * \param <p> - Recebe a posicao do registro
     *
-    * \retval - Nao possui valor de retorno
+    * \return - Nao possui valor de retorno
     *
     */
     void setPos (long int);

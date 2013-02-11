@@ -6,7 +6,9 @@
 #ifndef MP_H
 #define	MP_H
 
-#include<string>
+#include <string>
+#include <vector>
+#include "..\MGD\mgd.h"
 
 using namespace std;
 
@@ -60,6 +62,7 @@ public:
 */
 class Professor : public Usuario
 {
+    string disciplina;
 public:
     /**
     * \brief Este construtor cria um objeto do tipo Professor com os dados ja padronizados.
@@ -81,10 +84,18 @@ public:
     *
     */
     void cadastrar ();
+
+    /**
+    * \brief Este metodo retorna a disciplina do Professor.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a disciplina do Professor
+    *
+    */
+    string getDisciplina ();
     //Me apague:
     void esc ();
-protected:
-    string disciplina;
 };
 
 /**
@@ -93,6 +104,7 @@ protected:
 */
 class Aluno : public Usuario
 {
+    char turma; //O sistema é implementado para apenas uma série, ou seja, especificaremos apenas a letra da turma
 public:
     /**
     * \brief Este construtor cria um objeto do tipo Aluno com os dados ja padronizados.
@@ -114,10 +126,28 @@ public:
     *
     */
     void cadastrar ();
+
+    /**
+    * \brief Este metodo retorna o nome do Aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna o nome do Aluno
+    *
+    */
+    string getNome ();
+
+    /**
+    * \brief Este metodo retorna a matricula do Aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna a matricula do Aluno
+    *
+    */
+    string getMatricula ();
     //Me apague:
     void esc ();
-protected:
-    char turma; //O sistema é implementado para apenas uma série, ou seja, especificaremos apenas a letra da turma
 };
 
 /**
@@ -176,13 +206,25 @@ public:
     * \param <nome> - Nome do usuario
     * \param <matricula> - Matricula do usuario
     * \param <senha> - Senha do usuario
-    * \param <t> - Turma do usuario
+    * \param <turma> - Turma do usuario
     * \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
     *
     * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
     *
     */
     bool existe_user (const string, const string, const string, const char, const char *nome_arquivo = "dados/Aluno.txt");
+
+    /**
+    * \brief Este metodo solicita a checagem da existencia de um Aluno com os dados recebidos.
+    *
+    * \param <nome> - Nome do usuario
+    * \param <matricula> - Matricula do usuario
+    * \param <*nome_arquivo> - Arquivo que armazena os dados dos alunos cadastrados (por padrao, tem o valor "dados/Aluno.txt")
+    *
+    * \return - Retorna 'true' se o usuario existe; 'false', caso contrario
+    *
+    */
+    bool existe_user (const string, const string,const char *nome_arquivo = "dados/Aluno.txt");
 
     /**
     * \brief Este metodo solicita a exclusao de um usuario.
@@ -196,6 +238,66 @@ public:
     *
     */
     bool solicitar_excluir_user (const string, const string, const int);
+};
+
+/**
+* \brief Esta classe armazena o conjunto de notas de um aluno.
+*
+*/
+class Notas
+{
+    string nome;
+    string matricula;
+    string disciplina;
+    vector<Nota> *conjunto_notas;
+
+    /**
+    * \brief Este metodo recupera todas as notas de um aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    *
+    */
+    void PreencherNotas ();
+
+public:
+    /**
+    * \brief Este construtor cria um objeto que armazena o Nome, a Matricula e todas as notas de um certo aluno.
+    *
+    * \param <n> - Nome do usuario
+    * \param <mat> - Matricula do usuario
+    *
+    */
+    Notas (const string, const string);
+
+    /**
+    * \brief Este construtor cria um objeto que armazena o Nome, a Matricula, a Disciplina e todas as notas de um certo aluno (eh acessado por Professor).
+    *
+    * \param <n> - Nome do usuario
+    * \param <mat> - Matricula do usuario
+    * \param <disci> - Disciplina do usuario
+    *
+    */
+    Notas (const string, const string, const string);
+
+    /**
+    * \brief Este destrutor libera o ponteiro de vetor de notas.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    */
+    ~Notas ();
+
+    /**
+    * \brief Este metodo imprime na tela as notas do aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    *
+    */
+    void imprimir_notas ();
 };
 
 #endif	/* MP_H */

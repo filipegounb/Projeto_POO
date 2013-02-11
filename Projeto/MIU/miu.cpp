@@ -235,9 +235,9 @@ Aluno *Login::logar_a ()
             try
             {
                 bool existe;
-                User user;
+                User *user = new User ();
 
-                existe = user.existe_user (this->nome, this->matricula, this->senha, this->turma);
+                existe = user->existe_user (this->nome, this->matricula, this->senha, this->turma);
 
                 if (existe)
                 {
@@ -257,7 +257,6 @@ Aluno *Login::logar_a ()
                 cout << "Ocorreu um erro desconhecido...\n\n";
                 return NULL;
             }
-
     }
     else
     {
@@ -388,7 +387,8 @@ void Menu::menu_master ()
     cout << "4) Excluir Professor" << endl;
     cout << "5) Cadastrar Aluno" << endl;
     cout << "6) Excluir Aluno" << endl;
-    cout << "7) Log out" << endl;
+    cout << "7) Postar Notas" << endl;
+    cout << "8) Log out" << endl;
     cout << "Opcao: ";
 }
 
@@ -413,8 +413,8 @@ void Menu::menu_aluno ()
     dh.ImprimeDataHora ();
     //Menu
     cout << "\n\nMenu:" << endl;
-    cout << "1) Ver Notas (em construcao)" << endl;
-    cout << "4) Log out" << endl;
+    cout << "1) Ver Notas" << endl;
+    cout << "2) Log out" << endl;
     cout << "Opcao: ";
 }
 
@@ -444,6 +444,8 @@ interface_usuario::interface_usuario ()
 
     string lixo;
 
+    Data_Hora dh;
+
     //Checa se é o primeiro acesso ao programa
     Checa_estado_sistema sistema;
 
@@ -463,6 +465,7 @@ interface_usuario::interface_usuario ()
                 //Criacao e efetivação (ou não) do login
                 try
                 {
+                    Master *user = NULL;
                     do
                     {
                         system ("cls");
@@ -480,7 +483,7 @@ interface_usuario::interface_usuario ()
 
                         Login login (nome, matricula, senha, nivel);
 
-                        Master *user = login.logar_m ();
+                        user = login.logar_m ();
 
                         if (user == 0)
                         {
@@ -664,7 +667,7 @@ interface_usuario::interface_usuario ()
                             {
                                 getline (cin, lixo);
 
-                                //Para excluir um usuario, serao necessario apenas nome e matricula
+                                //Para excluir um usuario, serao necessarios apenas nome e matricula
                                 cout << "\n\n\n\n";
                                 cout << "Nome: ";
                                 getline (cin, n_nome);
@@ -693,6 +696,66 @@ interface_usuario::interface_usuario ()
 
                             menu = true;
                         }
+                        else if (opcao == 7)
+                        {
+                            bool resultado;
+
+                            do
+                            {
+                                getline (cin, lixo);
+                                system ("cls");
+
+                                dh.ImprimeDataHora ();
+
+                                cout << "\n\nNome do Aluno: ";
+                                getline (cin, n_nome);
+
+                                cout << "Matricula: ";
+                                getline (cin, n_matricula);
+
+                                padronizar p (n_nome, n_matricula);
+
+                                User user;
+
+                                resultado = user.existe_user(n_nome, n_matricula);
+
+                                //Aluno não encontrado
+                                if ( !resultado )
+                                {
+                                    cout << "Aluno nao encontrado! Pressione 'enter' para tentar novamente." << endl;
+                                    getchar ();
+                                }
+                            }
+                            while ( !resultado );
+
+                            system ("cls");
+                            dh.ImprimeDataHora ();
+
+                            Notas notas (n_nome, n_matricula);
+
+                            notas.imprimir_notas ();
+
+                            cout << "Pressione qualquer tecla para continuar" << endl;
+                            getchar ();
+
+                            ////////////////////////
+
+                            controle = 0;
+
+                            menu = true;
+
+                            /////////////////////
+
+
+                            ///////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+                        }
                         //Log out
                         else
                         {
@@ -715,6 +778,7 @@ interface_usuario::interface_usuario ()
                 //Criacao e efetivação (ou não) do login
                 try
                 {
+                    Professor *user = NULL;
                     do
                     {
                         system ("cls");
@@ -736,7 +800,7 @@ interface_usuario::interface_usuario ()
 
                         Login login (nome, matricula, senha, disciplina, nivel);
 
-                        Professor *user = login.logar_p ();
+                        user = login.logar_p ();
 
                         if (user == 0)
                         {
@@ -785,6 +849,54 @@ interface_usuario::interface_usuario ()
                             novo_aluno.cadastrar ();
 
                             cout << "Aluno Cadastrado com Sucesso!" << endl;
+
+                            menu = true;
+                        }
+                        else if (opcao == 2)
+                        {
+                            bool resultado;
+
+                            do
+                            {
+                                getline (cin, lixo);
+                                system ("cls");
+
+                                dh.ImprimeDataHora ();
+
+                                cout << "\n\nNome do Aluno: ";
+                                getline (cin, n_nome);
+
+                                cout << "Matricula: ";
+                                getline (cin, n_matricula);
+
+                                padronizar p (n_nome, n_matricula);
+
+                                User user;
+
+                                resultado = user.existe_user(n_nome, n_matricula);
+
+                                //Aluno não encontrado
+                                if ( !resultado )
+                                {
+                                    cout << "Aluno nao encontrado! Pressione 'enter' para tentar novamente." << endl;
+                                    getchar ();
+                                }
+                            }
+                            while ( !resultado );
+
+                            system ("cls");
+                            dh.ImprimeDataHora ();
+
+                            Notas notas (n_nome, n_matricula, user->getDisciplina ());
+
+                            notas.imprimir_notas ();
+
+                            cout << "Pressione qualquer tecla para continuar" << endl;
+                            getchar ();
+
+                            ////////////////////////
+
+                            controle = 0;
 
                             menu = true;
                         }
@@ -845,6 +957,7 @@ interface_usuario::interface_usuario ()
             case 3:
                 try
                 {
+                    Aluno *user = NULL;
                     do
                     {
                         system ("cls");
@@ -867,7 +980,7 @@ interface_usuario::interface_usuario ()
 
                         Login login (nome, matricula, senha, turma, nivel);
 
-                        Aluno *user = login.logar_a ();
+                        user = login.logar_a ();
 
                         if (user == 0)
                         {
@@ -894,7 +1007,19 @@ interface_usuario::interface_usuario ()
 
                         if (opcao == 1)
                         {
-                            //////////
+                            getline (cin, lixo);
+                            system ("cls");
+                            dh.ImprimeDataHora ();
+
+                            Notas notas ( user->getNome (), user->getMatricula () );
+
+                            notas.imprimir_notas ();
+
+                            cout << "Pressione qualquer tecla para continuar" << endl;
+                            getchar ();
+
+                            controle = 0;
+
                             menu = true;
                         }
                         //Log out

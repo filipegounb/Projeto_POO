@@ -230,6 +230,7 @@ public:
     * \param - Nao possui parametros de entrada
     *
     * \return - Nao possui valor de retorno
+    *
     */
     void menu_inicial ();
 
@@ -259,6 +260,16 @@ public:
     * \return - Nao possui valor de retorno
     */
     void menu_aluno ();
+
+    /**
+    * \brief Este metodo imprime o menu para postar notas para Aluno.
+    *
+    * \param - Nao possui parametros de entrada
+    *
+    * \return - Nao possui valor de retorno
+    *
+    */
+    void menu_postar_nota ();
 };
 
 /**
