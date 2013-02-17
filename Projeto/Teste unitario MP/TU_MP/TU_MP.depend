@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1279804268 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1279804268 c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1361135812 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\main.cpp
+	<iostream>
+	"mp.h"
+	"CuTest.h"
+
+1361135812 c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mp.h
+	<string>
+	<vector>
+	"mgd.h"
+
+1361127737 c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mgd.h
+	<fstream>
+	<string>
+	<vector>
+
+1361126908 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mgd.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"mgd.h"
+	"mvb.h"
+
+1361024664 c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mvb.h
+
+1361135825 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mp.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"mp.h"
+	"mgd.h"
+	<vector>
+	<stdlib.h>
+
+1360982761 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mp\tu_mp\mvb.cpp
+	<iostream>
+	<fstream>
+	"mvb.h"
+

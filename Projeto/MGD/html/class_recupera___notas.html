@@ -60,8 +60,8 @@
 Métodos Públicos</h2></td></tr>
 <tr class="memitem:aba4d85b7cce19d1aec7995594ab4c726"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726">~Recupera_Notas</a> ()</td></tr>
 <tr class="memdesc:aba4d85b7cce19d1aec7995594ab4c726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este destrutor libera o ponteiro de vetor de notas.  <a href="#aba4d85b7cce19d1aec7995594ab4c726"></a><br/></td></tr>
-<tr class="memitem:aaf0faa6db32827c65b1994e1cf656ec0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_recupera___notas.html#aaf0faa6db32827c65b1994e1cf656ec0">obter_conjunto_notas</a> (const string &amp;, const string &amp;)</td></tr>
-<tr class="memdesc:aaf0faa6db32827c65b1994e1cf656ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo le as notas de um aluno e as armazena em um vetor.  <a href="#aaf0faa6db32827c65b1994e1cf656ec0"></a><br/></td></tr>
+<tr class="memitem:a8a6ad9a0221c7cbf1c5b70abc3d5d106"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_recupera___notas.html#a8a6ad9a0221c7cbf1c5b70abc3d5d106">obter_conjunto_notas</a> (const string &amp;, const string &amp;, const char *nome_arquivo=&quot;dados/Notas.txt&quot;)</td></tr>
+<tr class="memdesc:a8a6ad9a0221c7cbf1c5b70abc3d5d106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo le as notas de um aluno e as armazena em um vetor.  <a href="#a8a6ad9a0221c7cbf1c5b70abc3d5d106"></a><br/></td></tr>
 <tr class="memitem:ad4f7e8f9a9749c575282aa12c8cdefda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_nota.html">Nota</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda">obter_uma_nota</a> ()</td></tr>
 <tr class="memdesc:ad4f7e8f9a9749c575282aa12c8cdefda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo retorna uma nota, sendo que sempre retorna a nota mais recente ainda presente no vetor 'conjunto_notas'.  <a href="#ad4f7e8f9a9749c575282aa12c8cdefda"></a><br/></td></tr>
 </table>
@@ -91,12 +91,12 @@ Métodos Públicos</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00732">732</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00731">731</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Métodos</h2>
-<a class="anchor" id="aaf0faa6db32827c65b1994e1cf656ec0"></a>
+<a class="anchor" id="a8a6ad9a0221c7cbf1c5b70abc3d5d106"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -110,7 +110,13 @@ Métodos Públicos</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>disciplina_professor</em>&#160;</td>
+          <td class="paramname"><em>disciplina_professor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nome_arquivo</em> = <code>&quot;dados/Notas.txt&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -124,13 +130,14 @@ Métodos Públicos</h2></td></tr>
 <dl class="params"><dt>Parâmetros:</dt><dd>
   <table class="params">
     <tr><td class="paramname">&lt;matricula&gt;</td><td>- Matricula do Aluno </td></tr>
-    <tr><td class="paramname">&lt;disciplina_professor&gt;</td><td>- Disciplina ministrada pelo Professor</td></tr>
+    <tr><td class="paramname">&lt;disciplina_professor&gt;</td><td>- Disciplina ministrada pelo Professor (para desativar o filtro de busca com disciplina, deve-se entrar com o valor " " - espaco - nestes campo) </td></tr>
+    <tr><td class="paramname">&lt;*nome_arquivo&gt;</td><td>- Nome do arquivo que possui as notas (por padrao, tem o valor "dados/Notas.txt")</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Retorna a quantidade de disciplinas que tem notas publicadas para esta matricula </dd></dl>
 
-<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00746">746</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00745">745</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
 
 </div>
 </div>
@@ -156,7 +163,7 @@ Métodos Públicos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Retorna uma nota (disciplina e as quatro notas desta disciplina, em um objeto do tipo <a class="el" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a>) na ordem inversa do vetor 'conjunto_notas' </dd></dl>
 
-<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00877">877</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="mgd_8cpp_source.html#l00876">876</a> do arquivo <a class="el" href="mgd_8cpp_source.html">mgd.cpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +174,7 @@ Métodos Públicos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 11 de Fevereiro de 2013 19:28:56 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 17 de Fevereiro de 2013 16:42:25 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

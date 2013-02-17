@@ -91,7 +91,7 @@ public:
     * \retval <Valor_nao_negativo> - a primeira posição livre do arquivo em questão
     * \retval <-1> - indica que nao ha possicoes livres, ou seja, o novo registro deve ser inserido no final do arquivo
     * \retval <-2> - tem-se o indicativo de que o arquivo de vetor de bits desejado ainda não existe
-    * \retval <-3> -  houve erro no valor do argumento da função (o valor passado não é aceitável)
+    * \retval <-3> -  houve erro no valor do nivel do usuario (valor invalido)
     *
     */
     int obter_posicao_livre ();
@@ -105,7 +105,7 @@ public:
     * \retval <-1> - indica que o novo valor que se quer atribuir ao registro é inválido (diferente de '0' e de '1')
     * \retval <-2> - indica que o arquivo que se deseja alterar não existe
     * \retval <-3> - indica que o registro que deve ser alterado não existe, ou seja, o tamanho do arquivo é menor do que a posição do registro que se quer alterar
-    * \retval <-4> - indica que o valor passado para o primeiro argumento é inválido
+    * \retval <-4> - indica que o nivel de usuario eh invalido
     *
     */
     int alterar_status_registro (int);

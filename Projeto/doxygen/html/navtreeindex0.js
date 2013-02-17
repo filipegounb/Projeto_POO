@@ -66,7 +66,7 @@ var NAVTREEINDEX0 =
 "class_professor.html#adcad4b61b63a742a3ad3a43ff337dc94":[1,0,16,1],
 "class_professor.html#afa8691258db853304e67130571792365":[1,0,16,0],
 "class_recupera___notas.html":[1,0,17],
-"class_recupera___notas.html#aaf0faa6db32827c65b1994e1cf656ec0":[1,0,17,1],
+"class_recupera___notas.html#a8a6ad9a0221c7cbf1c5b70abc3d5d106":[1,0,17,1],
 "class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726":[1,0,17,0],
 "class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda":[1,0,17,2],
 "class_registro.html":[1,0,18],

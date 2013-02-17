@@ -1,4 +1,25 @@
-C:/Users/MateusMendelson/Desktop/Projeto/MVB/mvb.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+Warning: The selected output language "portuguese" has not been updated
+since release 1.8.0.  As a result some sentences may appear in English.
+
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:6: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:9: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:12: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:16: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:23: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:27: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:32: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:36: warning: Invalid or missing section label
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:52: warning: Invalid or missing section label
 C:/Users/MateusMendelson/Desktop/Projeto/MGD/mgd.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MVB/mvb.h:2: warning: found more than one \mainpage comment block! Skipping this block.
 C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:2: warning: found more than one \mainpage comment block! Skipping this block.
 C:/Users/MateusMendelson/Desktop/Projeto/MP/mp.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:5: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:8: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:11: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:15: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:22: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:26: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:31: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:35: warning: found paragraph command outside of subsubsection context!
+C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:51: warning: found paragraph command outside of subsubsection context!

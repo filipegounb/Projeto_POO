@@ -3,16 +3,16 @@ var NAVTREE =
   [ "Projeto", "index.html", [
     [ "Projeto de Programação Orientada a Objetos", "index.html", null ],
     [ "Classes", null, [
-      [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Index", "classes.html", "classes" ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+      [ "Lista de componentes", "annotated.html", "annotated" ],
+      [ "Índice dos componentes", "classes.html", "classes" ],
+      [ "Hierarquia de classes", "hierarchy.html", "hierarchy" ],
+      [ "Componentes membro", "functions.html", [
+        [ "Tudo", "functions.html", null ],
+        [ "Funções", "functions_func.html", null ]
       ] ]
     ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ]
+    [ "Ficheiros", null, [
+      [ "Lista de ficheiros", "files.html", "files" ]
     ] ]
   ] ]
 ];

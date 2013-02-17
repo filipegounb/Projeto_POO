@@ -6,14 +6,22 @@ Obs. 1: Na primeira execução do programa, é automaticamente cadastrado um usuári
 - Matricula: 123456789
 - Senha: 12345
 
-Obs.2 : O projeto foi feito na IDE CodeBlocks versão 12.11 no Windows 8.
+Obs.2: O projeto foi feito na IDE CodeBlocks versão 12.11 no Windows 8.
 
 Obs. 3: O projeto é enviado com alguns usuários já cadastrados. Para testar o sistema em seu estado inicial, apague
-todos os arquivos da pasta 'dados'.
+todos os arquivos da pasta 'dados' (recomendo que não delete o arquivo "Notas.txt" - ver Obs. 7).
 
 Obs. 4: A documentação de cada módulo encontra-se em sua respectiva pasta. Uma documentação completa está no diretório "doxygen".
 
 Obs. 5: O código foi feito com o uso de system ("cls"), que limpa a tela. Se houver problemas na compilação, tente excluir todos os comandos
 system ("cls") e compile novamente.
+
+Obs. 6: Para executar os códigos direto do arquivo executável, faça: copie o arquivo executável de maneira q ele esteja no mesmo diretório do
+arquivo do projeto. Ex.: para rodar o teste de unidade do mgd, copie o executável da pasta Projeto\Teste unitario MGD\TU_MGD\bin\Debug para a pasta Projeto\Teste unitario MGD\TU_MGD
+Isso faz com q a hierarquia das pastas funcione corretamente na execução.
+
+Obs. 7: A função de envio de notas ainda não está disponível. Temos apenas a visualização de notas. Para testar, insira notas diretamente no arquivo "dados\Notas.txt".
+
+Obs. 8: O arquivo da análise do código está no diretório "Análise de Código" e deve ser aberto com o inFusion.
 
 Até agora, temos as seguintes funcionalidades: Cadastro, login, exclusão de usuários, reuso de espaço livre, mostrador de data e hora

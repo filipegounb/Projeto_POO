@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1279804268 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1279804268 c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1361129079 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\main.cpp
+	<iostream>
+	"mgd.h"
+	"CuTest.h"
+
+1361127737 c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\mgd.h
+	<fstream>
+	<string>
+	<vector>
+
+1361126908 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\mgd.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"mgd.h"
+	"mvb.h"
+
+1361024664 c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\mvb.h
+
+1360982761 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mgd\tu_mgd\mvb.cpp
+	<iostream>
+	<fstream>
+	"mvb.h"
+

@@ -682,7 +682,6 @@ bool Excluir_user::excluir_user (const string nome, const string matricula, cons
         Registro registro (nivel);
         registro.setPos ((long int) posicao);
         registro.alterar_status_registro (0);
-        //alterar_status_registro (nivel, (long int) posicao, 0);
 
         return true;
     }
@@ -743,7 +742,7 @@ Recupera_Notas::~Recupera_Notas ()
 }
 
 //Le e retorna o conjunto de notas de um certo aluno
-int Recupera_Notas::obter_conjunto_notas (const string& matricula, const string& disciplina_professor)
+int Recupera_Notas::obter_conjunto_notas (const string& matricula, const string& disciplina_professor, const char *nome_arquivo)
 {
     string disciplina;
     float N1;
@@ -753,7 +752,7 @@ int Recupera_Notas::obter_conjunto_notas (const string& matricula, const string&
 
     this->conjunto_notas = new vector<Nota> ();
 
-    FILE *arquivo = fopen ("dados/Notas.txt", "r");
+    FILE *arquivo = fopen (nome_arquivo, "r");
 
     if (arquivo == 0)
     {

@@ -732,212 +732,211 @@
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        Registro registro (nivel);</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        registro.setPos ((<span class="keywordtype">long</span> <span class="keywordtype">int</span>) posicao);</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        registro.alterar_status_registro (0);</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="comment">//alterar_status_registro (nivel, (long int) posicao, 0);</span></div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    }</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;}</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="comment">//Seta as notas para uma disciplina</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno"><a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571">  692</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">Nota::setNota</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> disci, <span class="keyword">const</span> <span class="keywordtype">float</span> n1, <span class="keyword">const</span> <span class="keywordtype">float</span> n2, <span class="keyword">const</span> <span class="keywordtype">float</span> n3, <span class="keyword">const</span> <span class="keywordtype">float</span> n4)</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;{</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    this-&gt;disciplina = disci;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    this-&gt;N1 = n1;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    this-&gt;N2 = n2;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    this-&gt;N3 = n3;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    this-&gt;N4 = n4;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;}</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="comment">//Retorna a disciplina</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno"><a class="code" href="class_nota.html#ad55c6feda0c6031e17b5ec6f60e835d3">  702</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_nota.html#ad55c6feda0c6031e17b5ec6f60e835d3" title="Este metodo retorna a disciplina da nota.">Nota::getDisciplina</a> ()</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;{</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keywordflow">return</span> this-&gt;disciplina;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;}</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="comment">//Retorna a primeira nota</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno"><a class="code" href="class_nota.html#acbbb8238cb19fc3f44311b5a11d7dd72">  708</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#acbbb8238cb19fc3f44311b5a11d7dd72" title="Este metodo retorna a primeira nota.">Nota::getN1</a> ()</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;{</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keywordflow">return</span> this-&gt;N1;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;}</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="comment">//Retorna a segunda nota</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno"><a class="code" href="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da">  714</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da" title="Este metodo retorna a segunda nota.">Nota::getN2</a> ()</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;{</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">return</span> this-&gt;N2;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;}</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="comment">//Retorna a terceira nota</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno"><a class="code" href="class_nota.html#abbd79dcaf36804921955b77877b2e5b0">  720</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#abbd79dcaf36804921955b77877b2e5b0" title="Este metodo retorna a terceira nota.">Nota::getN3</a> ()</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;{</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">return</span> this-&gt;N3;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;}</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">//Retorna a quarta nota</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno"><a class="code" href="class_nota.html#ad3be44b204c59882fc96ba3078d23888">  726</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#ad3be44b204c59882fc96ba3078d23888" title="Este metodo retorna a quarta nota.">Nota::getN4</a> ()</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;{</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keywordflow">return</span> this-&gt;N4;</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;}</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">//Destrutor de &#39;Recupera_Notas&#39;</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726">  732</a></span>&#160;<a class="code" href="class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726" title="Este destrutor libera o ponteiro de vetor de notas.">Recupera_Notas::~Recupera_Notas</a> ()</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;{</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">int</span> tam = conjunto_notas-&gt;size ();</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; tam; i++)</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    {</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        conjunto_notas-&gt;pop_back ();</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    }</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    free (conjunto_notas);</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;}</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment">//Le e retorna o conjunto de notas de um certo aluno</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#aaf0faa6db32827c65b1994e1cf656ec0">  746</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_recupera___notas.html#aaf0faa6db32827c65b1994e1cf656ec0" title="Este metodo le as notas de um aluno e as armazena em um vetor.">Recupera_Notas::obter_conjunto_notas</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; matricula, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; disciplina_professor)</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;{</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">string</span> disciplina;</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keywordtype">float</span> N1;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordtype">float</span> N2;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordtype">float</span> N3;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordtype">float</span> N4;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    this-&gt;conjunto_notas = <span class="keyword">new</span> vector&lt;Nota&gt; ();</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    FILE *arquivo = fopen (<span class="stringliteral">&quot;dados/Notas.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    <span class="keywordflow">if</span> (arquivo == 0)</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    {</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    }</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> *nota = <span class="keyword">new</span> <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> ();</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    <span class="keywordtype">char</span> lixo;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordtype">char</span> mat[10];</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    <span class="keywordtype">char</span> disci[11];</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    mat[9] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    disci[10] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="comment">//Nao eh necessario se preocupar com a disciplina</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">if</span> (disciplina_professor == <span class="stringliteral">&quot; &quot;</span>)</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    {</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        {</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            fscanf (arquivo, <span class="stringliteral">&quot;%9c&quot;</span>, mat);</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            <span class="comment">//Le as notas</span></div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            <span class="keywordflow">if</span> (mat == matricula)</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;            {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%10c&quot;</span>, disci);</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                disciplina.assign (disci);</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N1);</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N2);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N3);</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N4);</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                <span class="comment">//Seta o objeto &#39;nota&#39;</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (disciplina, N1, N2, N3, N4);</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                <span class="comment">//Insere a nota no conjunto de notas</span></div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                this-&gt;conjunto_notas-&gt;push_back (*nota);</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            }</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;            <span class="comment">//Avançamos até o próximo registro</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            {</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                {</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                    fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                }</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                <span class="keywordflow">while</span> (lixo != <span class="charliteral">&#39;+&#39;</span> &amp;&amp; !feof (arquivo));</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;            }</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            <span class="keywordflow">if</span> ( !feof (arquivo)) fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        }</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="keywordflow">while</span> ( !feof (arquivo) );</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    }</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="comment">//Deve-se escolher a disciplina correta</span></div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    {</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        {</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            fscanf (arquivo, <span class="stringliteral">&quot;%9c&quot;</span>, mat);</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            <span class="comment">//Le as notas</span></div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            <span class="keywordflow">if</span> (mat == matricula)</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            {</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%10c&quot;</span>, disci);</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                disciplina.assign (disci);</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    }</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;}</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="comment">//Seta as notas para uma disciplina</span></div>
+<div class="line"><a name="l00691"></a><span class="lineno"><a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571">  691</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">Nota::setNota</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> disci, <span class="keyword">const</span> <span class="keywordtype">float</span> n1, <span class="keyword">const</span> <span class="keywordtype">float</span> n2, <span class="keyword">const</span> <span class="keywordtype">float</span> n3, <span class="keyword">const</span> <span class="keywordtype">float</span> n4)</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;{</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    this-&gt;disciplina = disci;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    this-&gt;N1 = n1;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    this-&gt;N2 = n2;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    this-&gt;N3 = n3;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    this-&gt;N4 = n4;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;}</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="comment">//Retorna a disciplina</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno"><a class="code" href="class_nota.html#ad55c6feda0c6031e17b5ec6f60e835d3">  701</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_nota.html#ad55c6feda0c6031e17b5ec6f60e835d3" title="Este metodo retorna a disciplina da nota.">Nota::getDisciplina</a> ()</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;{</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">return</span> this-&gt;disciplina;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;}</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="comment">//Retorna a primeira nota</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="code" href="class_nota.html#acbbb8238cb19fc3f44311b5a11d7dd72">  707</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#acbbb8238cb19fc3f44311b5a11d7dd72" title="Este metodo retorna a primeira nota.">Nota::getN1</a> ()</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;{</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keywordflow">return</span> this-&gt;N1;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;}</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="comment">//Retorna a segunda nota</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno"><a class="code" href="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da">  713</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da" title="Este metodo retorna a segunda nota.">Nota::getN2</a> ()</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;{</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keywordflow">return</span> this-&gt;N2;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="comment">//Retorna a terceira nota</span></div>
+<div class="line"><a name="l00719"></a><span class="lineno"><a class="code" href="class_nota.html#abbd79dcaf36804921955b77877b2e5b0">  719</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#abbd79dcaf36804921955b77877b2e5b0" title="Este metodo retorna a terceira nota.">Nota::getN3</a> ()</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;{</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="keywordflow">return</span> this-&gt;N3;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;}</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">//Retorna a quarta nota</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno"><a class="code" href="class_nota.html#ad3be44b204c59882fc96ba3078d23888">  725</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="class_nota.html#ad3be44b204c59882fc96ba3078d23888" title="Este metodo retorna a quarta nota.">Nota::getN4</a> ()</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;{</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    <span class="keywordflow">return</span> this-&gt;N4;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;}</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">//Destrutor de &#39;Recupera_Notas&#39;</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726">  731</a></span>&#160;<a class="code" href="class_recupera___notas.html#aba4d85b7cce19d1aec7995594ab4c726" title="Este destrutor libera o ponteiro de vetor de notas.">Recupera_Notas::~Recupera_Notas</a> ()</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;{</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordtype">int</span> tam = conjunto_notas-&gt;size ();</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; tam; i++)</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    {</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        conjunto_notas-&gt;pop_back ();</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    }</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    free (conjunto_notas);</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">//Le e retorna o conjunto de notas de um certo aluno</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#a8a6ad9a0221c7cbf1c5b70abc3d5d106">  745</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_recupera___notas.html#a8a6ad9a0221c7cbf1c5b70abc3d5d106" title="Este metodo le as notas de um aluno e as armazena em um vetor.">Recupera_Notas::obter_conjunto_notas</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; matricula, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; disciplina_professor, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo)</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;{</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordtype">string</span> disciplina;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">float</span> N1;</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keywordtype">float</span> N2;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordtype">float</span> N3;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordtype">float</span> N4;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    this-&gt;conjunto_notas = <span class="keyword">new</span> vector&lt;Nota&gt; ();</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    FILE *arquivo = fopen (nome_arquivo, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <span class="keywordflow">if</span> (arquivo == 0)</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    {</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> *nota = <span class="keyword">new</span> <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> ();</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keywordtype">char</span> lixo;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    <span class="keywordtype">char</span> mat[10];</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordtype">char</span> disci[11];</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    mat[9] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    disci[10] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="comment">//Nao eh necessario se preocupar com a disciplina</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordflow">if</span> (disciplina_professor == <span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    {</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        {</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            fscanf (arquivo, <span class="stringliteral">&quot;%9c&quot;</span>, mat);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            <span class="comment">//Le as notas</span></div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            <span class="keywordflow">if</span> (mat == matricula)</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            {</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%10c&quot;</span>, disci);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                disciplina.assign (disci);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N1);</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N2);</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N3);</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N4);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                <span class="comment">//Seta o objeto &#39;nota&#39;</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (disciplina, N1, N2, N3, N4);</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                <span class="comment">//Insere a nota no conjunto de notas</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                this-&gt;conjunto_notas-&gt;push_back (*nota);</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            }</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            <span class="comment">//Avançamos até o próximo registro</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            {</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                {</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                    fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                }</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                <span class="keywordflow">while</span> (lixo != <span class="charliteral">&#39;+&#39;</span> &amp;&amp; !feof (arquivo));</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            }</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;            <span class="keywordflow">if</span> ( !feof (arquivo)) fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        }</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        <span class="keywordflow">while</span> ( !feof (arquivo) );</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    }</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    <span class="comment">//Deve-se escolher a disciplina correta</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    {</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        {</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            fscanf (arquivo, <span class="stringliteral">&quot;%9c&quot;</span>, mat);</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            <span class="comment">//Le as notas</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            <span class="keywordflow">if</span> (mat == matricula)</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            {</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%10c&quot;</span>, disci);</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                disciplina.assign (disci);</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N1);</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N2);</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N3);</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N4);</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                <span class="keywordflow">if</span> (disciplina == disciplina_professor)</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                {</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                    <span class="comment">//Seta o objeto &#39;nota&#39;</span></div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                    nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (disciplina, N1, N2, N3, N4);</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                    <span class="comment">//Insere a nota no conjunto de notas</span></div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                    this-&gt;conjunto_notas-&gt;push_back (*nota);</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                }</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            }</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            <span class="comment">//Avançamos até o próximo registro</span></div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;            {</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                {</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                    fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                }</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                <span class="keywordflow">while</span> (lixo != <span class="charliteral">&#39;+&#39;</span> &amp;&amp; !feof (arquivo));</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            }</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;            <span class="keywordflow">if</span> ( !feof (arquivo)) fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        }</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordflow">while</span> ( !feof (arquivo) );</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    }</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="keywordflow">return</span> this-&gt;conjunto_notas-&gt;size ();</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;}</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="comment">//Retorna um objeto Nota</span></div>
-<div class="line"><a name="l00877"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda">  877</a></span>&#160;<a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> <a class="code" href="class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda" title="Este metodo retorna uma nota, sendo que sempre retorna a nota mais recente ainda presente no vetor &#39;c...">Recupera_Notas::obter_uma_nota</a> ()</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;{</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> *nota = <span class="keyword">new</span> <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> ();</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (this-&gt;conjunto_notas-&gt;back ().getDisciplina (), this-&gt;conjunto_notas-&gt;back ().getN1 (), this-&gt;conjunto_notas-&gt;back ().getN2 (), this-&gt;conjunto_notas-&gt;back ().getN3 (), this-&gt;conjunto_notas-&gt;back ().getN4 ());</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    this-&gt;conjunto_notas-&gt;pop_back ();</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keywordflow">return</span> *nota;</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;}</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N1);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N2);</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N3);</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo); <span class="comment">//Avançando &#39;|&#39;</span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                fscanf (arquivo, <span class="stringliteral">&quot;%f&quot;</span>, &amp;N4);</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                <span class="keywordflow">if</span> (disciplina == disciplina_professor)</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                {</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                    <span class="comment">//Seta o objeto &#39;nota&#39;</span></div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                    nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (disciplina, N1, N2, N3, N4);</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                    <span class="comment">//Insere a nota no conjunto de notas</span></div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                    this-&gt;conjunto_notas-&gt;push_back (*nota);</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                }</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            }</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            <span class="comment">//Avançamos até o próximo registro</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;            {</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;                <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                {</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                    fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                }</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                <span class="keywordflow">while</span> (lixo != <span class="charliteral">&#39;+&#39;</span> &amp;&amp; !feof (arquivo));</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            }</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;            <span class="keywordflow">if</span> ( !feof (arquivo)) fscanf (arquivo, <span class="stringliteral">&quot;%c&quot;</span>, &amp;lixo);</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        }</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordflow">while</span> ( !feof (arquivo) );</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    }</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keywordflow">return</span> this-&gt;conjunto_notas-&gt;size ();</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;}</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;<span class="comment">//Retorna um objeto Nota</span></div>
+<div class="line"><a name="l00876"></a><span class="lineno"><a class="code" href="class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda">  876</a></span>&#160;<a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> <a class="code" href="class_recupera___notas.html#ad4f7e8f9a9749c575282aa12c8cdefda" title="Este metodo retorna uma nota, sendo que sempre retorna a nota mais recente ainda presente no vetor &#39;c...">Recupera_Notas::obter_uma_nota</a> ()</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;{</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> *nota = <span class="keyword">new</span> <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> ();</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    nota-&gt;<a class="code" href="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571" title="Este metodo seta as notas.">setNota</a> (this-&gt;conjunto_notas-&gt;back ().getDisciplina (), this-&gt;conjunto_notas-&gt;back ().getN1 (), this-&gt;conjunto_notas-&gt;back ().getN2 (), this-&gt;conjunto_notas-&gt;back ().getN3 (), this-&gt;conjunto_notas-&gt;back ().getN4 ());</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    this-&gt;conjunto_notas-&gt;pop_back ();</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">return</span> *nota;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 11 de Fevereiro de 2013 19:28:56 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 17 de Fevereiro de 2013 16:42:24 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
