@@ -3,6 +3,12 @@
 *
 * \brief Projeto para a matéria de POO, 2012/2.
 *
+* \paragraph <Aluno>
+* - Alun o: Mateus Mendelson Esteves da Silva
+*
+* \paragraph <Matricula>
+* - Matrícula: 11/0017579
+*
 * \paragraph <Arquitetura>
 * O estilo arquitetural seguido no sistema é o de Layers.
 *

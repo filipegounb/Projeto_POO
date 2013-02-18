@@ -32,7 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CuTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CuTest.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mgd.cpp" />
+		<Unit filename="mgd.h" />
+		<Unit filename="mp.cpp" />
+		<Unit filename="mp.h" />
+		<Unit filename="mvb.cpp" />
+		<Unit filename="mvb.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

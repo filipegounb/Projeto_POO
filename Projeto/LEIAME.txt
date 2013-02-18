@@ -24,4 +24,6 @@ Obs. 7: A função de envio de notas ainda não está disponível. Temos apenas a vis
 
 Obs. 8: O arquivo da análise do código está no diretório "Análise de Código" e deve ser aberto com o inFusion.
 
-Até agora, temos as seguintes funcionalidades: Cadastro, login, exclusão de usuários, reuso de espaço livre, mostrador de data e hora
+Obs. 9: Cada teste unitário já vem com os arquivos de dados mínimos necessários para sua execução.
+
+Até agora, temos as seguintes funcionalidades: Cadastro, login, exclusão de usuários, reuso de espaço livre, mostrador de data e hora, mostrador de notas.

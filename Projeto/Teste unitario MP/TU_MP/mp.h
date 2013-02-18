@@ -243,7 +243,6 @@ class Notas
     string nome;
     string matricula;
     string disciplina;
-    vector<Nota> *conjunto_notas;
 
     /**
     * \brief Este metodo recupera todas as notas de um aluno.
@@ -256,6 +255,9 @@ class Notas
     void PreencherNotas ();
 
 public:
+    //Este vetor é público somente para viabilizar o teste unitario
+    vector<Nota> *conjunto_notas;
+
     /**
     * \brief Este construtor cria um objeto que armazena o Nome, a Matricula e todas as notas de um certo aluno.
     *
