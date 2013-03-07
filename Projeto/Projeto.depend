@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1361126937 source:c:\users\mateusmendelson\desktop\projeto\mgd\mgd.cpp
+1362613943 source:c:\users\mateusmendelson\desktop\projeto\mgd\mgd.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -7,14 +7,14 @@
 	"mgd.h"
 	"..\MVB\mvb.h"
 
-1361127245 c:\users\mateusmendelson\desktop\projeto\mgd\mgd.h
+1362606652 c:\users\mateusmendelson\desktop\projeto\mgd\mgd.h
 	<fstream>
 	<string>
 	<vector>
 
 1361024528 c:\users\mateusmendelson\desktop\projeto\mvb\mvb.h
 
-1360617026 source:c:\users\mateusmendelson\desktop\projeto\miu\miu.cpp
+1362613943 source:c:\users\mateusmendelson\desktop\projeto\miu\miu.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -25,26 +25,30 @@
 	<ctime>
 	<sstream>
 
-1360432557 c:\users\mateusmendelson\desktop\projeto\miu\miu.h
+1362597741 c:\users\mateusmendelson\desktop\projeto\miu\miu.h
 	<string>
 	"..\MP\mp.h"
 
-1360617993 c:\users\mateusmendelson\desktop\projeto\mp\mp.h
+1362607123 c:\users\mateusmendelson\desktop\projeto\mp\mp.h
 	<string>
 	<vector>
 	"..\MGD\mgd.h"
 
-1360617822 source:c:\users\mateusmendelson\desktop\projeto\mp\mp.cpp
+1362608573 source:c:\users\mateusmendelson\desktop\projeto\mp\mp.cpp
 	<iostream>
 	<fstream>
 	<string>
-	"mp.h"
-	"..\MGD\mgd.h"
 	<vector>
 	<stdlib.h>
+	<sstream>
+	"mp.h"
+	"..\MGD\mgd.h"
 
 1360261767 source:c:\users\mateusmendelson\desktop\projeto\mvb\mvb.cpp
 	<iostream>
 	<fstream>
 	"mvb.h"
+
+1361153872 source:c:\users\mateusmendelson\desktop\projeto\main.cpp
+	"MIU\miu.h"
 

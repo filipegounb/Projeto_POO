@@ -289,6 +289,20 @@ public:
     *
     */
     float getN4 ();
+
+    /**
+    * \brief Este metodo grava a nota em disco.
+    *
+    * \param <status> - Indica se o registro é novo (0) ou se ele já existia antes (1)
+    * \param <mat> - Matricula do Aluno
+    * \param <disci> - Disciplina da nota
+    *
+    * \return - Retorna a quarta nota
+    *
+    */
+    void gravar (const int, const string, const string);
+
+
 };
 
 /**

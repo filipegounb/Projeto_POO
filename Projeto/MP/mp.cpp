@@ -2,10 +2,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "mp.h"
-#include "..\MGD\mgd.h"
 #include <vector>
 #include <stdlib.h>
+#include <sstream>
+#include "mp.h"
+#include "..\MGD\mgd.h"
 
 using namespace std;
 //Métodos para Master
@@ -144,6 +145,8 @@ Notas::Notas (const string n, const string mat)
 //Monta os dados do aluno com as notas (acessado por um professor)
 Notas::Notas (const string n, const string mat, const string disci)
 {
+    this->conjunto_notas = NULL;
+
     this->nome = n;
     this->matricula = mat;
     this->disciplina = disci;
@@ -182,12 +185,13 @@ void Notas::PreencherNotas ()
     }
 }
 
-//Imprime na tela todas as notas de um Aluno
-void Notas::imprimir_notas ()
+//Retorna o Boletim do Aluno
+string Notas::getBoletim ()
 {
     vector<Nota>::iterator i;
     char suporte;
     int n = -1;
+    stringstream boletim (stringstream::in|stringstream::out);
 
     //Filtrando os espaços anteriores ao nome
     do
@@ -209,14 +213,14 @@ void Notas::imprimir_notas ()
     string matricula_impressao (this->matricula, n, 20);
 
     //Impressão
-    cout << "Nome do aluno: " << nome_impressao << endl;
-    cout << "Matricula do aluno: " << matricula_impressao << endl;
-    cout << "-----------------------------------" << endl;
+    boletim << "Nome do aluno: " << nome_impressao << endl;
+    boletim << "Matricula do aluno: " << matricula_impressao << endl;
+    boletim << "-----------------------------------" << endl;
 
     //Nao ha notas para o aluno
     if (this->conjunto_notas->size () == 0)
     {
-        cout << "\nNao ha notas disponiveis!" << endl;
+        boletim << "\nNao ha notas disponiveis!" << endl;
     }
     //Ha notas para o aluno
     else
@@ -235,50 +239,102 @@ void Notas::imprimir_notas ()
             while (suporte == ' ');
             string disciplina_impressao (d, n, 20);
 
-            cout << "Disciplina: " << disciplina_impressao << endl;
+            boletim << "Disciplina: " << disciplina_impressao << endl;
 
             //Nota 1
             if (i->getN1 () < 0)
             {
-                cout << "Nota 1: Indisponivel" << endl;
+                boletim << "Nota 1: Indisponivel" << endl;
             }
             else
             {
-                cout << "Nota 1: " << i->getN1 () << endl;
+                boletim << "Nota 1: " << i->getN1 () << endl;
             }
 
             //Nota 2
             if (i->getN2 () < 0)
             {
-                cout << "Nota 2: Indisponivel" << endl;
+                boletim << "Nota 2: Indisponivel" << endl;
             }
             else
             {
-                cout << "Nota 2: " << i->getN2 () << endl;
+                boletim << "Nota 2: " << i->getN2 () << endl;
             }
 
             //Nota 3
             if (i->getN3 () < 0)
             {
-                cout << "Nota 3: Indisponivel" << endl;
+                boletim << "Nota 3: Indisponivel" << endl;
             }
             else
             {
-                cout << "Nota 3: " << i->getN3 () << endl;
+                boletim << "Nota 3: " << i->getN3 () << endl;
             }
 
             //Nota 4
             if (i->getN4 () < 0)
             {
-                cout << "Nota 4: Indisponivel" << endl;
+                boletim << "Nota 4: Indisponivel" << endl;
             }
             else
             {
-                cout << "Nota 4: " << i->getN4 () << endl;
+                boletim << "Nota 4: " << i->getN4 () << endl;
             }
 
-            cout << "-----------------------------------" << endl;
+            boletim << "-----------------------------------" << endl;
         }
+    }
+
+    return boletim.str ();
+
+}
+
+void Notas::adicionarNota (const string disci, const float n1, const float n2, const float n3, const float n4)
+{
+    Nota* nova_nota = new Nota ();
+
+    nova_nota->setNota(disci, n1, n2, n3, n4);
+
+    vector<Nota>::iterator i;
+
+    i = this->conjunto_notas->begin ();
+
+    int controle = 0;
+
+    do
+    {
+        i++;
+
+        if (conjunto_notas->size() == 0)
+        {
+            controle = 1;
+        }
+        else if (i == this->conjunto_notas->end ())
+        {
+            controle = 1;
+        }
+        else if (i->getDisciplina () == disci)
+        {
+            controle = 1;
+        }
+    }
+    while (controle == 0);
+
+    //A disciplina eh nova
+    if (conjunto_notas->size() == 0 || i == this->conjunto_notas->end ())
+    {
+        this->conjunto_notas->push_back (*nova_nota);
+
+        nova_nota->gravar(0, this->matricula, disci);
+    }
+    //A disciplina jah existe
+    else
+    {
+        this->conjunto_notas->erase (i);
+
+        this->conjunto_notas->push_back(*nova_nota);
+
+        nova_nota->gravar(1, this->matricula, disci);
     }
 }
 

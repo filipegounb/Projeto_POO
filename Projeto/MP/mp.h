@@ -290,14 +290,28 @@ public:
     ~Notas ();
 
     /**
-    * \brief Este metodo imprime na tela as notas do aluno.
+    * \brief Este metodo retorna o boletim do aluno.
     *
     * \param - Nao possui parametros de entrada
+    *
+    * \return - Retorna o texto para o boletim
+    *
+    */
+    string getBoletim ();
+
+    /**
+    * \brief Este metodo adiciona uma nova nota.
+    *
+    * \param <disci> - Disciplina da nota
+    * \param <n1> - Primeira nota
+    * \param <n2> - Segunda nota
+    * \param <n3> - Terceira nota
+    * \param <n4> - Quarta nota
     *
     * \return - Nao possui valor de retorno
     *
     */
-    void imprimir_notas ();
+    void adicionarNota (const string disci, const float n1, const float n2, const float n3, const float n4);
 };
 
 #endif	/* MP_H */

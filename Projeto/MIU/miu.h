@@ -214,6 +214,15 @@ public:
     *
     */
     padronizar (string&, string&);
+
+    /**
+    * \brief Este construtor padroniza o comprimento da entrada disciplina.
+    *
+    * Adiciona-se espaços a direita do que foi digitado.
+    *
+    * \param <disci> - Disciplina ministrada pelo usuario
+    */
+    padronizar (string&);
 };
 
 /**
@@ -264,12 +273,13 @@ public:
     /**
     * \brief Este metodo imprime o menu para postar notas para Aluno.
     *
-    * \param - Nao possui parametros de entrada
+    * \param <d> - Disciplina da nota
+    * \param <n> - Conjunto de notas do Aluno
     *
     * \return - Nao possui valor de retorno
     *
     */
-    void menu_postar_nota ();
+    void menu_postar_nota (const string, Notas&);
 };
 
 /**

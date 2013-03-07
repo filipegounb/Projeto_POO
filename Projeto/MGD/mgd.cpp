@@ -741,6 +741,112 @@ Recupera_Notas::~Recupera_Notas ()
     free (conjunto_notas);
 }
 
+//The following method is kind of confusing... Don't try to change this, just use it! It works!
+void Nota::gravar (const int status, const string mat, const string disci)
+{
+    FILE* arquivo = NULL;
+
+    char m[10];
+    char d[11];
+
+    m[9] = '\0';
+    d[10] = '\0';
+
+    for (unsigned int i = 0; i < mat.size (); i++)
+    {
+        m[i] = mat[i];
+    }
+
+    for (unsigned int i = 0; i < disci.size (); i++)
+    {
+        d[i] = disci[i];
+    }
+
+    arquivo = fopen ("dados/Notas.txt", "r");
+
+    if (arquivo == NULL)
+    {
+        fclose (arquivo);
+
+        arquivo = fopen ("dados/Notas.txt", "w");
+
+        fprintf (arquivo, "%s|%s|%.1f|%.1f|%.1f|%.1f", m, d, N1, N2, N3, N4);
+
+        fclose (arquivo);
+
+        return;
+    }
+
+    arquivo = fopen ("dados/Notas.txt", "a+");
+
+    //Grava no final do arquivo
+    if (status == 0)
+    {
+        fprintf (arquivo, "+%s|%s|%.1f|%.1f|%.1f|%.1f", m, d, N1, N2, N3, N4);
+    }
+    //Procura o registro da nota e a escreve no arquivo
+    else if (status == 1)
+    {
+        int posicao = -1;
+        int parar = 0;
+        char lixo[50];
+        char mat_suporte[10];
+        char disci_suporte[11];
+
+        mat_suporte[9] = '\0';
+        disci_suporte[10] = '\0';
+
+        long int tam_registro = 36;
+
+        do
+        {
+            posicao++;
+
+            fscanf (arquivo, "%[^|]", mat_suporte);
+            fscanf (arquivo, "%c", &lixo[0]);
+
+            if (mat_suporte == mat)
+            {
+                fscanf (arquivo, "%[^|]", disci_suporte);
+                fscanf (arquivo, "%c", &lixo[0]);
+
+                if (disci_suporte == disci)
+                {
+                    parar = 1;
+                }
+                else
+                {
+                    for (int i = 0; i < 15; i++)
+                    {
+                        fscanf (arquivo, "%c", &lixo[i]);
+                    }
+                    fscanf (arquivo, "%c", &lixo[0]);
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < 26; i++)
+                {
+                    fscanf (arquivo, "%c", &lixo[i]);
+                }
+                fscanf (arquivo, "%c", &lixo[0]);
+            }
+        }
+        while (parar == 0);
+
+        fclose (arquivo);
+
+        arquivo = fopen ("dados/Notas.txt", "r+");
+
+        fseek(arquivo, ( (long int) posicao) * (tam_registro+1) + 21, SEEK_SET);
+
+        fprintf (arquivo, "%.1f|%.1f|%.1f|%.1f", N1, N2, N3, N4);
+    }
+
+    fclose (arquivo);
+}
+
 //Le e retorna o conjunto de notas de um certo aluno
 int Recupera_Notas::obter_conjunto_notas (const string& matricula, const string& disciplina_professor, const char *nome_arquivo)
 {

@@ -317,7 +317,7 @@ padronizar::padronizar (string& n, string& mat, string& s, string& disci)
     char disci_suporte[] = "          "; //10 espaços
     unsigned int i = 0;
 
-    //Padronizando o nome
+    //Padronizando a disciplina
     while (i < disci.size () && i < 10)
     {
         disci_suporte[9 - i] = disci[(disci.size () - 1) - i];
@@ -352,6 +352,21 @@ padronizar::padronizar (string& n, string& mat)
         i++;
     }
     mat = mat_suporte;
+}
+
+//Padroniza o dado de uma disciplina
+padronizar::padronizar (string& disci)
+{
+    char disci_suporte[] = "          "; //10 espaços
+    unsigned int i = 0;
+
+    //Padronizando a disciplina
+    while (i < disci.size () && i < 10)
+    {
+        disci_suporte[9 - i] = disci[(disci.size () - 1) - i];
+        i++;
+    }
+    disci = disci_suporte;
 }
 
 //Menu inicial
@@ -416,6 +431,27 @@ void Menu::menu_aluno ()
     cout << "1) Ver Notas" << endl;
     cout << "2) Log out" << endl;
     cout << "Opcao: ";
+}
+
+void Menu::menu_postar_nota(const string disci, Notas& n)
+{
+    float n1, n2, n3, n4;
+
+    //cout << "\nPara indicar que a nota ainda esta indisponivel, entre com o valor -10\n" << endl;
+
+    cout << "Nota 1: ";
+    cin >> n1;
+
+    cout << "Nota 2: ";
+    cin >> n2;
+
+    cout << "Nota 3: ";
+    cin >> n3;
+
+    cout << "Nota 4: ";
+    cin >> n4;
+
+    n.adicionarNota (disci, n1, n2, n3, n4);
 }
 
 //Interface com o usuario
@@ -728,33 +764,47 @@ interface_usuario::interface_usuario ()
                             }
                             while ( !resultado );
 
-                            system ("cls");
-                            dh.ImprimeDataHora ();
-
                             Notas notas (n_nome, n_matricula);
 
-                            notas.imprimir_notas ();
-
-                            cout << "Pressione qualquer tecla para continuar" << endl;
-                            getchar ();
-
-                            ////////////////////////
-
-                            controle = 0;
-
-                            menu = true;
-
-                            /////////////////////
+                            int opc;
+                            do
+                            {
 
 
-                            ///////////////////////////////////////////////////////////////////
+                                system ("cls");
+                                dh.ImprimeDataHora ();
 
+                                string boletim;
 
+                                boletim = notas.getBoletim ();
 
+                                //Imprime o boletim na tela
+                                cout << boletim;
 
+                                cout << "\n\n1) Postar nota\n2) Sair" << endl;
+                                cout << "Opcao: ";
+                                cin >> opc;
 
+                                Menu m;
 
+                                if (opc == 1)
+                                {
+                                    string d;
 
+                                    cout << "Disciplina: ";
+                                    cin >> d;
+
+                                    padronizar p (d);
+
+                                    Menu umavariavel;
+
+                                    umavariavel.menu_postar_nota(d, notas);
+                                }
+
+                                controle = 0;
+
+                                menu = true;
+                            }while (opc == 1);
                         }
                         //Log out
                         else
@@ -884,21 +934,40 @@ interface_usuario::interface_usuario ()
                             }
                             while ( !resultado );
 
-                            system ("cls");
-                            dh.ImprimeDataHora ();
-
                             Notas notas (n_nome, n_matricula, user->getDisciplina ());
 
-                            notas.imprimir_notas ();
+                            int opc;
+                            do
+                            {
 
-                            cout << "Pressione qualquer tecla para continuar" << endl;
-                            getchar ();
 
-                            ////////////////////////
+                                system ("cls");
+                                dh.ImprimeDataHora ();
 
-                            controle = 0;
+                                string boletim;
 
-                            menu = true;
+                                boletim = notas.getBoletim ();
+
+                                //Imprime o boletim na tela
+                                cout << boletim;
+
+                                cout << "\n\n1) Postar nota\n2) Sair" << endl;
+                                cout << "Opcao: ";
+                                cin >> opc;
+
+                                Menu m;
+
+                                if (opc == 1)
+                                {
+                                    Menu umavariavel;
+
+                                    umavariavel.menu_postar_nota(user->getDisciplina(), notas);
+                                }
+
+                                controle = 0;
+
+                                menu = true;
+                            }while (opc == 1);
                         }
                         else if (opcao == 3)
                         {
@@ -1013,7 +1082,12 @@ interface_usuario::interface_usuario ()
 
                             Notas notas ( user->getNome (), user->getMatricula () );
 
-                            notas.imprimir_notas ();
+                            string boletim;
+
+                            boletim = notas.getBoletim ();
+
+                            //Imprime o boletim na tela
+                            cout << boletim;
 
                             cout << "Pressione qualquer tecla para continuar" << endl;
                             getchar ();
