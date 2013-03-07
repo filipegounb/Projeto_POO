@@ -415,7 +415,7 @@ void Menu::menu_professor ()
     //Menu
     cout << "\n\nMenu:" << endl;
     cout << "1) Cadastrar Aluno" << endl;
-    cout << "2) Postar Nota de Aluno (em construcao)" << endl;
+    cout << "2) Postar Nota de Aluno" << endl;
     cout << "3) Excluir Aluno" << endl;
     cout << "4) Log out" << endl;
     cout << "Opcao: ";
@@ -769,8 +769,6 @@ interface_usuario::interface_usuario ()
                             int opc;
                             do
                             {
-
-
                                 system ("cls");
                                 dh.ImprimeDataHora ();
 

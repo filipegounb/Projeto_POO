@@ -182,27 +182,31 @@ $(document).ready(function(){initNavTree('mgd_8h.html','');});
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">float</span> getN3 ();</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">float</span> getN4 ();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;};</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno"><a class="code" href="class_recupera___notas.html">  298</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_recupera___notas.html" title="Esta classe armazena o conjunto de notas de um dado aluno.">Recupera_Notas</a></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    vector&lt;Nota&gt; *conjunto_notas;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    ~<a class="code" href="class_recupera___notas.html" title="Esta classe armazena o conjunto de notas de um dado aluno.">Recupera_Notas</a> ();</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">int</span> obter_conjunto_notas (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Notas.txt&quot;</span>);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> obter_uma_nota ();</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;};</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MGD_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">void</span> gravar (<span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>, <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;};</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="code" href="class_recupera___notas.html">  312</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_recupera___notas.html" title="Esta classe armazena o conjunto de notas de um dado aluno.">Recupera_Notas</a></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    vector&lt;Nota&gt; *conjunto_notas;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    ~<a class="code" href="class_recupera___notas.html" title="Esta classe armazena o conjunto de notas de um dado aluno.">Recupera_Notas</a> ();</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">int</span> obter_conjunto_notas (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">char</span> *nome_arquivo = <span class="stringliteral">&quot;dados/Notas.txt&quot;</span>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <a class="code" href="class_nota.html" title="Esta classe armazena os dados de uma nota.">Nota</a> obter_uma_nota ();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;};</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MGD_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d1f904e3633186ad89e32e8e9dc6473f.html">MGD</a></li><li class="navelem"><b>mgd.h</b></li>
-    <li class="footer">Gerado em Domingo, 17 de Fevereiro de 2013 23:17:55 para Projeto por
+    <li class="footer">Gerado em Quarta, 6 de Março de 2013 23:33:33 para Projeto por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

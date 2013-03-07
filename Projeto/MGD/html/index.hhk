@@ -29,6 +29,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da"><param name="Name" value="getN2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#abbd79dcaf36804921955b77877b2e5b0"><param name="Name" value="getN3"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#ad3be44b204c59882fc96ba3078d23888"><param name="Name" value="getN4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#a43aba674db04192eea1e60b4ccf60946"><param name="Name" value="gravar"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_inicializar_sistema.html"><param name="Name" value="InicializarSistema"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_inicializar_sistema.html#aaac199eec5c9c2f4d4413bd09b597871"><param name="Name" value="InicializarSistema"></OBJECT>
@@ -40,6 +41,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#ac6edf0f23ac5986fcef15c80a81421da"><param name="Name" value="getN2"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#abbd79dcaf36804921955b77877b2e5b0"><param name="Name" value="getN3"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#ad3be44b204c59882fc96ba3078d23888"><param name="Name" value="getN4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#a43aba674db04192eea1e60b4ccf60946"><param name="Name" value="gravar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_nota.html#ae5e81c4a0cc05bd91130955fab2e6571"><param name="Name" value="setNota"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_recupera___notas.html#a8a6ad9a0221c7cbf1c5b70abc3d5d106"><param name="Name" value="obter_conjunto_notas"></OBJECT>

@@ -16,6 +16,9 @@ C:/Users/MateusMendelson/Desktop/Projeto/MGD/mgd.h:2: warning: found more than o
 C:/Users/MateusMendelson/Desktop/Projeto/MVB/mvb.h:2: warning: found more than one \mainpage comment block! Skipping this block.
 C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:2: warning: found more than one \mainpage comment block! Skipping this block.
 C:/Users/MateusMendelson/Desktop/Projeto/MP/mp.h:2: warning: found more than one \mainpage comment block! Skipping this block.
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:274: warning: argument 'd' of command @param is not found in the argument list of Menu::menu_postar_nota(const string disci, Notas &n)
+C:/Users/MateusMendelson/Desktop/Projeto/MIU/miu.h:274: warning: The following parameters of Menu::menu_postar_nota(const string disci, Notas &n) are not documented:
+  parameter 'disci'
 C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:5: warning: found paragraph command outside of subsubsection context!
 C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:8: warning: found paragraph command outside of subsubsection context!
 C:/Users/MateusMendelson/Desktop/Projeto/main.cpp:11: warning: found paragraph command outside of subsubsection context!

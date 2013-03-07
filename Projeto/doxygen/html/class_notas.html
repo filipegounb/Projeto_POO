@@ -121,8 +121,10 @@ Membros públicos</h2></td></tr>
 <tr class="memdesc:a53a3408ef991ced373f4b272df4ea074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este construtor cria um objeto que armazena o Nome, a Matricula, a Disciplina e todas as notas de um certo aluno (eh acessado por <a class="el" href="class_professor.html" title="Esta classe representa um Professor.">Professor</a>).  <a href="#a53a3408ef991ced373f4b272df4ea074"></a><br/></td></tr>
 <tr class="memitem:ac3ae2756c8382451a2b3d55eee598a80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notas.html#ac3ae2756c8382451a2b3d55eee598a80">~Notas</a> ()</td></tr>
 <tr class="memdesc:ac3ae2756c8382451a2b3d55eee598a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este destrutor libera o ponteiro de vetor de notas.  <a href="#ac3ae2756c8382451a2b3d55eee598a80"></a><br/></td></tr>
-<tr class="memitem:a6bb001908d9a0a1b12e24c85bc8779e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notas.html#a6bb001908d9a0a1b12e24c85bc8779e6">imprimir_notas</a> ()</td></tr>
-<tr class="memdesc:a6bb001908d9a0a1b12e24c85bc8779e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo imprime na tela as notas do aluno.  <a href="#a6bb001908d9a0a1b12e24c85bc8779e6"></a><br/></td></tr>
+<tr class="memitem:a0c7a967c580dce5b2e01263c8e9a1486"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notas.html#a0c7a967c580dce5b2e01263c8e9a1486">getBoletim</a> ()</td></tr>
+<tr class="memdesc:a0c7a967c580dce5b2e01263c8e9a1486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo retorna o boletim do aluno.  <a href="#a0c7a967c580dce5b2e01263c8e9a1486"></a><br/></td></tr>
+<tr class="memitem:ac69675cb0e6a8b603fb4c5330290e1c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notas.html#ac69675cb0e6a8b603fb4c5330290e1c5">adicionarNota</a> (const string disci, const float n1, const float n2, const float n3, const float n4)</td></tr>
+<tr class="memdesc:ac69675cb0e6a8b603fb4c5330290e1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo adiciona uma nova nota.  <a href="#ac69675cb0e6a8b603fb4c5330290e1c5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Descrição detalhada</h2>
 <div class="textblock"><p>Esta classe armazena o conjunto de notas de um aluno. </p>
@@ -228,12 +230,69 @@ Membros públicos</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Documentação dos métodos</h2>
-<a class="anchor" id="a6bb001908d9a0a1b12e24c85bc8779e6"></a>
+<a class="anchor" id="ac69675cb0e6a8b603fb4c5330290e1c5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Notas::imprimir_notas </td>
+          <td class="memname">void Notas::adicionarNota </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>disci</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este metodo adiciona uma nova nota. </p>
+<dl class="params"><dt>Parâmetros:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;disci&gt;</td><td>- Disciplina da nota </td></tr>
+    <tr><td class="paramname">&lt;n1&gt;</td><td>- Primeira nota </td></tr>
+    <tr><td class="paramname">&lt;n2&gt;</td><td>- Segunda nota </td></tr>
+    <tr><td class="paramname">&lt;n3&gt;</td><td>- Terceira nota </td></tr>
+    <tr><td class="paramname">&lt;n4&gt;</td><td>- Quarta nota</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c7a967c580dce5b2e01263c8e9a1486"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Notas::getBoletim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,14 +300,14 @@ Membros públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Este metodo imprime na tela as notas do aluno. </p>
+<p>Este metodo retorna o boletim do aluno. </p>
 <dl class="params"><dt>Parâmetros:</dt><dd>
   <table class="params">
     <tr><td class="paramname">-</td><td>Nao possui parametros de entrada</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
+<dl class="section return"><dt>Retorna:</dt><dd>- Retorna o texto para o boletim </dd></dl>
 
 </div>
 </div>
@@ -262,7 +321,7 @@ Membros públicos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_notas.html">Notas</a></li>
-    <li class="footer">Gerado em Domingo, 17 de Fevereiro de 2013 23:17:55 para Projeto por
+    <li class="footer">Gerado em Quarta, 6 de Março de 2013 23:33:33 para Projeto por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

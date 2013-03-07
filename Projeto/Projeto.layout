@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="MGD\mgd.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="20644" topLine="232" />
-		</Cursor>
-		<Folding>
-			<Collapse line="192" />
-			<Collapse line="261" />
-			<Collapse line="339" />
-			<Collapse line="413" />
-			<Collapse line="482" />
-			<Collapse line="669" />
-			<Collapse line="691" />
-			<Collapse line="701" />
-			<Collapse line="707" />
-			<Collapse line="713" />
-			<Collapse line="719" />
-			<Collapse line="725" />
-			<Collapse line="731" />
-			<Collapse line="745" />
-			<Collapse line="851" />
-			<Collapse line="982" />
-		</Folding>
-	</File>
 	<File name="MGD\mgd.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="8558" topLine="127" />
@@ -34,26 +11,17 @@
 			<Collapse line="53" />
 			<Collapse line="81" />
 			<Collapse line="122" />
-			<Collapse line="200" />
-			<Collapse line="312" />
 		</Folding>
 	</File>
-	<File name="MIU\miu.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MIU\miu.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="28413" topLine="735" />
+			<Cursor1 position="10242" topLine="402" />
 		</Cursor>
 		<Folding>
 			<Collapse line="358" />
-			<Collapse line="548" />
-			<Collapse line="572" />
-			<Collapse line="608" />
-			<Collapse line="634" />
-			<Collapse line="671" />
-			<Collapse line="698" />
-			<Collapse line="878" />
 		</Folding>
 	</File>
-	<File name="MIU\miu.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MIU\miu.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="7970" topLine="79" />
 		</Cursor>
@@ -62,10 +30,30 @@
 			<Collapse line="60" />
 		</Folding>
 	</File>
-	<File name="MVB\mvb.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MP\mp.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="7790" topLine="244" />
 		</Cursor>
+		<Folding>
+			<Collapse line="146" />
+			<Collapse line="158" />
+			<Collapse line="172" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="150" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="MP\mp.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6948" topLine="57" />
+		</Cursor>
+		<Folding>
+			<Collapse line="19" />
+			<Collapse line="33" />
+			<Collapse line="63" />
+		</Folding>
 	</File>
 	<File name="MVB\mvb.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -79,34 +67,17 @@
 			<Collapse line="121" />
 		</Folding>
 	</File>
-	<File name="MP\mp.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MGD\mgd.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6948" topLine="57" />
+			<Cursor1 position="21475" topLine="803" />
 		</Cursor>
 		<Folding>
-			<Collapse line="19" />
-			<Collapse line="33" />
-			<Collapse line="63" />
-			<Collapse line="105" />
-			<Collapse line="157" />
-			<Collapse line="173" />
+			<Collapse line="192" />
 		</Folding>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MVB\mvb.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="150" topLine="36" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
-	</File>
-	<File name="MP\mp.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7777" topLine="155" />
-		</Cursor>
-		<Folding>
-			<Collapse line="146" />
-			<Collapse line="158" />
-			<Collapse line="172" />
-			<Collapse line="189" />
-			<Collapse line="292" />
-		</Folding>
 	</File>
 </CodeBlocks_layout_file>

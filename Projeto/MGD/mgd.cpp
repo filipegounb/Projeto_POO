@@ -789,6 +789,8 @@ void Nota::gravar (const int status, const string mat, const string disci)
     {
         int posicao = -1;
         int parar = 0;
+        int c1 = 0;
+        int c2 = 0;
         char lixo[50];
         char mat_suporte[10];
         char disci_suporte[11];
@@ -800,17 +802,36 @@ void Nota::gravar (const int status, const string mat, const string disci)
 
         do
         {
+            c1 = 0;
+            c2 = 0;
+
             posicao++;
 
             fscanf (arquivo, "%[^|]", mat_suporte);
             fscanf (arquivo, "%c", &lixo[0]);
 
-            if (mat_suporte == mat)
+            for (int i = 0; i < 10; i++)
+            {
+                if (mat_suporte[i] != m[i])
+                {
+                    c1 = 1;
+                }
+            }
+
+            if (c1 == 0)
             {
                 fscanf (arquivo, "%[^|]", disci_suporte);
                 fscanf (arquivo, "%c", &lixo[0]);
 
-                if (disci_suporte == disci)
+                for (int i = 0; i < 11; i++)
+                {
+                    if (disci_suporte[i] != d[i])
+                    {
+                        c2 = 1;
+                    }
+                }
+
+                if (c2 == 0)
                 {
                     parar = 1;
                 }
@@ -839,7 +860,14 @@ void Nota::gravar (const int status, const string mat, const string disci)
 
         arquivo = fopen ("dados/Notas.txt", "r+");
 
-        fseek(arquivo, ( (long int) posicao) * (tam_registro+1) + 21, SEEK_SET);
+        if (posicao == 0)
+        {
+            fseek(arquivo, 21, SEEK_SET);
+        }
+        else
+        {
+            fseek(arquivo, ( (long int) posicao) * (tam_registro + 1) + 21, SEEK_SET);
+        }
 
         fprintf (arquivo, "%.1f|%.1f|%.1f|%.1f", N1, N2, N3, N4);
     }

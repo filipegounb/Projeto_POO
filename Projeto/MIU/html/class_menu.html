@@ -66,13 +66,13 @@ Métodos Públicos</h2></td></tr>
 <tr class="memdesc:a6e7c5107d99058c130a9d53651138ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo imprime o menu para Professor.  <a href="#a6e7c5107d99058c130a9d53651138ed6"></a><br/></td></tr>
 <tr class="memitem:a64eab52cd4a95d2a345b146e252a3d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a64eab52cd4a95d2a345b146e252a3d7f">menu_aluno</a> ()</td></tr>
 <tr class="memdesc:a64eab52cd4a95d2a345b146e252a3d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo imprime o menu para Aluno.  <a href="#a64eab52cd4a95d2a345b146e252a3d7f"></a><br/></td></tr>
-<tr class="memitem:aa3c5ef258043e1f0a18ec448f73c09b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aa3c5ef258043e1f0a18ec448f73c09b3">menu_postar_nota</a> ()</td></tr>
-<tr class="memdesc:aa3c5ef258043e1f0a18ec448f73c09b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo imprime o menu para postar notas para Aluno.  <a href="#aa3c5ef258043e1f0a18ec448f73c09b3"></a><br/></td></tr>
+<tr class="memitem:a1b04bb7afd1d43afec3c2a9a7b228b1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a1b04bb7afd1d43afec3c2a9a7b228b1b">menu_postar_nota</a> (const string, Notas &amp;)</td></tr>
+<tr class="memdesc:a1b04bb7afd1d43afec3c2a9a7b228b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este metodo imprime o menu para postar notas para Aluno.  <a href="#a1b04bb7afd1d43afec3c2a9a7b228b1b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Descrição Detalhada</h2>
 <div class="textblock"><p>Esta classe eh responsavel por apresentar os menus ao usuario. </p>
 
-<p>Definição na linha <a class="el" href="miu_8h_source.html#l00223">223</a> do arquivo <a class="el" href="miu_8h_source.html">miu.h</a>.</p>
+<p>Definição na linha <a class="el" href="miu_8h_source.html#l00232">232</a> do arquivo <a class="el" href="miu_8h_source.html">miu.h</a>.</p>
 </div><hr/><h2>Métodos</h2>
 <a class="anchor" id="a64eab52cd4a95d2a345b146e252a3d7f"></a>
 <div class="memitem">
@@ -96,7 +96,7 @@ Métodos Públicos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
 
-<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00410">410</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00425">425</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
 
 </div>
 </div>
@@ -122,7 +122,7 @@ Métodos Públicos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
 
-<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00358">358</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00373">373</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
 
 </div>
 </div>
@@ -148,19 +148,30 @@ Métodos Públicos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
 
-<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00378">378</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00393">393</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa3c5ef258043e1f0a18ec448f73c09b3"></a>
+<a class="anchor" id="a1b04bb7afd1d43afec3c2a9a7b228b1b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Menu::menu_postar_nota </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>disci</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">Notas &amp;&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -168,11 +179,14 @@ Métodos Públicos</h2></td></tr>
 <p>Este metodo imprime o menu para postar notas para Aluno. </p>
 <dl class="params"><dt>Parâmetros:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">-</td><td>Nao possui parametros de entrada</td></tr>
+    <tr><td class="paramname">&lt;d&gt;</td><td>- Disciplina da nota </td></tr>
+    <tr><td class="paramname">&lt;n&gt;</td><td>- Conjunto de notas do Aluno</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
+
+<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00436">436</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +212,7 @@ Métodos Públicos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna:</dt><dd>- Nao possui valor de retorno </dd></dl>
 
-<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00396">396</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
+<p>Definição na linha <a class="el" href="miu_8cpp_source.html#l00411">411</a> do arquivo <a class="el" href="miu_8cpp_source.html">miu.cpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +223,7 @@ Métodos Públicos</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 17 de Fevereiro de 2013 16:42:55 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Quarta, 6 de Março de 2013 23:35:39 para Projeto de POO (Software de Apoio Educacional) por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

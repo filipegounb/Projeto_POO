@@ -301,10 +301,8 @@ void Notas::adicionarNota (const string disci, const float n1, const float n2, c
 
     int controle = 0;
 
-    do
+    for (i = this->conjunto_notas->begin(); controle == 0; i++)
     {
-        i++;
-
         if (conjunto_notas->size() == 0)
         {
             controle = 1;
@@ -312,13 +310,14 @@ void Notas::adicionarNota (const string disci, const float n1, const float n2, c
         else if (i == this->conjunto_notas->end ())
         {
             controle = 1;
+            i--;
         }
         else if (i->getDisciplina () == disci)
         {
             controle = 1;
+            i--;
         }
     }
-    while (controle == 0);
 
     //A disciplina eh nova
     if (conjunto_notas->size() == 0 || i == this->conjunto_notas->end ())

@@ -32,7 +32,8 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Notas"><param name="Local" value="class_notas.html#a7f479dbc59c5da024f25d460cba949e7"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Notas"><param name="Local" value="class_notas.html#a53a3408ef991ced373f4b272df4ea074"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="~Notas"><param name="Local" value="class_notas.html#ac3ae2756c8382451a2b3d55eee598a80"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="imprimir_notas"><param name="Local" value="class_notas.html#a6bb001908d9a0a1b12e24c85bc8779e6"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="adicionarNota"><param name="Local" value="class_notas.html#ac69675cb0e6a8b603fb4c5330290e1c5"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="getBoletim"><param name="Local" value="class_notas.html#a0c7a967c580dce5b2e01263c8e9a1486"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Professor"><param name="Local" value="class_professor.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
@@ -140,7 +141,8 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Notas"><param name="Local" value="class_notas.html#a7f479dbc59c5da024f25d460cba949e7"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Notas"><param name="Local" value="class_notas.html#a53a3408ef991ced373f4b272df4ea074"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~Notas"><param name="Local" value="class_notas.html#ac3ae2756c8382451a2b3d55eee598a80"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="imprimir_notas"><param name="Local" value="class_notas.html#a6bb001908d9a0a1b12e24c85bc8779e6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="adicionarNota"><param name="Local" value="class_notas.html#ac69675cb0e6a8b603fb4c5330290e1c5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="getBoletim"><param name="Local" value="class_notas.html#a0c7a967c580dce5b2e01263c8e9a1486"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     </UL>
