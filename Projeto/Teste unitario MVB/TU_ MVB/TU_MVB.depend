@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1279804268 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mvb\tu_ mvb\cutest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1279804268 c:\users\mateusmendelson\desktop\projeto\teste unitario mvb\tu_ mvb\cutest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1361060002 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mvb\tu_ mvb\main.cpp
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	"mvb.h"
+	"CuTest.h"
+
+1361024664 c:\users\mateusmendelson\desktop\projeto\teste unitario mvb\tu_ mvb\mvb.h
+
+1360982761 source:c:\users\mateusmendelson\desktop\projeto\teste unitario mvb\tu_ mvb\mvb.cpp
+	<iostream>
+	<fstream>
+	"mvb.h"
+

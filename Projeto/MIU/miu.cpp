@@ -437,8 +437,6 @@ void Menu::menu_postar_nota(const string disci, Notas& n)
 {
     float n1, n2, n3, n4;
 
-    //cout << "\nPara indicar que a nota ainda esta indisponivel, entre com o valor -10\n" << endl;
-
     cout << "Nota 1: ";
     cin >> n1;
 
